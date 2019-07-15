@@ -20,6 +20,7 @@
 		B3455CB422D8BDA000478FFF /* EducatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CB322D8BDA000478FFF /* EducatUITests.swift */; };
 		B3455CC422D8C0B500478FFF /* EducatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC322D8C0B500478FFF /* EducatTabBar.swift */; };
 		B3455CC622D8C82100478FFF /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC522D8C82100478FFF /* ContainerViewController.swift */; };
+		B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3522DD09580065558C /* SignUpViewController.swift */; };
 		B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505122DC81A8008D560A /* BookmarksViewController.swift */; };
 		B392505622DC81DB008D560A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505522DC81DB008D560A /* FeedViewController.swift */; };
 		B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* PrivateProfileViewController.swift */; };
@@ -71,6 +72,7 @@
 		B3455CB522D8BDA000478FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3455CC322D8C0B500478FFF /* EducatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducatTabBar.swift; sourceTree = "<group>"; };
 		B3455CC522D8C82100478FFF /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		B37D0C3522DD09580065558C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B392505122DC81A8008D560A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		B392505522DC81DB008D560A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B392505822DC822C008D560A /* PrivateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateProfileViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +171,6 @@
 				B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */,
 				B3455C9F22D8BDA000478FFF /* Info.plist */,
 				B3455C9722D8BD9D00478FFF /* Educat.xcdatamodeld */,
-				B392505C22DC82C5008D560A /* TabBarViewController.swift */,
 			);
 			path = Educat;
 			sourceTree = "<group>";
@@ -195,18 +196,11 @@
 		B3455CC122D8C07800478FFF /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B3455CC222D8C09200478FFF /* TabBar */,
+				B392505C22DC82C5008D560A /* TabBarViewController.swift */,
+				B3455CC322D8C0B500478FFF /* EducatTabBar.swift */,
 				B3455CC522D8C82100478FFF /* ContainerViewController.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		B3455CC222D8C09200478FFF /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				B3455CC322D8C0B500478FFF /* EducatTabBar.swift */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		B392505022DC8188008D560A /* Bookmarks */ = {
@@ -239,6 +233,7 @@
 			children = (
 				B392505F22DC87F9008D560A /* LoginViewController.swift */,
 				B392506122DC8851008D560A /* LoginStoryboard.storyboard */,
+				B37D0C3522DD09580065558C /* SignUpViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -465,6 +460,7 @@
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,
 				B392506022DC87F9008D560A /* LoginViewController.swift in Sources */,
 				B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */,
+				B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */,
 				B3455CC622D8C82100478FFF /* ContainerViewController.swift in Sources */,
 				B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */,
 				B3455CC422D8C0B500478FFF /* EducatTabBar.swift in Sources */,
