@@ -21,6 +21,7 @@
 		B3455CC422D8C0B500478FFF /* EducatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC322D8C0B500478FFF /* EducatTabBar.swift */; };
 		B3455CC622D8C82100478FFF /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC522D8C82100478FFF /* ContainerViewController.swift */; };
 		B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3522DD09580065558C /* SignUpViewController.swift */; };
+		B37D0C3822DD26350065558C /* EcColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* EcColors.swift */; };
 		B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505122DC81A8008D560A /* BookmarksViewController.swift */; };
 		B392505622DC81DB008D560A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505522DC81DB008D560A /* FeedViewController.swift */; };
 		B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* PrivateProfileViewController.swift */; };
@@ -73,6 +74,7 @@
 		B3455CC322D8C0B500478FFF /* EducatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducatTabBar.swift; sourceTree = "<group>"; };
 		B3455CC522D8C82100478FFF /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		B37D0C3522DD09580065558C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B37D0C3722DD26350065558C /* EcColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcColors.swift; sourceTree = "<group>"; };
 		B392505122DC81A8008D560A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		B392505522DC81DB008D560A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B392505822DC822C008D560A /* PrivateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateProfileViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */,
 				B3455C9F22D8BDA000478FFF /* Info.plist */,
 				B3455C9722D8BD9D00478FFF /* Educat.xcdatamodeld */,
+				B37D0C3722DD26350065558C /* EcColors.swift */,
 			);
 			path = Educat;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */,
+				B37D0C3822DD26350065558C /* EcColors.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
 				B392505B22DC8256008D560A /* ForeignProfileViewController.swift in Sources */,
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,

@@ -4,12 +4,12 @@ import Lottie
 class LoginViewController: UIViewController {
     
     // Кнопки входа
-    @IBOutlet weak var googleRegistrationButton: UIButton!
-    @IBOutlet weak var vkRegistrationButtons: UIButton!
-    @IBOutlet weak var emailRegistrationButtons: UIButton!
+    @IBOutlet weak var googleSingInButton: UIButton!
+    @IBOutlet weak var vkSignInButton: UIButton!
+    @IBOutlet weak var emailSignInButton: UIButton!
     
     // Кнопка регистрации
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     // Кнопка политики конфеденциальности
     
@@ -49,10 +49,16 @@ class LoginViewController: UIViewController {
     
     // Установки для кнопок
     func setButtons() -> Void {
-        let cornerRadius = 10.0
-        googleRegistrationButton.layer.cornerRadius = CGFloat(cornerRadius)
-        vkRegistrationButtons.layer.cornerRadius = CGFloat(cornerRadius)
-        emailRegistrationButtons.layer.cornerRadius = CGFloat(cornerRadius)
+        setUp(button: googleSingInButton)
+        setUp(button: vkSignInButton)
+        setUp(button: emailSignInButton)
+    }
+    
+    func setUp(button: UIButton) -> Void {
+        button.layer.cornerRadius = CGFloat(10.0)
+        let grad = CAGradientLayer.gradient(.pinkOrage, forView: button)
+        button.layer.insertSublayer(grad, at: 0)
+        button.clipsToBounds = true
     }
 
 }
