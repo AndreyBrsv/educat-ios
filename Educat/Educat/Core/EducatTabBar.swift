@@ -23,6 +23,7 @@ class EducatTabBar: UIView {
         // показывается тогда, когда при инициализации приложения
         // определяем модель iPhone
         self.isHidden = true
+        self.clipsToBounds = true
 
     }
     
@@ -30,23 +31,43 @@ class EducatTabBar: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // Настройка горизональной стопки
+    
+    
+    
+    
+    /// Настройка горизональной стопки
     private func configureHorizontalStackView() -> Void {
         tabBarButtonsStackView = UIStackView()
-        // Тут проводится дополнительная настройка стопки
         self.addSubview(tabBarButtonsStackView)
+        // Тут проводится дополнительная настройка стопки
+        configureTabBarStackViewConstraints()
+    }
+    // Настройка ограничений горизонтальной стопки
+    private func configureTabBarStackViewConstraints() -> Void {
+        tabBarButtonsStackView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    // Настройки селектора
+    
+    
+    
+    /// Настройки селектора
     private func configureSelector() -> Void {
         tabBarSelector = UIView()
+        // Нужно задать размеры селектора
         tabBarSelector.layer.cornerRadius = CGFloat(selectorCornerRadius)
-        tabBarSelector.clipsToBounds = true
-        //
+        configureTabBarStackViewConstraints()
         self.addSubview(tabBarSelector)
     }
+    // Настройки ограничений слектора
+    private func configureSelectorConstraints() -> Void {
+        tabBarSelector.translatesAutoresizingMaskIntoConstraints = false
+        tabBarSelector.centerYAnchor.constraint(equalTo: self.topAnchor).isActive = true
+    }
     
-    // Настройка ограничений бара
+    
+    
+    
+    /// Настройка ограничений бара
     private func configureConstraints() -> Void {
         
     }

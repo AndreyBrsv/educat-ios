@@ -48,15 +48,15 @@ class LoginViewController: UIViewController {
     
     
     // Установки для кнопок
-    func setButtons() -> Void {
+    private func setButtons() -> Void {
         setUp(button: googleSingInButton)
         setUp(button: vkSignInButton)
         setUp(button: emailSignInButton)
     }
     
-    func setUp(button: UIButton) -> Void {
-        button.layer.cornerRadius = CGFloat(10.0)
-        let grad = CAGradientLayer.gradient(.pinkOrage, forView: button)
+    private func setUp(button: UIButton) -> Void {
+        button.layer.cornerRadius = CGFloat(button.frame.height/2.0)
+        let grad = CAGradientLayer.gradient(.pinkOrange, forView: button)
         button.layer.insertSublayer(grad, at: 0)
         button.clipsToBounds = true
     }

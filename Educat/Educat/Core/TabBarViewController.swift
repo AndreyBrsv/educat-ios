@@ -12,7 +12,7 @@ class TabBarViewController: UITabBarController {
         
     }
     
-    func replaceTabBar(_ flag: Bool) -> Void {
+    public func replaceTabBar(_ flag: Bool) -> Void {
         if flag {
             self.tabBar.isHidden = !self.tabBar.isHidden
             self.educatTabBar.isHidden = !self.educatTabBar.isHidden

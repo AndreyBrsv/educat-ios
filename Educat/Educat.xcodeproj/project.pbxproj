@@ -22,6 +22,9 @@
 		B3455CC622D8C82100478FFF /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC522D8C82100478FFF /* ContainerViewController.swift */; };
 		B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3522DD09580065558C /* SignUpViewController.swift */; };
 		B37D0C3822DD26350065558C /* EcColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* EcColors.swift */; };
+		B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */; };
+		B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3D22DE005B0065558C /* SubscribeView.swift */; };
+		B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */; };
 		B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505122DC81A8008D560A /* BookmarksViewController.swift */; };
 		B392505622DC81DB008D560A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505522DC81DB008D560A /* FeedViewController.swift */; };
 		B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* PrivateProfileViewController.swift */; };
@@ -75,6 +78,9 @@
 		B3455CC522D8C82100478FFF /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		B37D0C3522DD09580065558C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B37D0C3722DD26350065558C /* EcColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcColors.swift; sourceTree = "<group>"; };
+		B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateProfile.storyboard; sourceTree = "<group>"; };
+		B37D0C3D22DE005B0065558C /* SubscribeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeView.swift; sourceTree = "<group>"; };
+		B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberViewDelegate.swift; sourceTree = "<group>"; };
 		B392505122DC81A8008D560A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		B392505522DC81DB008D560A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B392505822DC822C008D560A /* PrivateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateProfileViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +212,15 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		B37D0C3F22DE01EA0065558C /* SubscriberView */ = {
+			isa = PBXGroup;
+			children = (
+				B37D0C3D22DE005B0065558C /* SubscribeView.swift */,
+				B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */,
+			);
+			path = SubscriberView;
+			sourceTree = "<group>";
+		};
 		B392505022DC8188008D560A /* Bookmarks */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,8 +240,10 @@
 		B392505722DC81F8008D560A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B37D0C3F22DE01EA0065558C /* SubscriberView */,
 				B392505822DC822C008D560A /* PrivateProfileViewController.swift */,
 				B392505A22DC8256008D560A /* ForeignProfileViewController.swift */,
+				B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -355,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */,
+				B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */,
 				B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */,
 				B3455C9622D8BD9D00478FFF /* Main.storyboard in Resources */,
 				B392506222DC8851008D560A /* LoginStoryboard.storyboard in Resources */,
@@ -458,10 +476,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */,
+				B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */,
 				B37D0C3822DD26350065558C /* EcColors.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
 				B392505B22DC8256008D560A /* ForeignProfileViewController.swift in Sources */,
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,
+				B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */,
 				B392506022DC87F9008D560A /* LoginViewController.swift in Sources */,
 				B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */,
 				B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */,

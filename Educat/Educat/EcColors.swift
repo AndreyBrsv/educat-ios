@@ -7,7 +7,8 @@ extension CAGradientLayer {
     // Вспомогательный enum - сюда забиваем цвета для
     // создания темы
     public enum EcGradient {
-        case pinkOrage
+        case pinkOrange
+        case lightBlueDarkBlue
     }
     
     public static func gradient(_ gradient: EcGradient, forView view: UIView) -> CAGradientLayer {
@@ -15,7 +16,7 @@ extension CAGradientLayer {
         grad.frame = view.bounds
         var cgColorsArray: [CGColor] = []
         switch gradient {
-        case .pinkOrage:
+        case .pinkOrange:
             // Сюда добавляем необходимые цвета
             cgColorsArray.append(UIColor.purple.cgColor)
             break

@@ -1,30 +1,38 @@
-//
-//  ForeignProfileViewController.swift
-//  Educat
-//
-//  Created by Ilya Mikheev on 15/07/2019.
-//  Copyright © 2019 Ilya Mikheev. All rights reserved.
-//
 
 import UIKit
 
-class ForeignProfileViewController: UIViewController {
+class ForeignProfileViewController: UIViewController, SubscriberViewDelegate, UITableViewDelegate {
+    
+    var subscriberView: SubscribeView!
+    
+    var articlesTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        configureSubscribeView()
+        
+        articlesTableView = UITableView()
+        articlesTableView.delegate = self
+        self.view.addSubview(articlesTableView)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    /// Методы делегата SubscribeView (вызываются тогда, когда мы пытаемся
+    /// подписаться/отписаться к/от пользователя)
+    func subscribe() -> Void {
+        
     }
-    */
-
+    
+    func unsubscribe() -> Void {
+        
+    }
+    
+    /// Методы конфигурации
+    func configureSubscribeView() -> Void {
+        subscriberView = SubscribeView()
+        subscriberView.delegate = self
+        self.view.addSubview(subscriberView)
+    }
 }
