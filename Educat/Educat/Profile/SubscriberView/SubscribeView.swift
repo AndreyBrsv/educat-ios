@@ -23,14 +23,9 @@ class SubscribeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.publicationsTitle.text = "Публикации"
-        self.publications.text = "0"
-        
-        self.subscribersTitle.text = "Подписчики"
-        self.subscribers.text = "0"
-        
         configureSubscribeButton()
         
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -66,6 +61,16 @@ class SubscribeView: UIView {
             action: #selector(tapOnSubscribeButton(sender:)),
             for: .touchUpOutside
         )
+        self.addSubview(subscribeButton)
+        configureButtonConstraints()
+    }
+    private func configureButtonConstraints() -> Void {
+        
+        subscribeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        subscribeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        subscribeButton.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        subscribeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
     

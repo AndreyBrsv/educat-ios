@@ -23,6 +23,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setButtons()
         vc = SignUpViewController()
+        view.layer.insertSublayer(
+            CAGradientLayer.gradient(.yellowCorall, forView: view),
+            at: 0)
     }
     
     // Действия кнопок
@@ -55,9 +58,10 @@ class LoginViewController: UIViewController {
     }
     
     private func setUp(button: UIButton) -> Void {
-        button.layer.cornerRadius = CGFloat(button.frame.height/2.0)
-        let grad = CAGradientLayer.gradient(.pinkOrange, forView: button)
-        button.layer.insertSublayer(grad, at: 0)
+        button.layer.cornerRadius = CGFloat(10.0)
+//        let grad = CAGradientLayer.gradient(.yellowCorall, forView: button)
+//        button.layer.insertSublayer(grad, at: 0)
+        button.backgroundColor = .white
         button.clipsToBounds = true
     }
 

@@ -20,8 +20,9 @@
 		B3455CB422D8BDA000478FFF /* EducatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CB322D8BDA000478FFF /* EducatUITests.swift */; };
 		B3455CC422D8C0B500478FFF /* EducatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC322D8C0B500478FFF /* EducatTabBar.swift */; };
 		B3455CC622D8C82100478FFF /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC522D8C82100478FFF /* ContainerViewController.swift */; };
+		B36FB94822DE603700E996FF /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94722DE603700E996FF /* colors.swift */; };
 		B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3522DD09580065558C /* SignUpViewController.swift */; };
-		B37D0C3822DD26350065558C /* EcColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* EcColors.swift */; };
+		B37D0C3822DD26350065558C /* gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* gradients.swift */; };
 		B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */; };
 		B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3D22DE005B0065558C /* SubscribeView.swift */; };
 		B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */; };
@@ -76,8 +77,9 @@
 		B3455CB522D8BDA000478FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3455CC322D8C0B500478FFF /* EducatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducatTabBar.swift; sourceTree = "<group>"; };
 		B3455CC522D8C82100478FFF /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		B36FB94722DE603700E996FF /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		B37D0C3522DD09580065558C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		B37D0C3722DD26350065558C /* EcColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcColors.swift; sourceTree = "<group>"; };
+		B37D0C3722DD26350065558C /* gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradients.swift; sourceTree = "<group>"; };
 		B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateProfile.storyboard; sourceTree = "<group>"; };
 		B37D0C3D22DE005B0065558C /* SubscribeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeView.swift; sourceTree = "<group>"; };
 		B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberViewDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		B3455C8F22D8BD9D00478FFF /* Educat */ = {
 			isa = PBXGroup;
 			children = (
+				B36FB94622DE600600E996FF /* Colors */,
 				B392505E22DC87D0008D560A /* Auth */,
 				B392505722DC81F8008D560A /* Profile */,
 				B392505322DC81BE008D560A /* Feed */,
@@ -179,7 +182,6 @@
 				B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */,
 				B3455C9F22D8BDA000478FFF /* Info.plist */,
 				B3455C9722D8BD9D00478FFF /* Educat.xcdatamodeld */,
-				B37D0C3722DD26350065558C /* EcColors.swift */,
 			);
 			path = Educat;
 			sourceTree = "<group>";
@@ -210,6 +212,15 @@
 				B3455CC522D8C82100478FFF /* ContainerViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		B36FB94622DE600600E996FF /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				B37D0C3722DD26350065558C /* gradients.swift */,
+				B36FB94722DE603700E996FF /* colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		B37D0C3F22DE01EA0065558C /* SubscriberView */ = {
@@ -439,10 +450,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Educat/Pods-Educat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,13 +492,14 @@
 			files = (
 				B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */,
 				B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */,
-				B37D0C3822DD26350065558C /* EcColors.swift in Sources */,
+				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
 				B392505B22DC8256008D560A /* ForeignProfileViewController.swift in Sources */,
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,
 				B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */,
 				B392506022DC87F9008D560A /* LoginViewController.swift in Sources */,
 				B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */,
+				B36FB94822DE603700E996FF /* colors.swift in Sources */,
 				B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */,
 				B3455CC622D8C82100478FFF /* ContainerViewController.swift in Sources */,
 				B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */,
