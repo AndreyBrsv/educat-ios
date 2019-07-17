@@ -1,9 +1,17 @@
 import UIKit
 
-class SWTabBar: UIView, UITabBarDelegate {
+class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     
     /// Радиус скругления углов бара
     public var tabBarCornerRadius: Double = 20.0
+    /// Дополнительный отступ для стека кнопок
+    public var itemsStackViewAdditionalMargin: Double = 10.0
+    /// Полный отступ для стека кнопок
+    public var itemsStackViewMargin: Double {
+        get {
+            return tabBarCornerRadius + itemsStackViewAdditionalMargin
+        }
+    }
     
     /// Радиус скругления селектора
     public var selectorCornerRadius: Double = 5.0
@@ -19,8 +27,8 @@ class SWTabBar: UIView, UITabBarDelegate {
     public var delegate: SWTabBarDelegate?
     
     
-    private var tabBarButtonsStackView: UIStackView!
-    private var tabBarSelector: UIView!
+    private var itemsStackView = UIStackView()
+    private var selector = UIView()
     
     
     /// Инициализатор
@@ -38,6 +46,7 @@ class SWTabBar: UIView, UITabBarDelegate {
         // определяем модель iPhone
         self.isHidden = true
         self.clipsToBounds = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,61 +58,58 @@ class SWTabBar: UIView, UITabBarDelegate {
     
     
     /// Настройка горизональной стопки
-    func configureHorizontalStackView() -> Void {
+    private func configureHorizontalStackView() -> Void {
         
-        tabBarButtonsStackView = UIStackView()
-        self.addSubview(tabBarButtonsStackView)
+        self.addSubview(itemsStackView)
         
         // Тут проводится дополнительная настройка стопки
         
-        tabBarButtonsStackView.axis = .horizontal
-        tabBarButtonsStackView.alignment = .center
-        tabBarButtonsStackView.distribution = .equalSpacing
-        tabBarButtonsStackView.spacing = CGFloat(10.0)
+        itemsStackView.axis = .horizontal
+        itemsStackView.alignment = .center
+        itemsStackView.distribution = .equalSpacing
+        itemsStackView.spacing = CGFloat(10.0)
         
         configureTabBarStackViewConstraints()
     }
     // Настройка ограничений горизонтальной стопки
     private func configureTabBarStackViewConstraints() -> Void {
         
-        tabBarButtonsStackView.translatesAutoresizingMaskIntoConstraints = false
+        itemsStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        tabBarButtonsStackView.leadingAnchor.constraint(
+        itemsStackView.leadingAnchor.constraint(
             equalTo: self.leadingAnchor,
-            constant: CGFloat(tabBarCornerRadius)).isActive = true
+            constant: CGFloat(itemsStackViewMargin)).isActive = true
         
-        tabBarButtonsStackView.trailingAnchor.constraint(
+        itemsStackView.trailingAnchor.constraint(
             equalTo: self.trailingAnchor,
-            constant: CGFloat(-tabBarCornerRadius)).isActive = true
+            constant: CGFloat(-itemsStackViewMargin)).isActive = true
         
-        tabBarButtonsStackView.bottomAnchor.constraint(
+        itemsStackView.bottomAnchor.constraint(
             equalTo: self.bottomAnchor).isActive = true
         
-        tabBarButtonsStackView.heightAnchor
+        itemsStackView.heightAnchor
             .constraint(equalTo: self.heightAnchor).isActive = true
     }
     
     
     /// Настройки селектора
-    func configureSelector() -> Void {
-        tabBarSelector = UIView()
-        tabBarSelector.backgroundColor = .educatLightYellow
+    private func configureSelector() -> Void {
         
-        // Нужно задать размеры селектора
-        tabBarSelector.layer.cornerRadius = CGFloat(selectorCornerRadius)
-        self.addSubview(tabBarSelector)
+        self.addSubview(selector)
         
+        self.selector.layer.cornerRadius = CGFloat(selectorCornerRadius)
+        self.selector.backgroundColor = .educatLightYellow
         configureSelectorConstraints()
     }
     // Настройки ограничений слектора
     private func configureSelectorConstraints() -> Void {
         
-        tabBarSelector.translatesAutoresizingMaskIntoConstraints = false
+        self.selector.translatesAutoresizingMaskIntoConstraints = false
         
-        tabBarSelector.centerYAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        tabBarSelector.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        tabBarSelector.heightAnchor.constraint(equalToConstant: 12).isActive = true
-        tabBarSelector.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        self.selector.centerYAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        //self.selector.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.selector.heightAnchor.constraint(equalToConstant: 12).isActive = true
+        self.selector.widthAnchor.constraint(equalToConstant: 35).isActive = true
     }
     
     
@@ -132,20 +138,26 @@ class SWTabBar: UIView, UITabBarDelegate {
         self.centerXAnchor.constraint(equalTo: tabBarControllerView.centerXAnchor).isActive = true
     }
     
+    func wasTapped(item: UIButton) -> Void {
+        animateSelectorFor(sender: item)
+    }
     
     /// Метод для анимации селектора
     /// Перемещает селектор при нажатии на кнопку
-    @objc func animateSelectorFor(sender: UIButton) -> Void {
-        self.tabBarSelector.centerXAnchor.constraint(equalTo: sender.centerXAnchor).isActive = true
-        UIView.animate(withDuration: 0.5) {
-            self.layoutIfNeeded()
+    func animateSelectorFor(sender: UIButton) -> Void {
+        UIView.animate(withDuration: 0.2) {
+            self.selector.center.x = CGFloat(self.itemsStackViewMargin) + sender.center.x
         }
     }
     
     /// Добавляет items в массив
-    public func setItems(_ items: [SWTabBarItem]?) -> Void {
+    open func setItems(_ items: [SWTabBarItem]?) -> Void {
         if let i = items {
-            i.forEach {self.items.append($0)}
+            i.forEach {
+                self.items.append($0)
+                self.itemsStackView.addArrangedSubview($0)
+                $0.delegate = self
+            }
         }
     }
     

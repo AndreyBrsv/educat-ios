@@ -12,7 +12,9 @@ class TabBarViewController: UITabBarController {
         
         changeTabBar(true)
         
-        print(swTabBar.items)
+        self.view.layer.insertSublayer(CAGradientLayer.gradient(.yellowCorall, forView: self.view), at: 0)
+        
+        self.swTabBar.setItems([SWTabBarItem(), SWTabBarItem(), SWTabBarItem(), SWTabBarItem()])
         
     }
     
