@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
 //        let grad = CAGradientLayer.gradient(.yellowCorall, forView: button)
 //        button.layer.insertSublayer(grad, at: 0)
         button.backgroundColor = .white
+        button.setTitleColor(.educatDarkYellow, for: .normal)
         button.clipsToBounds = true
     }
 

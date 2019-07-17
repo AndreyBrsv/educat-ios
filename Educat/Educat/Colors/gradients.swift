@@ -16,7 +16,7 @@ extension CAGradientLayer {
         
     }
     
-    public static func gradient(_ gradient: CAGradient, forView view: UIView) -> CAGradientLayer {
+    open class func gradient(_ gradient: CAGradient, forView view: UIView) -> CAGradientLayer {
         let grad = CAGradientLayer()
         grad.frame = view.bounds
         var cgColorsArray: [CGColor] = []

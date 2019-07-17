@@ -18,9 +18,13 @@
 		B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */; };
 		B3455CA922D8BDA000478FFF /* EducatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CA822D8BDA000478FFF /* EducatTests.swift */; };
 		B3455CB422D8BDA000478FFF /* EducatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CB322D8BDA000478FFF /* EducatUITests.swift */; };
-		B3455CC422D8C0B500478FFF /* EducatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC322D8C0B500478FFF /* EducatTabBar.swift */; };
-		B3455CC622D8C82100478FFF /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC522D8C82100478FFF /* ContainerViewController.swift */; };
+		B3455CC422D8C0B500478FFF /* SWTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC322D8C0B500478FFF /* SWTabBar.swift */; };
 		B36FB94822DE603700E996FF /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94722DE603700E996FF /* colors.swift */; };
+		B36FB94E22DF790F00E996FF /* SWTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94D22DF790F00E996FF /* SWTabBarItem.swift */; };
+		B36FB95122DF871800E996FF /* UITabBarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95022DF871800E996FF /* UITabBarControllerExtension.swift */; };
+		B36FB95322DF876600E996FF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95222DF876600E996FF /* UIViewControllerExtension.swift */; };
+		B36FB95622DF889900E996FF /* Description.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B36FB95522DF889900E996FF /* Description.rtf */; };
+		B36FB95A22DFAE8400E996FF /* SWTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */; };
 		B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3522DD09580065558C /* SignUpViewController.swift */; };
 		B37D0C3822DD26350065558C /* gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* gradients.swift */; };
 		B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */; };
@@ -75,9 +79,13 @@
 		B3455CAF22D8BDA000478FFF /* EducatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EducatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455CB322D8BDA000478FFF /* EducatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducatUITests.swift; sourceTree = "<group>"; };
 		B3455CB522D8BDA000478FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3455CC322D8C0B500478FFF /* EducatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducatTabBar.swift; sourceTree = "<group>"; };
-		B3455CC522D8C82100478FFF /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		B3455CC322D8C0B500478FFF /* SWTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBar.swift; sourceTree = "<group>"; };
 		B36FB94722DE603700E996FF /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		B36FB94D22DF790F00E996FF /* SWTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarItem.swift; sourceTree = "<group>"; };
+		B36FB95022DF871800E996FF /* UITabBarControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtension.swift; sourceTree = "<group>"; };
+		B36FB95222DF876600E996FF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		B36FB95522DF889900E996FF /* Description.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Description.rtf; sourceTree = "<group>"; };
+		B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarDelegate.swift; sourceTree = "<group>"; };
 		B37D0C3522DD09580065558C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B37D0C3722DD26350065558C /* gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradients.swift; sourceTree = "<group>"; };
 		B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateProfile.storyboard; sourceTree = "<group>"; };
@@ -169,6 +177,7 @@
 		B3455C8F22D8BD9D00478FFF /* Educat */ = {
 			isa = PBXGroup;
 			children = (
+				B36FB94F22DF86F500E996FF /* SwallowUI */,
 				B36FB94622DE600600E996FF /* Colors */,
 				B392505E22DC87D0008D560A /* Auth */,
 				B392505722DC81F8008D560A /* Profile */,
@@ -208,8 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				B392505C22DC82C5008D560A /* TabBarViewController.swift */,
-				B3455CC322D8C0B500478FFF /* EducatTabBar.swift */,
-				B3455CC522D8C82100478FFF /* ContainerViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -221,6 +228,27 @@
 				B36FB94722DE603700E996FF /* colors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		B36FB94F22DF86F500E996FF /* SwallowUI */ = {
+			isa = PBXGroup;
+			children = (
+				B36FB95522DF889900E996FF /* Description.rtf */,
+				B36FB95422DF87AE00E996FF /* TabBar */,
+			);
+			path = SwallowUI;
+			sourceTree = "<group>";
+		};
+		B36FB95422DF87AE00E996FF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B36FB94D22DF790F00E996FF /* SWTabBarItem.swift */,
+				B36FB95222DF876600E996FF /* UIViewControllerExtension.swift */,
+				B3455CC322D8C0B500478FFF /* SWTabBar.swift */,
+				B36FB95022DF871800E996FF /* UITabBarControllerExtension.swift */,
+				B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		B37D0C3F22DE01EA0065558C /* SubscriberView */ = {
@@ -383,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */,
+				B36FB95622DF889900E996FF /* Description.rtf in Resources */,
 				B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */,
 				B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */,
 				B3455C9622D8BD9D00478FFF /* Main.storyboard in Resources */,
@@ -492,20 +521,23 @@
 			files = (
 				B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */,
 				B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */,
+				B36FB95322DF876600E996FF /* UIViewControllerExtension.swift in Sources */,
+				B36FB94E22DF790F00E996FF /* SWTabBarItem.swift in Sources */,
 				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
 				B392505B22DC8256008D560A /* ForeignProfileViewController.swift in Sources */,
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,
 				B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */,
 				B392506022DC87F9008D560A /* LoginViewController.swift in Sources */,
+				B36FB95A22DFAE8400E996FF /* SWTabBarDelegate.swift in Sources */,
 				B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */,
 				B36FB94822DE603700E996FF /* colors.swift in Sources */,
 				B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */,
-				B3455CC622D8C82100478FFF /* ContainerViewController.swift in Sources */,
 				B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */,
-				B3455CC422D8C0B500478FFF /* EducatTabBar.swift in Sources */,
+				B3455CC422D8C0B500478FFF /* SWTabBar.swift in Sources */,
 				B392505D22DC82C5008D560A /* TabBarViewController.swift in Sources */,
 				B392505622DC81DB008D560A /* FeedViewController.swift in Sources */,
+				B36FB95122DF871800E996FF /* UITabBarControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

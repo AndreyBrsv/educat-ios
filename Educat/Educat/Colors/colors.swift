@@ -79,6 +79,7 @@ extension UIColor {
         }
     }
     
+    // Фирменный коралловый
     open class var educatCorall: UIColor {
         get {
             return UIColor(hex: "#FF977F")!
