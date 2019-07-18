@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let vc = storyboard.instantiateViewController(withIdentifier: "login")
         
         print(UIDevice.current.name)
-        window?.rootViewController = TabBarViewController()
+        let nav = UINavigationController()
+        nav.setViewControllers([TabBarViewController()], animated: false)
+        nav.navigationBar.isOpaque = false
+        nav.navigationBar.backgroundColor = .white
+        window?.rootViewController = nav
         return true
     }
 

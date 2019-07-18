@@ -31,7 +31,7 @@ class ForeignProfileViewController: UIViewController, SubscriberViewDelegate, UI
     
     /// Методы конфигурации
     func configureSubscribeView() -> Void {
-        subscriberView = SubscribeView()
+        //subscriberView = SubscribeView()
         subscriberView.delegate = self
         self.view.addSubview(subscriberView)
     }

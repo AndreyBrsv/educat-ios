@@ -3,28 +3,43 @@ import UIKit
 
 class SubscribeView: UIView {
     
-    var delegate: SubscriberViewDelegate?
+    open var delegate: SubscriberViewDelegate? // Делегат
     
-    var viewCornerRadius: Double {
-        return 20.0
-    }
+    open var viewCornerRadius = 20.0 // Радиус скругления
     
-    private var publicationsTitle: UILabel = UILabel()
-    var publications: UILabel = UILabel()
+    private var publicationsTitle: UILabel = UILabel() //
+    
+    open var publications: UILabel = UILabel() // Количество публикаций
     
     private var publicationsSubscribersDelimeter: UIView = UIView()
     
     private var subscribersTitle: UILabel = UILabel()
-    var subscribers: UILabel = UILabel()
     
-    var subscribeButton: UIButton = UIButton()
-    var subscribed = false
+    var subscribers: UILabel = UILabel() // Количество подписчиков
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    var subscribeButton: UIButton = UIButton() // Кнопка подписаться
+    
+    private var subscribeValue = false // Значение признака подписан или нет
+    
+    open var subscribed: Bool { // Признак подписан или нет
+        get {
+            return self.subscribeValue
+        }
+        set {
+            subscribeButtonStateIf(state: newValue)
+            self.subscribeValue = newValue
+        }
+    }
+    
+    init(publications: String, subscribers: String, subscribed: Bool) {
+        
+        super.init(frame: CGRect.zero)
+        
+        self.publications.text = publications
+        self.subscribers.text = subscribers
+        self.subscribed = subscribed
         
         configureSubscribeButton()
-        
     
     }
     
@@ -74,5 +89,7 @@ class SubscribeView: UIView {
     }
     
     
-    
+    private func subscribeButtonStateIf(state: Bool) -> Void {
+        
+    }
 }

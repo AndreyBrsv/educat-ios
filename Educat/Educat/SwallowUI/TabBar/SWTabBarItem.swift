@@ -24,8 +24,6 @@ class SWTabBarItem: UIButton {
         self.heightAnchor.constraint(equalToConstant: 35).isActive = true
         self.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
-        self.frame.origin = CGPoint(x: frame.width / 2.0, y: frame.height / 2.0)
-        
         // Default color when button created
         self.backgroundColor = .educatLightGray
         

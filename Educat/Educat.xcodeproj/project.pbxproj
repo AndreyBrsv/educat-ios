@@ -27,6 +27,7 @@
 		B36FB95A22DFAE8400E996FF /* SWTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */; };
 		B36FB95C22DFC73A00E996FF /* SWTabBarItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */; };
 		B36FB95E22E08DB000E996FF /* SWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95D22E08DB000E996FF /* SWViewController.swift */; };
+		B36FB96122E0A12900E996FF /* CirclePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB96022E0A12900E996FF /* CirclePhoto.swift */; };
 		B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3522DD09580065558C /* SignUpViewController.swift */; };
 		B37D0C3822DD26350065558C /* gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* gradients.swift */; };
 		B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */; };
@@ -90,6 +91,7 @@
 		B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarDelegate.swift; sourceTree = "<group>"; };
 		B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarItemDelegate.swift; sourceTree = "<group>"; };
 		B36FB95D22E08DB000E996FF /* SWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWViewController.swift; sourceTree = "<group>"; };
+		B36FB96022E0A12900E996FF /* CirclePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePhoto.swift; sourceTree = "<group>"; };
 		B37D0C3522DD09580065558C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B37D0C3722DD26350065558C /* gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradients.swift; sourceTree = "<group>"; };
 		B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateProfile.storyboard; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		B3455C8F22D8BD9D00478FFF /* Educat */ = {
 			isa = PBXGroup;
 			children = (
+				B36FB95F22E0A10A00E996FF /* CirclePhoto */,
 				B36FB94F22DF86F500E996FF /* SwallowUI */,
 				B36FB94622DE600600E996FF /* Colors */,
 				B392505E22DC87D0008D560A /* Auth */,
@@ -255,6 +258,14 @@
 				B36FB95D22E08DB000E996FF /* SWViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B36FB95F22E0A10A00E996FF /* CirclePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				B36FB96022E0A12900E996FF /* CirclePhoto.swift */,
+			);
+			path = CirclePhoto;
 			sourceTree = "<group>";
 		};
 		B37D0C3F22DE01EA0065558C /* SubscriberView */ = {
@@ -531,6 +542,7 @@
 				B36FB94E22DF790F00E996FF /* SWTabBarItem.swift in Sources */,
 				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
+				B36FB96122E0A12900E996FF /* CirclePhoto.swift in Sources */,
 				B36FB95E22E08DB000E996FF /* SWViewController.swift in Sources */,
 				B392505B22DC8256008D560A /* ForeignProfileViewController.swift in Sources */,
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,

@@ -2,7 +2,7 @@ import UIKit
 
 class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     
-    open var tabBarCornerRadius: Double = 25.0 // Радиус скругления углов бара
+    open var tabBarCornerRadius: Double = 20.0 // Радиус скругления углов бара
     
     open var itemsStackViewAdditionalMargin: Double = 10.0 // Дополнительный отступ для стека кнопок
     
@@ -44,6 +44,8 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     private var itemsStackView = UIStackView() // Горизонтальный StackView, хранящий кнопки бара
     
     private var selector = UIView() // Селектор (верхняя ползающая полоска)
+    
+    open weak var tabBarController: UITabBarController!
     
     
     
@@ -143,7 +145,13 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         self.centerXAnchor.constraint(equalTo: tabBarControllerView.centerXAnchor).isActive = true
     }
     
-    func wasTapped(item: UIButton) -> Void {
+    func wasTapped(item: UIButton) -> Void { // Метод, вызываемый, когда кнопка была нажата
+        self.items.forEach {
+            if $0.isEqual(item) {
+                self.tabBarController.selectedIndex = self.items.firstIndex(of: item as! SWTabBarItem)!
+            }
+        }
+        
         animateSelectorFor(sender: item)
     }
     
