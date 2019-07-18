@@ -3,8 +3,18 @@ import UIKit
 
 class SWTabBarItem: UIButton {
     
-    public var delegate: SWTabBarItemDelegate?
-    private let notificationIndicator = UIView()
+    open var delegate: SWTabBarItemDelegate? // Делегат кнопки
+    
+    open var showNotificationIndicator: Bool { // Признак отображения индикатора уведомлений
+        get {
+            return notificationIndicator.isHidden
+        }
+        set {
+            notificationIndicator.isHidden = newValue
+        }
+    }
+    
+    private let notificationIndicator = UIView() // Индикатор уведомления
     
     init() {
         

@@ -10,11 +10,18 @@ class TabBarViewController: UITabBarController {
         swTabBar.configureTabBarConstraints()
         
         
-        changeTabBar(true)
+        switchTabBar(true)
         
         self.view.layer.insertSublayer(CAGradientLayer.gradient(.yellowCorall, forView: self.view), at: 0)
         
-        self.swTabBar.setItems([SWTabBarItem(), SWTabBarItem(), SWTabBarItem(), SWTabBarItem()])
+        self.addViewControllers([SWViewController(), SWViewController(), SWViewController(), SWViewController()], animated: true)
+        
+        print("У детей______________*************_______________________")
+        (self.children as! [SWViewController]).forEach {print($0.swTabBarItem)}
+        print("У бара______________*************_______________________")
+        self.swTabBar.items.forEach {print($0)}
+        print("У детей______________*************_______________________")
+        (self.children as! [SWViewController]).forEach {print($0.swTabBarItem)}
         
     }
     

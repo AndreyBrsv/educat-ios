@@ -2,4 +2,5 @@
 import Foundation
 
 protocol SWTabBarDelegate {
+    
 }

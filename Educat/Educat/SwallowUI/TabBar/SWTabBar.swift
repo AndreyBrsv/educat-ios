@@ -2,33 +2,33 @@ import UIKit
 
 class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     
-    /// Радиус скругления углов бара
-    public var tabBarCornerRadius: Double = 20.0
-    /// Дополнительный отступ для стека кнопок
-    public var itemsStackViewAdditionalMargin: Double = 10.0
-    /// Полный отступ для стека кнопок
-    public var itemsStackViewMargin: Double {
+    open var tabBarCornerRadius: Double = 25.0 // Радиус скругления углов бара
+    
+    open var itemsStackViewAdditionalMargin: Double = 10.0 // Дополнительный отступ для стека кнопок
+    
+    open var itemsStackViewMargin: Double { // Полный оступ для стека кнопок
         get {
             return tabBarCornerRadius + itemsStackViewAdditionalMargin
         }
     }
     
-    /// Радиус скругления селектора
-    public var selectorCornerRadius: Double = 5.0
+    open var selectorCornerRadius: Double = 5.0 // Радиус скругления селектора
     
-    /// Множители для определения размера бара относительно safeArea
-    public var tabBarWidthScaleFactor: Double = 0.9
-    public var tabBarHeightScaleFactor: Double = 0.1
+    open var tabBarWidthScaleFactor: Double = 0.9 // Доля ширины бара от ширины safeArea
+    
+    open var tabBarHeightScaleFactor: Double = 0.1 // Доля высоты бара от высоты safeArea
 
-    /// Коллекция кнопок
-    private(set) var items: [SWTabBarItem] = []
+    var items: [SWTabBarItem] { // Кнопки бара
+        get {
+            return itemsStackView.arrangedSubviews as! [SWTabBarItem]
+        }
+    }
     
-    /// Делегат бара
-    public var delegate: SWTabBarDelegate?
+    open var delegate: SWTabBarDelegate? // Делегат бара
     
+    private var itemsStackView = UIStackView() // Горизонтальный StackView, хранящий кнопки бара
     
-    private var itemsStackView = UIStackView()
-    private var selector = UIView()
+    private var selector = UIView() // Селектор (верхняя ползающая полоска)
     
     
     /// Инициализатор
@@ -41,10 +41,7 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         configureHorizontalStackView()
         configureSelector()
         
-        // По умолчанию делаем его скрытым. Кастомный бар
-        // показывается тогда, когда при инициализации приложения
-        // определяем модель iPhone
-        self.isHidden = true
+        self.isHidden = true // Делаем скрытым пол умолчанию
         self.clipsToBounds = true
         
     }
@@ -66,8 +63,7 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         
         itemsStackView.axis = .horizontal
         itemsStackView.alignment = .center
-        itemsStackView.distribution = .equalSpacing
-        itemsStackView.spacing = CGFloat(10.0)
+        itemsStackView.distribution = .equalCentering
         
         configureTabBarStackViewConstraints()
     }
@@ -107,9 +103,8 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         self.selector.translatesAutoresizingMaskIntoConstraints = false
         
         self.selector.centerYAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        //self.selector.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        self.selector.heightAnchor.constraint(equalToConstant: 12).isActive = true
-        self.selector.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        self.selector.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.15).isActive = true
+        self.selector.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
     }
     
     
@@ -154,9 +149,9 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     open func setItems(_ items: [SWTabBarItem]?) -> Void {
         if let i = items {
             i.forEach {
-                self.items.append($0)
                 self.itemsStackView.addArrangedSubview($0)
                 $0.delegate = self
+                print($0)
             }
         }
     }
