@@ -12,16 +12,9 @@ class TabBarViewController: UITabBarController {
         
         switchTabBar(true)
         
-        self.view.layer.insertSublayer(CAGradientLayer.gradient(.yellowCorall, forView: self.view), at: 0)
+        self.addViewControllers([ViewController(), ViewController(), ViewController(), ViewController()], animated: true)
         
-        self.addViewControllers([SWViewController(), SWViewController(), SWViewController(), SWViewController()], animated: true)
-        
-        print("У детей______________*************_______________________")
-        (self.children as! [SWViewController]).forEach {print($0.swTabBarItem)}
-        print("У бара______________*************_______________________")
-        self.swTabBar.items.forEach {print($0)}
-        print("У детей______________*************_______________________")
-        (self.children as! [SWViewController]).forEach {print($0.swTabBarItem)}
+        swTabBar.selectorColor = .educatCorall
         
     }
     

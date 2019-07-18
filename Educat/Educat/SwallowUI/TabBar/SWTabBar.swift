@@ -24,6 +24,21 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         }
     }
     
+    open var selectorColor: UIColor? { // Цвет селектора
+        get {
+            return self.selector.backgroundColor
+        }
+        set {
+            self.selector.backgroundColor = newValue
+        }
+    }
+    
+    open var selectorLayer: CALayer { // Layer
+        get {
+            return self.selector.layer
+        }
+    }
+    
     open var delegate: SWTabBarDelegate? // Делегат бара
     
     private var itemsStackView = UIStackView() // Горизонтальный StackView, хранящий кнопки бара
@@ -31,17 +46,18 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     private var selector = UIView() // Селектор (верхняя ползающая полоска)
     
     
-    /// Инициализатор
+    
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.backgroundColor = .white
         self.layer.cornerRadius = CGFloat(tabBarCornerRadius)
         
-        configureHorizontalStackView()
+        configureItemsStackView()
         configureSelector()
         
-        self.isHidden = true // Делаем скрытым пол умолчанию
+        self.isHidden = true // Делаем скрытым по умолчанию
         self.clipsToBounds = true
         
     }
@@ -50,12 +66,7 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
-    
-    
-    /// Настройка горизональной стопки
-    private func configureHorizontalStackView() -> Void {
+    private func configureItemsStackView() -> Void { // Настройка itemsStackView
         
         self.addSubview(itemsStackView)
         
@@ -67,8 +78,8 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         
         configureTabBarStackViewConstraints()
     }
-    // Настройка ограничений горизонтальной стопки
-    private func configureTabBarStackViewConstraints() -> Void {
+    
+    private func configureTabBarStackViewConstraints() -> Void { // Настройка ограничений itemsStackView
         
         itemsStackView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -87,31 +98,30 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
             .constraint(equalTo: self.heightAnchor).isActive = true
     }
     
-    
-    /// Настройки селектора
-    private func configureSelector() -> Void {
+    private func configureSelector() -> Void { // Настройки селектора
         
         self.addSubview(selector)
         
         self.selector.layer.cornerRadius = CGFloat(selectorCornerRadius)
         self.selector.backgroundColor = .educatLightYellow
-        configureSelectorConstraints()
+        
     }
-    // Настройки ограничений слектора
-    private func configureSelectorConstraints() -> Void {
+    
+    private func configureSelectorConstraints() -> Void { // Настройки ограничений слектора
         
         self.selector.translatesAutoresizingMaskIntoConstraints = false
         
         self.selector.centerYAnchor.constraint(equalTo: self.topAnchor).isActive = true
         self.selector.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.15).isActive = true
         self.selector.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
+        
+        if self.items.count != 0 {
+            self.selector.centerXAnchor.constraint(equalTo: self.items[0].centerXAnchor).isActive = true
+        }
+        
     }
     
-    
-    
-    
-    /// Настройка ограничений бара
-    public func configureTabBarConstraints() -> Void {
+    public func configureTabBarConstraints() -> Void { // Настройки ограничений бара
         
         self.translatesAutoresizingMaskIntoConstraints = false
         
@@ -137,25 +147,20 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         animateSelectorFor(sender: item)
     }
     
-    /// Метод для анимации селектора
-    /// Перемещает селектор при нажатии на кнопку
-    func animateSelectorFor(sender: UIButton) -> Void {
+    func animateSelectorFor(sender: UIButton) -> Void { // Анимация селектора при нажатии на кнопку
         UIView.animate(withDuration: 0.2) {
             self.selector.center.x = CGFloat(self.itemsStackViewMargin) + sender.center.x
         }
     }
     
-    /// Добавляет items в массив
-    open func setItems(_ items: [SWTabBarItem]?) -> Void {
+    open func setItems(_ items: [SWTabBarItem]?) -> Void { // Добавляет кнопки в массив arrangedViews itemStackView
         if let i = items {
             i.forEach {
                 self.itemsStackView.addArrangedSubview($0)
                 $0.delegate = self
-                print($0)
             }
+            configureSelectorConstraints()
         }
     }
-    
-    /// Реализация метода делегата
     
 }
