@@ -6,19 +6,25 @@ extension UITabBarController: SWTabBarDelegate {
     
     private struct SWTabBarStruct {
         static var swTabBar = SWTabBar(frame: CGRect.zero)
+        
     }
     
     var swTabBar: SWTabBar {
         get {
+            if SWTabBarStruct.swTabBar.tabBarController == nil {
+                SWTabBarStruct.swTabBar.tabBarController = self
+                self.view.addSubview(SWTabBarStruct.swTabBar)
+                SWTabBarStruct.swTabBar.configureTabBarConstraints()
+            }
             return SWTabBarStruct.swTabBar
         }
     }
     
-    /// Позволяет скрыть встроенный tabBar и показывать SWTabBar
-    public func switchTabBar(_ flag: Bool) {
+    public func switchTabBar(_ flag: Bool) { // Позволяет скрыть встроенный tabBar и показывать SWTabBar
         self.tabBar.isHidden = flag
         self.swTabBar.isHidden = !flag
     }
+    
     /// Позволяет добавлять к TabBarController другие контроллеры, добавляя при этом кнопки в SWTabBar
     /// На данный момент требуется в качестве массива передавать [SWViewController]
     public func addViewControllers(_ viewControllers: [UIViewController]?, animated: Bool) {

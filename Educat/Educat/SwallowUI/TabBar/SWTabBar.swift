@@ -105,7 +105,7 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         self.addSubview(selector)
         
         self.selector.layer.cornerRadius = CGFloat(selectorCornerRadius)
-        self.selector.backgroundColor = .educatLightYellow
+        self.selector.backgroundColor = .educatRed
         
     }
     
@@ -145,7 +145,7 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         self.centerXAnchor.constraint(equalTo: tabBarControllerView.centerXAnchor).isActive = true
     }
     
-    func wasTapped(item: UIButton) -> Void { // Метод, вызываемый, когда кнопка была нажата
+    func wasTapped(item: UIButton) -> Void { // Метод, вызываем
         self.items.forEach {
             if $0.isEqual(item) {
                 self.tabBarController.selectedIndex = self.items.firstIndex(of: item as! SWTabBarItem)!

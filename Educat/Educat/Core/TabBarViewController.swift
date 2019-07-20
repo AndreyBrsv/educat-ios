@@ -6,11 +6,6 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 10-12 нужно выносить в отдельный метод
-        self.view.addSubview(swTabBar)
-        swTabBar.configureTabBarConstraints()
-        swTabBar.tabBarController = self
-        
         switchTabBar(true)
         let vc1 = ViewController()
         vc1.view.backgroundColor = .educatLightGray
@@ -25,6 +20,9 @@ class TabBarViewController: UITabBarController {
         
         swTabBar.selectorColor = .educatCorall
         
+        let s = SubscribeView(publications: "10", subscribers: "20", subscribed: false)
+        self.view.addSubview(s)
+        s.configureSelf()
     }
     
 

@@ -39,7 +39,7 @@ class SubscribeView: UIView {
         self.subscribers.text = subscribers
         self.subscribed = subscribed
         
-        configureSubscribeButton()
+       // configureSubscribeButton()
     
     }
     
@@ -64,11 +64,67 @@ class SubscribeView: UIView {
     
     
     /// Конфигурационные методы
-    private func configureSelf() {
+    func configureSelf() {
         self.clipsToBounds = true
-        self.layer.cornerRadius = CGFloat(viewCornerRadius)
+        //self.layer.cornerRadius = CGFloat(viewCornerRadius)
         
+        self.backgroundColor = .educatLightGray
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.heightAnchor.constraint(equalToConstant: 73).isActive = true;
+        self.widthAnchor.constraint(equalTo: superview!.widthAnchor, multiplier: 0.9).isActive = true
+        self.centerXAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        self.centerYAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.centerYAnchor).isActive = true
+        
+        
+        
+        publicationsTitle.text = "Публикации"
+        self.addSubview(publicationsTitle)
+        publicationsTitle.translatesAutoresizingMaskIntoConstraints = false
+        publicationsTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+        //publicationsTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -10).isActive = true
+        
+//        self.addSubview(publications)
+//        publications.translatesAutoresizingMaskIntoConstraints = false
+//        publications.centerXAnchor.constraint(equalTo: publicationsTitle.centerXAnchor).isActive = true
+//        publications.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 10).isActive = true
+//
+        self.addSubview(publicationsSubscribersDelimeter)
+        publicationsSubscribersDelimeter.backgroundColor = .educatCorall
+        publicationsSubscribersDelimeter.translatesAutoresizingMaskIntoConstraints = false
+        publicationsSubscribersDelimeter.leadingAnchor.constraint(equalTo: publicationsTitle.trailingAnchor, constant: 10).isActive = true
+//        publicationsSubscribersDelimeter.centerYAnchor.constraint(equalTo: superview!.centerYAnchor).isActive = true
+        publicationsSubscribersDelimeter.heightAnchor.constraint(equalToConstant: CGFloat(50)).isActive = true
+        publicationsSubscribersDelimeter.widthAnchor.constraint(equalToConstant: 3).isActive = true
+//       // publicationsSubscribersDelimeter.layer.cornerRadius = publicationsSubscribersDelimeter.frame.width / 2.0
+//
+//
+//
+        subscribersTitle.text = "Подписчики"
+        self.addSubview(subscribersTitle)
+        subscribersTitle.translatesAutoresizingMaskIntoConstraints = false
+        subscribersTitle.leadingAnchor.constraint(equalTo: publicationsSubscribersDelimeter.trailingAnchor, constant: 10).isActive = true
+//        subscribersTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -10).isActive = true
+//
+//        self.addSubview(subscribers)
+//        subscribers.translatesAutoresizingMaskIntoConstraints = false
+//        subscribers.centerXAnchor.constraint(equalTo: subscribersTitle.centerXAnchor).isActive = true
+//        subscribers.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 10).isActive = true
+//
+        subscribeButton.setTitle("Подписаться", for: .normal)
+        subscribeButton.backgroundColor = .educatLightYellow
+        self.addSubview(subscribeButton)
+        subscribeButton.translatesAutoresizingMaskIntoConstraints = false
+        subscribeButton.leadingAnchor.constraint(equalTo: subscribersTitle.trailingAnchor, constant: 10).isActive = true
+        subscribeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+//        subscribeButton.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+//        subscribeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+     
     }
+    
+    
+    
     // Метод, конфигурирующий кнопку
     private func configureSubscribeButton() -> Void {
         subscribeButton.addTarget(
@@ -76,16 +132,6 @@ class SubscribeView: UIView {
             action: #selector(tapOnSubscribeButton(sender:)),
             for: .touchUpOutside
         )
-        self.addSubview(subscribeButton)
-        configureButtonConstraints()
-    }
-    private func configureButtonConstraints() -> Void {
-        
-        subscribeButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        subscribeButton.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        subscribeButton.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        subscribeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
     
