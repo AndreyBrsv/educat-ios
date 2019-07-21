@@ -28,6 +28,10 @@
 		B36FB95C22DFC73A00E996FF /* SWTabBarItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */; };
 		B36FB95E22E08DB000E996FF /* SWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95D22E08DB000E996FF /* SWViewController.swift */; };
 		B36FB96122E0A12900E996FF /* CirclePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB96022E0A12900E996FF /* CirclePhoto.swift */; };
+		B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */; };
+		B36FB98522E3C86100E996FF /* ProfileViewControllerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */; };
+		B36FB98822E3DD8800E996FF /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */; };
+		B36FB98922E3DD8800E996FF /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36FB98722E3DD8800E996FF /* ProfileTableViewCell.xib */; };
 		B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3522DD09580065558C /* SignUpViewController.swift */; };
 		B37D0C3822DD26350065558C /* gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* gradients.swift */; };
 		B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */; };
@@ -35,7 +39,7 @@
 		B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */; };
 		B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505122DC81A8008D560A /* BookmarksViewController.swift */; };
 		B392505622DC81DB008D560A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505522DC81DB008D560A /* FeedViewController.swift */; };
-		B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* PrivateProfileViewController.swift */; };
+		B392505922DC822C008D560A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* ProfileViewController.swift */; };
 		B392505B22DC8256008D560A /* ForeignProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505A22DC8256008D560A /* ForeignProfileViewController.swift */; };
 		B392505D22DC82C5008D560A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505C22DC82C5008D560A /* TabBarViewController.swift */; };
 		B392506022DC87F9008D560A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505F22DC87F9008D560A /* LoginViewController.swift */; };
@@ -92,6 +96,10 @@
 		B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarItemDelegate.swift; sourceTree = "<group>"; };
 		B36FB95D22E08DB000E996FF /* SWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWViewController.swift; sourceTree = "<group>"; };
 		B36FB96022E0A12900E996FF /* CirclePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePhoto.swift; sourceTree = "<group>"; };
+		B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerImpl.swift; sourceTree = "<group>"; };
+		B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		B36FB98722E3DD8800E996FF /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		B37D0C3522DD09580065558C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B37D0C3722DD26350065558C /* gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradients.swift; sourceTree = "<group>"; };
 		B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateProfile.storyboard; sourceTree = "<group>"; };
@@ -99,7 +107,7 @@
 		B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberViewDelegate.swift; sourceTree = "<group>"; };
 		B392505122DC81A8008D560A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		B392505522DC81DB008D560A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		B392505822DC822C008D560A /* PrivateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateProfileViewController.swift; sourceTree = "<group>"; };
+		B392505822DC822C008D560A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B392505A22DC8256008D560A /* ForeignProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignProfileViewController.swift; sourceTree = "<group>"; };
 		B392505C22DC82C5008D560A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B392505F22DC87F9008D560A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -297,9 +305,13 @@
 			isa = PBXGroup;
 			children = (
 				B37D0C3F22DE01EA0065558C /* SubscriberView */,
-				B392505822DC822C008D560A /* PrivateProfileViewController.swift */,
+				B392505822DC822C008D560A /* ProfileViewController.swift */,
 				B392505A22DC8256008D560A /* ForeignProfileViewController.swift */,
 				B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */,
+				B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */,
+				B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */,
+				B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */,
+				B36FB98722E3DD8800E996FF /* ProfileTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -430,6 +442,7 @@
 				B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */,
 				B36FB95622DF889900E996FF /* Description.rtf in Resources */,
 				B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */,
+				B36FB98922E3DD8800E996FF /* ProfileTableViewCell.xib in Resources */,
 				B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */,
 				B3455C9622D8BD9D00478FFF /* Main.storyboard in Resources */,
 				B392506222DC8851008D560A /* LoginStoryboard.storyboard in Resources */,
@@ -536,9 +549,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B392505922DC822C008D560A /* PrivateProfileViewController.swift in Sources */,
+				B392505922DC822C008D560A /* ProfileViewController.swift in Sources */,
 				B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */,
 				B36FB95322DF876600E996FF /* UIViewControllerExtension.swift in Sources */,
+				B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */,
 				B36FB94E22DF790F00E996FF /* SWTabBarItem.swift in Sources */,
 				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
@@ -555,8 +569,10 @@
 				B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */,
 				B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */,
 				B3455CC422D8C0B500478FFF /* SWTabBar.swift in Sources */,
+				B36FB98522E3C86100E996FF /* ProfileViewControllerImpl.swift in Sources */,
 				B392505D22DC82C5008D560A /* TabBarViewController.swift in Sources */,
 				B392505622DC81DB008D560A /* FeedViewController.swift in Sources */,
+				B36FB98822E3DD8800E996FF /* ProfileTableViewCell.swift in Sources */,
 				B36FB95122DF871800E996FF /* UITabBarControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -61,7 +61,7 @@ extension UIColor {
     // Фирменный синий
     open class var educatDarkBlue: UIColor {
         get {
-            return UIColor(hex: "#48559E")!
+            return UIColor(hex: "#484D9D")!
         }
     }
     

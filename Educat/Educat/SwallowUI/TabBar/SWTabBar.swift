@@ -4,7 +4,7 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     
     open var tabBarCornerRadius: Double = 20.0 // Радиус скругления углов бара
     
-    open var itemsStackViewAdditionalMargin: Double = 10.0 // Дополнительный отступ для стека кнопок
+    open var itemsStackViewAdditionalMargin: Double = 20.0 // Дополнительный отступ для стека кнопок
     
     open var itemsStackViewMargin: Double { // Полный оступ для стека кнопок
         get {
@@ -85,19 +85,14 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         
         itemsStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        itemsStackView.leadingAnchor.constraint(
-            equalTo: self.leadingAnchor,
-            constant: CGFloat(itemsStackViewMargin)).isActive = true
+        let constraints = [
+            self.itemsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CGFloat(itemsStackViewMargin)),
+            self.itemsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: CGFloat(-itemsStackViewMargin)),
+            self.itemsStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            self.itemsStackView.heightAnchor.constraint(equalTo: self.heightAnchor),
+        ]
         
-        itemsStackView.trailingAnchor.constraint(
-            equalTo: self.trailingAnchor,
-            constant: CGFloat(-itemsStackViewMargin)).isActive = true
-        
-        itemsStackView.bottomAnchor.constraint(
-            equalTo: self.bottomAnchor).isActive = true
-        
-        itemsStackView.heightAnchor
-            .constraint(equalTo: self.heightAnchor).isActive = true
+        NSLayoutConstraint.activate(constraints)
     }
     
     private func configureSelector() -> Void { // Настройки селектора
@@ -105,7 +100,7 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         self.addSubview(selector)
         
         self.selector.layer.cornerRadius = CGFloat(selectorCornerRadius)
-        self.selector.backgroundColor = .educatRed
+        self.selector.backgroundColor = .educatLightYellow
         
     }
     
@@ -113,13 +108,17 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         
         self.selector.translatesAutoresizingMaskIntoConstraints = false
         
-        self.selector.centerYAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.selector.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.15).isActive = true
-        self.selector.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5).isActive = true
-        
+        var constraints = [
+            self.selector.centerYAnchor.constraint(equalTo: self.topAnchor),
+            self.selector.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.15),
+            self.selector.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.5),
+        ]
+            
         if self.items.count != 0 {
-            self.selector.centerXAnchor.constraint(equalTo: self.items[0].centerXAnchor).isActive = true
+            constraints.append(self.selector.centerXAnchor.constraint(equalTo: self.items[0].centerXAnchor))
         }
+        
+        NSLayoutConstraint.activate(constraints)
         
     }
     
@@ -129,20 +128,14 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         
         let tabBarControllerView = self.superview!
         
-        self.bottomAnchor
-            .constraint(
-                equalTo: tabBarControllerView.safeAreaLayoutGuide.bottomAnchor
-            ).isActive = true
+        let constraints = [
+            self.bottomAnchor.constraint(equalTo: tabBarControllerView.safeAreaLayoutGuide.bottomAnchor),
+            self.heightAnchor.constraint(equalTo: tabBarControllerView.safeAreaLayoutGuide.heightAnchor, multiplier: CGFloat(tabBarHeightScaleFactor)),
+            self.widthAnchor.constraint(equalTo: tabBarControllerView.safeAreaLayoutGuide.widthAnchor, multiplier: CGFloat(tabBarWidthScaleFactor)),
+            self.centerXAnchor.constraint(equalTo: tabBarControllerView.centerXAnchor),
+            ]
         
-        self.heightAnchor.constraint(
-            equalTo: tabBarControllerView.safeAreaLayoutGuide.heightAnchor,
-            multiplier: CGFloat(tabBarHeightScaleFactor)).isActive = true
-        
-        self.widthAnchor.constraint(
-            equalTo: tabBarControllerView.safeAreaLayoutGuide.widthAnchor,
-            multiplier: CGFloat(tabBarWidthScaleFactor)).isActive = true
-        
-        self.centerXAnchor.constraint(equalTo: tabBarControllerView.centerXAnchor).isActive = true
+        NSLayoutConstraint.activate(constraints)
     }
     
     func wasTapped(item: UIButton) -> Void { // Метод, вызываем
