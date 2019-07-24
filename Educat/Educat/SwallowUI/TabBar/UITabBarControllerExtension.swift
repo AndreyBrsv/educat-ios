@@ -2,7 +2,7 @@
 import UIKit
 
 /// Расширение, добавляющее swTabBar к системному UITabBarController
-extension UITabBarController: SWTabBarDelegate {
+extension UITabBarController {
     
     private struct SWTabBarStruct {
         static var swTabBar = SWTabBar(frame: CGRect.zero)

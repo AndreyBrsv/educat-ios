@@ -1,7 +1,7 @@
 
 import UIKit
 
-class SWViewController: UIViewController {
+public class SWViewController: UIViewController {
     
     open var swTabBarItem: SWTabBarItem = SWTabBarItem()
     

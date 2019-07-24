@@ -149,16 +149,28 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     }
     
     func animateSelectorFor(sender: UIButton) -> Void { // Анимация селектора при нажатии на кнопку
-        UIView.animate(withDuration: 0.2) {
-            self.selector.center.x = CGFloat(self.itemsStackViewMargin) + sender.center.x
-        }
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0,
+            usingSpringWithDamping: 0.4,
+            initialSpringVelocity: 0,
+            options: .curveEaseIn,
+            animations: {self.selector.center.x = CGFloat(self.itemsStackViewMargin) + sender.center.x} ,
+            completion: nil
+        )
     }
     
     open func setItems(_ items: [SWTabBarItem]?) -> Void { // Добавляет кнопки в массив arrangedViews itemStackView
         if let i = items {
+            var index = 0
             i.forEach {
                 self.itemsStackView.addArrangedSubview($0)
                 $0.delegate = self
+                $0.setImage(
+                    delegate?.getIconForItem(withIndex: index),
+                    for: .normal
+                )
+                index += 1
             }
             configureSelectorConstraints()
         }

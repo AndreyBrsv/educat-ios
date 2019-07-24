@@ -1,11 +1,11 @@
 
 import UIKit
 
-class SWTabBarItem: UIButton {
+public class SWTabBarItem: UIButton {
     
-    open var delegate: SWTabBarItemDelegate? // Делегат кнопки
+    open var delegate: SWTabBarItemDelegate? 
     
-    open var showNotificationIndicator: Bool { // Признак отображения индикатора уведомлений
+    open var showNotificationIndicator: Bool {
         get {
             return notificationIndicator.isHidden
         }
@@ -14,7 +14,7 @@ class SWTabBarItem: UIButton {
         }
     }
     
-    private let notificationIndicator = UIView() // Индикатор уведомления
+    private let notificationIndicator = UIView()
     
     init() {
         
@@ -23,9 +23,6 @@ class SWTabBarItem: UIButton {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalToConstant: 35).isActive = true
         self.widthAnchor.constraint(equalToConstant: 35).isActive = true
-        
-        // Default color when button created
-        self.backgroundColor = .educatLightGray
         
         self.addTarget(self, action: #selector(wasTapped(item:)), for: .touchUpInside)
     }

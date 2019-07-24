@@ -1,7 +1,7 @@
 
 import UIKit
 
-protocol SWTabBarItemDelegate {
+public protocol SWTabBarItemDelegate {
     
     func wasTapped(item: UIButton) -> Void
     

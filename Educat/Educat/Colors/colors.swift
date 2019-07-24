@@ -85,4 +85,11 @@ extension UIColor {
             return UIColor(hex: "#FF977F")!
         }
     }
+    
+    // Цвет обычного текста
+    open class var educatPlainTextColor: UIColor {
+        get {
+            return UIColor(hex: "#424D5D")!
+        }
+    }
 }

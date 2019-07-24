@@ -27,23 +27,56 @@
 		B36FB95A22DFAE8400E996FF /* SWTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */; };
 		B36FB95C22DFC73A00E996FF /* SWTabBarItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */; };
 		B36FB95E22E08DB000E996FF /* SWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95D22E08DB000E996FF /* SWViewController.swift */; };
-		B36FB96122E0A12900E996FF /* CirclePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB96022E0A12900E996FF /* CirclePhoto.swift */; };
+		B36FB96122E0A12900E996FF /* CirclePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB96022E0A12900E996FF /* CirclePhotoView.swift */; };
 		B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */; };
 		B36FB98522E3C86100E996FF /* ProfileViewControllerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */; };
 		B36FB98822E3DD8800E996FF /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */; };
-		B36FB98922E3DD8800E996FF /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36FB98722E3DD8800E996FF /* ProfileTableViewCell.xib */; };
-		B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3522DD09580065558C /* SignUpViewController.swift */; };
+		B36FB98E22E60A7E00E996FF /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98D22E60A7E00E996FF /* CardViewController.swift */; };
 		B37D0C3822DD26350065558C /* gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* gradients.swift */; };
-		B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */; };
 		B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3D22DE005B0065558C /* SubscribeView.swift */; };
 		B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */; };
+		B37DAD0022E8866F001DBCD0 /* appActions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B37DACFF22E8866F001DBCD0 /* appActions.plist */; };
+		B37DAD0922E88C20001DBCD0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD0822E88C20001DBCD0 /* ArticleViewController.swift */; };
+		B37DAD0B22E88C76001DBCD0 /* ArticleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD0A22E88C76001DBCD0 /* ArticleRouter.swift */; };
+		B37DAD0D22E88CA5001DBCD0 /* ArticlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD0C22E88CA5001DBCD0 /* ArticlePresenter.swift */; };
+		B37DAD0F22E88D17001DBCD0 /* ArticleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD0E22E88D17001DBCD0 /* ArticleConfigurator.swift */; };
+		B37DAD1122E88D92001DBCD0 /* ArticleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD1022E88D92001DBCD0 /* ArticleInteractor.swift */; };
+		B37DAD1822E88EAE001DBCD0 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD1722E88EAE001DBCD0 /* FeedRouter.swift */; };
+		B37DAD1A22E88ECC001DBCD0 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD1922E88ECC001DBCD0 /* FeedPresenter.swift */; };
+		B37DAD1C22E88EE8001DBCD0 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD1B22E88EE8001DBCD0 /* FeedInteractor.swift */; };
+		B37DAD1E22E88F0C001DBCD0 /* FeedConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD1D22E88F0C001DBCD0 /* FeedConfigurator.swift */; };
+		B37DAD2522E890E9001DBCD0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD2422E890E9001DBCD0 /* ProfileViewController.swift */; };
+		B37DAD2722E89153001DBCD0 /* ProfileConfiguratorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD2622E89153001DBCD0 /* ProfileConfiguratorImpl.swift */; };
+		B37DAD2922E89174001DBCD0 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD2822E89174001DBCD0 /* ProfileConfigurator.swift */; };
+		B37DAD2B22E891F3001DBCD0 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD2A22E891F3001DBCD0 /* ProfilePresenter.swift */; };
+		B37DAD2D22E89257001DBCD0 /* ProfilePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD2C22E89257001DBCD0 /* ProfilePresenterImpl.swift */; };
+		B37DAD2F22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD2E22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift */; };
+		B37DAD3122E89369001DBCD0 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD3022E89368001DBCD0 /* ProfileInteractor.swift */; };
+		B37DAD3322E89385001DBCD0 /* ProfileInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD3222E89385001DBCD0 /* ProfileInteractorImpl.swift */; };
+		B37DAD3522E893CD001DBCD0 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD3422E893CD001DBCD0 /* ProfileRouter.swift */; };
+		B37DAD3722E893F1001DBCD0 /* ProfileRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD3622E893F1001DBCD0 /* ProfileRouterImpl.swift */; };
+		B37DAD3F22E8B1D3001DBCD0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD3E22E8B1D3001DBCD0 /* SignUpViewController.swift */; };
+		B37DAD4122E8B229001DBCD0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD4022E8B229001DBCD0 /* SignInViewController.swift */; };
+		B37DAD4322E8B421001DBCD0 /* CourseMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD4222E8B421001DBCD0 /* CourseMarketViewController.swift */; };
+		B37DAD4522E8B494001DBCD0 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD4422E8B494001DBCD0 /* CourseViewController.swift */; };
+		B37DAD4822E8B4EF001DBCD0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD4722E8B4EF001DBCD0 /* UserViewController.swift */; };
+		B37DAD4B22E8B566001DBCD0 /* ShortDetailedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD4A22E8B566001DBCD0 /* ShortDetailedUserView.swift */; };
+		B37DAD4E22E8B702001DBCD0 /* ShortDetailedArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD4D22E8B702001DBCD0 /* ShortDetailedArticle.swift */; };
+		B37DAD5022E8B737001DBCD0 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD4F22E8B737001DBCD0 /* Article.swift */; };
+		B37DAD5422E8DE03001DBCD0 /* ArticleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD5322E8DE03001DBCD0 /* ArticleMetadata.swift */; };
+		B37DAD5622E8E011001DBCD0 /* ArticleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD5522E8E011001DBCD0 /* ArticleComponent.swift */; };
+		B37DAD5822E8E077001DBCD0 /* ArticleComponentRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD5722E8E077001DBCD0 /* ArticleComponentRole.swift */; };
+		B37DAD5B22E8E21C001DBCD0 /* ComponentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD5A22E8E21C001DBCD0 /* ComponentBuilder.swift */; };
+		B37DAD5D22E8E256001DBCD0 /* ArticleComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD5C22E8E256001DBCD0 /* ArticleComponentView.swift */; };
+		B37DAD6122E9017C001DBCD0 /* ShortDetailedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6022E9017C001DBCD0 /* ShortDetailedUser.swift */; };
 		B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505122DC81A8008D560A /* BookmarksViewController.swift */; };
 		B392505622DC81DB008D560A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505522DC81DB008D560A /* FeedViewController.swift */; };
-		B392505922DC822C008D560A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* ProfileViewController.swift */; };
-		B392505B22DC8256008D560A /* ForeignProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505A22DC8256008D560A /* ForeignProfileViewController.swift */; };
+		B392505922DC822C008D560A /* sProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* sProfileViewController.swift */; };
 		B392505D22DC82C5008D560A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505C22DC82C5008D560A /* TabBarViewController.swift */; };
 		B392506022DC87F9008D560A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505F22DC87F9008D560A /* LoginViewController.swift */; };
 		B392506222DC8851008D560A /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B392506122DC8851008D560A /* LoginStoryboard.storyboard */; };
+		B3DF99F722E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF99F622E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift */; };
+		B3DF99F922E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF99F822E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,23 +128,57 @@
 		B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarDelegate.swift; sourceTree = "<group>"; };
 		B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarItemDelegate.swift; sourceTree = "<group>"; };
 		B36FB95D22E08DB000E996FF /* SWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWViewController.swift; sourceTree = "<group>"; };
-		B36FB96022E0A12900E996FF /* CirclePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePhoto.swift; sourceTree = "<group>"; };
+		B36FB96022E0A12900E996FF /* CirclePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePhotoView.swift; sourceTree = "<group>"; };
 		B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerImpl.swift; sourceTree = "<group>"; };
 		B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
-		B36FB98722E3DD8800E996FF /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
-		B37D0C3522DD09580065558C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B36FB98D22E60A7E00E996FF /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		B37D0C3722DD26350065558C /* gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradients.swift; sourceTree = "<group>"; };
-		B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateProfile.storyboard; sourceTree = "<group>"; };
 		B37D0C3D22DE005B0065558C /* SubscribeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeView.swift; sourceTree = "<group>"; };
 		B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberViewDelegate.swift; sourceTree = "<group>"; };
+		B37DACFF22E8866F001DBCD0 /* appActions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = appActions.plist; sourceTree = "<group>"; };
+		B37DAD0822E88C20001DBCD0 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		B37DAD0A22E88C76001DBCD0 /* ArticleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRouter.swift; sourceTree = "<group>"; };
+		B37DAD0C22E88CA5001DBCD0 /* ArticlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePresenter.swift; sourceTree = "<group>"; };
+		B37DAD0E22E88D17001DBCD0 /* ArticleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleConfigurator.swift; sourceTree = "<group>"; };
+		B37DAD1022E88D92001DBCD0 /* ArticleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInteractor.swift; sourceTree = "<group>"; };
+		B37DAD1422E88E35001DBCD0 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		B37DAD1722E88EAE001DBCD0 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		B37DAD1922E88ECC001DBCD0 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		B37DAD1B22E88EE8001DBCD0 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		B37DAD1D22E88F0C001DBCD0 /* FeedConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedConfigurator.swift; sourceTree = "<group>"; };
+		B37DAD2422E890E9001DBCD0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B37DAD2622E89153001DBCD0 /* ProfileConfiguratorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfiguratorImpl.swift; sourceTree = "<group>"; };
+		B37DAD2822E89174001DBCD0 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
+		B37DAD2A22E891F3001DBCD0 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		B37DAD2C22E89257001DBCD0 /* ProfilePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterImpl.swift; sourceTree = "<group>"; };
+		B37DAD2E22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerProtocol.swift; sourceTree = "<group>"; };
+		B37DAD3022E89368001DBCD0 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		B37DAD3222E89385001DBCD0 /* ProfileInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorImpl.swift; sourceTree = "<group>"; };
+		B37DAD3422E893CD001DBCD0 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		B37DAD3622E893F1001DBCD0 /* ProfileRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouterImpl.swift; sourceTree = "<group>"; };
+		B37DAD3E22E8B1D3001DBCD0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B37DAD4022E8B229001DBCD0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B37DAD4222E8B421001DBCD0 /* CourseMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseMarketViewController.swift; sourceTree = "<group>"; };
+		B37DAD4422E8B494001DBCD0 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		B37DAD4722E8B4EF001DBCD0 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		B37DAD4A22E8B566001DBCD0 /* ShortDetailedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortDetailedUserView.swift; sourceTree = "<group>"; };
+		B37DAD4D22E8B702001DBCD0 /* ShortDetailedArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortDetailedArticle.swift; sourceTree = "<group>"; };
+		B37DAD4F22E8B737001DBCD0 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		B37DAD5322E8DE03001DBCD0 /* ArticleMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleMetadata.swift; sourceTree = "<group>"; };
+		B37DAD5522E8E011001DBCD0 /* ArticleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleComponent.swift; sourceTree = "<group>"; };
+		B37DAD5722E8E077001DBCD0 /* ArticleComponentRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleComponentRole.swift; sourceTree = "<group>"; };
+		B37DAD5A22E8E21C001DBCD0 /* ComponentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBuilder.swift; sourceTree = "<group>"; };
+		B37DAD5C22E8E256001DBCD0 /* ArticleComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleComponentView.swift; sourceTree = "<group>"; };
+		B37DAD6022E9017C001DBCD0 /* ShortDetailedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortDetailedUser.swift; sourceTree = "<group>"; };
 		B392505122DC81A8008D560A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		B392505522DC81DB008D560A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		B392505822DC822C008D560A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B392505A22DC8256008D560A /* ForeignProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignProfileViewController.swift; sourceTree = "<group>"; };
+		B392505822DC822C008D560A /* sProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sProfileViewController.swift; sourceTree = "<group>"; };
 		B392505C22DC82C5008D560A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B392505F22DC87F9008D560A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B392506122DC8851008D560A /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		B3DF99F622E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
+		B3DF99F822E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		CE7710BE3515F9BB690871A0 /* Pods-EducatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducatTests/Pods-EducatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,13 +258,16 @@
 		B3455C8F22D8BD9D00478FFF /* Educat */ = {
 			isa = PBXGroup;
 			children = (
-				B36FB95F22E0A10A00E996FF /* CirclePhoto */,
+				B37DACFF22E8866F001DBCD0 /* appActions.plist */,
+				B37DAD0522E88BC8001DBCD0 /* Services */,
+				B37DAD0122E88B93001DBCD0 /* Modules */,
+				B37DACFB22E870F8001DBCD0 /* ViewComponents */,
+				B36FB98C22E60A5600E996FF /* CardViewController */,
 				B36FB94F22DF86F500E996FF /* SwallowUI */,
 				B36FB94622DE600600E996FF /* Colors */,
 				B392505E22DC87D0008D560A /* Auth */,
 				B392505722DC81F8008D560A /* Profile */,
 				B392505322DC81BE008D560A /* Feed */,
-				B392505022DC8188008D560A /* Bookmarks */,
 				B3455CC122D8C07800478FFF /* Core */,
 				B3455C9022D8BD9D00478FFF /* AppDelegate.swift */,
 				B3455C9222D8BD9D00478FFF /* ViewController.swift */,
@@ -268,12 +338,14 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		B36FB95F22E0A10A00E996FF /* CirclePhoto */ = {
+		B36FB98C22E60A5600E996FF /* CardViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B36FB96022E0A12900E996FF /* CirclePhoto.swift */,
+				B36FB98D22E60A7E00E996FF /* CardViewController.swift */,
+				B3DF99F622E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift */,
+				B3DF99F822E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift */,
 			);
-			path = CirclePhoto;
+			path = CardViewController;
 			sourceTree = "<group>";
 		};
 		B37D0C3F22DE01EA0065558C /* SubscriberView */ = {
@@ -285,18 +357,271 @@
 			path = SubscriberView;
 			sourceTree = "<group>";
 		};
-		B392505022DC8188008D560A /* Bookmarks */ = {
+		B37DACFB22E870F8001DBCD0 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B36FB96022E0A12900E996FF /* CirclePhotoView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		B37DAD0122E88B93001DBCD0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD3822E8987E001DBCD0 /* Cources */,
+				B37DAD1622E88E94001DBCD0 /* SignUp */,
+				B37DAD1522E88E75001DBCD0 /* SignIn */,
+				B37DAD0722E88BFA001DBCD0 /* Users */,
+				B37DAD0622E88BE7001DBCD0 /* Articles */,
+				B37DAD0422E88BB5001DBCD0 /* Bookmarks */,
+				B37DAD0322E88BAB001DBCD0 /* Profile */,
+				B37DAD0222E88B9E001DBCD0 /* Feed */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B37DAD0222E88B9E001DBCD0 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B392505522DC81DB008D560A /* FeedViewController.swift */,
+				B37DAD1722E88EAE001DBCD0 /* FeedRouter.swift */,
+				B37DAD1922E88ECC001DBCD0 /* FeedPresenter.swift */,
+				B37DAD1B22E88EE8001DBCD0 /* FeedInteractor.swift */,
+				B37DAD1D22E88F0C001DBCD0 /* FeedConfigurator.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		B37DAD0322E88BAB001DBCD0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD2322E88F6F001DBCD0 /* Router */,
+				B37DAD2222E88F60001DBCD0 /* Configurator */,
+				B37DAD2122E88F57001DBCD0 /* Interactor */,
+				B37DAD2022E88F4E001DBCD0 /* Presenter */,
+				B37DAD1F22E88F46001DBCD0 /* View */,
+				B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */,
+				B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */,
+				B392505822DC822C008D560A /* sProfileViewController.swift */,
+				B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */,
+				B37DAD1422E88E35001DBCD0 /* ProfileTableViewCell.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B37DAD0422E88BB5001DBCD0 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD5E22E900F3001DBCD0 /* View */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		B37DAD0522E88BC8001DBCD0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B37DAD0622E88BE7001DBCD0 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD5222E8DD52001DBCD0 /* Interactor */,
+				B37DAD5122E8DD39001DBCD0 /* View */,
+				B37DAD4C22E8B64C001DBCD0 /* Entity */,
+				B37DAD3D22E8A84A001DBCD0 /* Configurator */,
+				B37DAD3C22E8A839001DBCD0 /* Presenter */,
+				B37DAD3B22E8A829001DBCD0 /* Router */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		B37DAD0722E88BFA001DBCD0 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD5F22E90166001DBCD0 /* Entity */,
+				B37DAD4622E8B4E0001DBCD0 /* View */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		B37DAD1522E88E75001DBCD0 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD4022E8B229001DBCD0 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		B37DAD1622E88E94001DBCD0 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD3E22E8B1D3001DBCD0 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		B37DAD1F22E88F46001DBCD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD2422E890E9001DBCD0 /* ProfileViewController.swift */,
+				B37DAD2E22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B37DAD2022E88F4E001DBCD0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD2A22E891F3001DBCD0 /* ProfilePresenter.swift */,
+				B37DAD2C22E89257001DBCD0 /* ProfilePresenterImpl.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B37DAD2122E88F57001DBCD0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD3022E89368001DBCD0 /* ProfileInteractor.swift */,
+				B37DAD3222E89385001DBCD0 /* ProfileInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B37DAD2222E88F60001DBCD0 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD2622E89153001DBCD0 /* ProfileConfiguratorImpl.swift */,
+				B37DAD2822E89174001DBCD0 /* ProfileConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		B37DAD2322E88F6F001DBCD0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD3422E893CD001DBCD0 /* ProfileRouter.swift */,
+				B37DAD3622E893F1001DBCD0 /* ProfileRouterImpl.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B37DAD3822E8987E001DBCD0 /* Cources */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD3A22E89893001DBCD0 /* CourseMarket */,
+				B37DAD3922E89888001DBCD0 /* Course */,
+			);
+			path = Cources;
+			sourceTree = "<group>";
+		};
+		B37DAD3922E89888001DBCD0 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD4422E8B494001DBCD0 /* CourseViewController.swift */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		B37DAD3A22E89893001DBCD0 /* CourseMarket */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD4222E8B421001DBCD0 /* CourseMarketViewController.swift */,
+			);
+			path = CourseMarket;
+			sourceTree = "<group>";
+		};
+		B37DAD3B22E8A829001DBCD0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD0A22E88C76001DBCD0 /* ArticleRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B37DAD3C22E8A839001DBCD0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD0C22E88CA5001DBCD0 /* ArticlePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B37DAD3D22E8A84A001DBCD0 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD0E22E88D17001DBCD0 /* ArticleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		B37DAD4622E8B4E0001DBCD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD4722E8B4EF001DBCD0 /* UserViewController.swift */,
+				B37DAD4A22E8B566001DBCD0 /* ShortDetailedUserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B37DAD4C22E8B64C001DBCD0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD4D22E8B702001DBCD0 /* ShortDetailedArticle.swift */,
+				B37DAD4F22E8B737001DBCD0 /* Article.swift */,
+				B37DAD5322E8DE03001DBCD0 /* ArticleMetadata.swift */,
+				B37DAD5522E8E011001DBCD0 /* ArticleComponent.swift */,
+				B37DAD5722E8E077001DBCD0 /* ArticleComponentRole.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B37DAD5122E8DD39001DBCD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD5922E8E1F9001DBCD0 /* Component */,
+				B37DAD0822E88C20001DBCD0 /* ArticleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B37DAD5222E8DD52001DBCD0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD1022E88D92001DBCD0 /* ArticleInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B37DAD5922E8E1F9001DBCD0 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD5A22E8E21C001DBCD0 /* ComponentBuilder.swift */,
+				B37DAD5C22E8E256001DBCD0 /* ArticleComponentView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B37DAD5E22E900F3001DBCD0 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				B392505122DC81A8008D560A /* BookmarksViewController.swift */,
 			);
-			path = Bookmarks;
+			path = View;
+			sourceTree = "<group>";
+		};
+		B37DAD5F22E90166001DBCD0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD6022E9017C001DBCD0 /* ShortDetailedUser.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		B392505322DC81BE008D560A /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				B392505522DC81DB008D560A /* FeedViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -305,13 +630,6 @@
 			isa = PBXGroup;
 			children = (
 				B37D0C3F22DE01EA0065558C /* SubscriberView */,
-				B392505822DC822C008D560A /* ProfileViewController.swift */,
-				B392505A22DC8256008D560A /* ForeignProfileViewController.swift */,
-				B37D0C3B22DDEA270065558C /* PrivateProfile.storyboard */,
-				B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */,
-				B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */,
-				B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */,
-				B36FB98722E3DD8800E996FF /* ProfileTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -321,7 +639,6 @@
 			children = (
 				B392505F22DC87F9008D560A /* LoginViewController.swift */,
 				B392506122DC8851008D560A /* LoginStoryboard.storyboard */,
-				B37D0C3522DD09580065558C /* SignUpViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -439,10 +756,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37DAD0022E8866F001DBCD0 /* appActions.plist in Resources */,
 				B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */,
 				B36FB95622DF889900E996FF /* Description.rtf in Resources */,
-				B37D0C3C22DDEA270065558C /* PrivateProfile.storyboard in Resources */,
-				B36FB98922E3DD8800E996FF /* ProfileTableViewCell.xib in Resources */,
 				B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */,
 				B3455C9622D8BD9D00478FFF /* Main.storyboard in Resources */,
 				B392506222DC8851008D560A /* LoginStoryboard.storyboard in Resources */,
@@ -549,31 +865,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B392505922DC822C008D560A /* ProfileViewController.swift in Sources */,
+				B37DAD4122E8B229001DBCD0 /* SignInViewController.swift in Sources */,
+				B392505922DC822C008D560A /* sProfileViewController.swift in Sources */,
+				B37DAD5022E8B737001DBCD0 /* Article.swift in Sources */,
 				B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */,
 				B36FB95322DF876600E996FF /* UIViewControllerExtension.swift in Sources */,
 				B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */,
+				B37DAD6122E9017C001DBCD0 /* ShortDetailedUser.swift in Sources */,
+				B37DAD1A22E88ECC001DBCD0 /* FeedPresenter.swift in Sources */,
 				B36FB94E22DF790F00E996FF /* SWTabBarItem.swift in Sources */,
+				B37DAD2722E89153001DBCD0 /* ProfileConfiguratorImpl.swift in Sources */,
+				B37DAD3522E893CD001DBCD0 /* ProfileRouter.swift in Sources */,
+				B37DAD1822E88EAE001DBCD0 /* FeedRouter.swift in Sources */,
 				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
+				B37DAD3122E89369001DBCD0 /* ProfileInteractor.swift in Sources */,
+				B37DAD2D22E89257001DBCD0 /* ProfilePresenterImpl.swift in Sources */,
+				B37DAD0922E88C20001DBCD0 /* ArticleViewController.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
-				B36FB96122E0A12900E996FF /* CirclePhoto.swift in Sources */,
+				B36FB96122E0A12900E996FF /* CirclePhotoView.swift in Sources */,
 				B36FB95E22E08DB000E996FF /* SWViewController.swift in Sources */,
-				B392505B22DC8256008D560A /* ForeignProfileViewController.swift in Sources */,
+				B37DAD2B22E891F3001DBCD0 /* ProfilePresenter.swift in Sources */,
+				B3DF99F922E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift in Sources */,
+				B37DAD0D22E88CA5001DBCD0 /* ArticlePresenter.swift in Sources */,
+				B37DAD3322E89385001DBCD0 /* ProfileInteractorImpl.swift in Sources */,
+				B37DAD0B22E88C76001DBCD0 /* ArticleRouter.swift in Sources */,
+				B37DAD4822E8B4EF001DBCD0 /* UserViewController.swift in Sources */,
+				B3DF99F722E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift in Sources */,
+				B37DAD4522E8B494001DBCD0 /* CourseViewController.swift in Sources */,
+				B37DAD2F22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift in Sources */,
+				B36FB98E22E60A7E00E996FF /* CardViewController.swift in Sources */,
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,
 				B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */,
+				B37DAD1E22E88F0C001DBCD0 /* FeedConfigurator.swift in Sources */,
+				B37DAD3722E893F1001DBCD0 /* ProfileRouterImpl.swift in Sources */,
+				B37DAD2922E89174001DBCD0 /* ProfileConfigurator.swift in Sources */,
+				B37DAD4B22E8B566001DBCD0 /* ShortDetailedUserView.swift in Sources */,
+				B37DAD1122E88D92001DBCD0 /* ArticleInteractor.swift in Sources */,
 				B36FB95C22DFC73A00E996FF /* SWTabBarItemDelegate.swift in Sources */,
 				B392506022DC87F9008D560A /* LoginViewController.swift in Sources */,
+				B37DAD0F22E88D17001DBCD0 /* ArticleConfigurator.swift in Sources */,
+				B37DAD5822E8E077001DBCD0 /* ArticleComponentRole.swift in Sources */,
+				B37DAD4322E8B421001DBCD0 /* CourseMarketViewController.swift in Sources */,
 				B36FB95A22DFAE8400E996FF /* SWTabBarDelegate.swift in Sources */,
 				B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */,
+				B37DAD1C22E88EE8001DBCD0 /* FeedInteractor.swift in Sources */,
+				B37DAD5D22E8E256001DBCD0 /* ArticleComponentView.swift in Sources */,
+				B37DAD5B22E8E21C001DBCD0 /* ComponentBuilder.swift in Sources */,
+				B37DAD2522E890E9001DBCD0 /* ProfileViewController.swift in Sources */,
 				B36FB94822DE603700E996FF /* colors.swift in Sources */,
-				B37D0C3622DD09580065558C /* SignUpViewController.swift in Sources */,
 				B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */,
 				B3455CC422D8C0B500478FFF /* SWTabBar.swift in Sources */,
+				B37DAD3F22E8B1D3001DBCD0 /* SignUpViewController.swift in Sources */,
 				B36FB98522E3C86100E996FF /* ProfileViewControllerImpl.swift in Sources */,
+				B37DAD5422E8DE03001DBCD0 /* ArticleMetadata.swift in Sources */,
 				B392505D22DC82C5008D560A /* TabBarViewController.swift in Sources */,
 				B392505622DC81DB008D560A /* FeedViewController.swift in Sources */,
 				B36FB98822E3DD8800E996FF /* ProfileTableViewCell.swift in Sources */,
 				B36FB95122DF871800E996FF /* UITabBarControllerExtension.swift in Sources */,
+				B37DAD4E22E8B702001DBCD0 /* ShortDetailedArticle.swift in Sources */,
+				B37DAD5622E8E011001DBCD0 /* ArticleComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
