@@ -69,11 +69,12 @@
 		B37DAD5B22E8E21C001DBCD0 /* ComponentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD5A22E8E21C001DBCD0 /* ComponentBuilder.swift */; };
 		B37DAD5D22E8E256001DBCD0 /* ArticleComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD5C22E8E256001DBCD0 /* ArticleComponentView.swift */; };
 		B37DAD6122E9017C001DBCD0 /* ShortDetailedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6022E9017C001DBCD0 /* ShortDetailedUser.swift */; };
+		B37DAD6322E9D9FF001DBCD0 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6222E9D9FF001DBCD0 /* CircleButton.swift */; };
+		B37DAD6A22E9E4F0001DBCD0 /* FeedRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6922E9E4F0001DBCD0 /* FeedRouterImpl.swift */; };
+		B37DAD6C22E9E53B001DBCD0 /* FeedInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6B22E9E53B001DBCD0 /* FeedInteractorImpl.swift */; };
 		B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505122DC81A8008D560A /* BookmarksViewController.swift */; };
 		B392505622DC81DB008D560A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505522DC81DB008D560A /* FeedViewController.swift */; };
 		B392505922DC822C008D560A /* sProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* sProfileViewController.swift */; };
-		B392505D22DC82C5008D560A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505C22DC82C5008D560A /* TabBarViewController.swift */; };
-		B392506022DC87F9008D560A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505F22DC87F9008D560A /* LoginViewController.swift */; };
 		B392506222DC8851008D560A /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B392506122DC8851008D560A /* LoginStoryboard.storyboard */; };
 		B3DF99F722E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF99F622E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift */; };
 		B3DF99F922E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF99F822E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift */; };
@@ -171,11 +172,12 @@
 		B37DAD5A22E8E21C001DBCD0 /* ComponentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBuilder.swift; sourceTree = "<group>"; };
 		B37DAD5C22E8E256001DBCD0 /* ArticleComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleComponentView.swift; sourceTree = "<group>"; };
 		B37DAD6022E9017C001DBCD0 /* ShortDetailedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortDetailedUser.swift; sourceTree = "<group>"; };
+		B37DAD6222E9D9FF001DBCD0 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		B37DAD6922E9E4F0001DBCD0 /* FeedRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouterImpl.swift; sourceTree = "<group>"; };
+		B37DAD6B22E9E53B001DBCD0 /* FeedInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractorImpl.swift; sourceTree = "<group>"; };
 		B392505122DC81A8008D560A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		B392505522DC81DB008D560A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B392505822DC822C008D560A /* sProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sProfileViewController.swift; sourceTree = "<group>"; };
-		B392505C22DC82C5008D560A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		B392505F22DC87F9008D560A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B392506122DC8851008D560A /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		B3DF99F622E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
 		B3DF99F822E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
@@ -265,10 +267,6 @@
 				B36FB98C22E60A5600E996FF /* CardViewController */,
 				B36FB94F22DF86F500E996FF /* SwallowUI */,
 				B36FB94622DE600600E996FF /* Colors */,
-				B392505E22DC87D0008D560A /* Auth */,
-				B392505722DC81F8008D560A /* Profile */,
-				B392505322DC81BE008D560A /* Feed */,
-				B3455CC122D8C07800478FFF /* Core */,
 				B3455C9022D8BD9D00478FFF /* AppDelegate.swift */,
 				B3455C9222D8BD9D00478FFF /* ViewController.swift */,
 				B3455C9422D8BD9D00478FFF /* Main.storyboard */,
@@ -296,14 +294,6 @@
 				B3455CB522D8BDA000478FFF /* Info.plist */,
 			);
 			path = EducatUITests;
-			sourceTree = "<group>";
-		};
-		B3455CC122D8C07800478FFF /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				B392505C22DC82C5008D560A /* TabBarViewController.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		B36FB94622DE600600E996FF /* Colors */ = {
@@ -361,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				B36FB96022E0A12900E996FF /* CirclePhotoView.swift */,
+				B37DAD6222E9D9FF001DBCD0 /* CircleButton.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -383,11 +374,11 @@
 		B37DAD0222E88B9E001DBCD0 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				B392505522DC81DB008D560A /* FeedViewController.swift */,
-				B37DAD1722E88EAE001DBCD0 /* FeedRouter.swift */,
-				B37DAD1922E88ECC001DBCD0 /* FeedPresenter.swift */,
-				B37DAD1B22E88EE8001DBCD0 /* FeedInteractor.swift */,
-				B37DAD1D22E88F0C001DBCD0 /* FeedConfigurator.swift */,
+				B37DAD6822E9E4BE001DBCD0 /* Configurator */,
+				B37DAD6722E9E487001DBCD0 /* Presenter */,
+				B37DAD6622E9E47F001DBCD0 /* Interactor */,
+				B37DAD6522E9E476001DBCD0 /* Router */,
+				B37DAD6422E9E471001DBCD0 /* View */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -449,6 +440,7 @@
 		B37DAD1522E88E75001DBCD0 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				B392506122DC8851008D560A /* LoginStoryboard.storyboard */,
 				B37DAD4022E8B229001DBCD0 /* SignInViewController.swift */,
 			);
 			path = SignIn;
@@ -559,6 +551,7 @@
 		B37DAD4622E8B4E0001DBCD0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B37D0C3F22DE01EA0065558C /* SubscriberView */,
 				B37DAD4722E8B4EF001DBCD0 /* UserViewController.swift */,
 				B37DAD4A22E8B566001DBCD0 /* ShortDetailedUserView.swift */,
 			);
@@ -619,28 +612,46 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		B392505322DC81BE008D560A /* Feed */ = {
+		B37DAD6422E9E471001DBCD0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B392505522DC81DB008D560A /* FeedViewController.swift */,
 			);
-			path = Feed;
+			path = View;
 			sourceTree = "<group>";
 		};
-		B392505722DC81F8008D560A /* Profile */ = {
+		B37DAD6522E9E476001DBCD0 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				B37D0C3F22DE01EA0065558C /* SubscriberView */,
+				B37DAD1722E88EAE001DBCD0 /* FeedRouter.swift */,
+				B37DAD6922E9E4F0001DBCD0 /* FeedRouterImpl.swift */,
 			);
-			path = Profile;
+			path = Router;
 			sourceTree = "<group>";
 		};
-		B392505E22DC87D0008D560A /* Auth */ = {
+		B37DAD6622E9E47F001DBCD0 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				B392505F22DC87F9008D560A /* LoginViewController.swift */,
-				B392506122DC8851008D560A /* LoginStoryboard.storyboard */,
+				B37DAD1B22E88EE8001DBCD0 /* FeedInteractor.swift */,
+				B37DAD6B22E9E53B001DBCD0 /* FeedInteractorImpl.swift */,
 			);
-			path = Auth;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B37DAD6722E9E487001DBCD0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD1922E88ECC001DBCD0 /* FeedPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B37DAD6822E9E4BE001DBCD0 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAD1D22E88F0C001DBCD0 /* FeedConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -868,10 +879,12 @@
 				B37DAD4122E8B229001DBCD0 /* SignInViewController.swift in Sources */,
 				B392505922DC822C008D560A /* sProfileViewController.swift in Sources */,
 				B37DAD5022E8B737001DBCD0 /* Article.swift in Sources */,
+				B37DAD6A22E9E4F0001DBCD0 /* FeedRouterImpl.swift in Sources */,
 				B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */,
 				B36FB95322DF876600E996FF /* UIViewControllerExtension.swift in Sources */,
 				B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */,
 				B37DAD6122E9017C001DBCD0 /* ShortDetailedUser.swift in Sources */,
+				B37DAD6C22E9E53B001DBCD0 /* FeedInteractorImpl.swift in Sources */,
 				B37DAD1A22E88ECC001DBCD0 /* FeedPresenter.swift in Sources */,
 				B36FB94E22DF790F00E996FF /* SWTabBarItem.swift in Sources */,
 				B37DAD2722E89153001DBCD0 /* ProfileConfiguratorImpl.swift in Sources */,
@@ -880,6 +893,7 @@
 				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
 				B37DAD3122E89369001DBCD0 /* ProfileInteractor.swift in Sources */,
 				B37DAD2D22E89257001DBCD0 /* ProfilePresenterImpl.swift in Sources */,
+				B37DAD6322E9D9FF001DBCD0 /* CircleButton.swift in Sources */,
 				B37DAD0922E88C20001DBCD0 /* ArticleViewController.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
 				B36FB96122E0A12900E996FF /* CirclePhotoView.swift in Sources */,
@@ -902,7 +916,6 @@
 				B37DAD4B22E8B566001DBCD0 /* ShortDetailedUserView.swift in Sources */,
 				B37DAD1122E88D92001DBCD0 /* ArticleInteractor.swift in Sources */,
 				B36FB95C22DFC73A00E996FF /* SWTabBarItemDelegate.swift in Sources */,
-				B392506022DC87F9008D560A /* LoginViewController.swift in Sources */,
 				B37DAD0F22E88D17001DBCD0 /* ArticleConfigurator.swift in Sources */,
 				B37DAD5822E8E077001DBCD0 /* ArticleComponentRole.swift in Sources */,
 				B37DAD4322E8B421001DBCD0 /* CourseMarketViewController.swift in Sources */,
@@ -918,7 +931,6 @@
 				B37DAD3F22E8B1D3001DBCD0 /* SignUpViewController.swift in Sources */,
 				B36FB98522E3C86100E996FF /* ProfileViewControllerImpl.swift in Sources */,
 				B37DAD5422E8DE03001DBCD0 /* ArticleMetadata.swift in Sources */,
-				B392505D22DC82C5008D560A /* TabBarViewController.swift in Sources */,
 				B392505622DC81DB008D560A /* FeedViewController.swift in Sources */,
 				B36FB98822E3DD8800E996FF /* ProfileTableViewCell.swift in Sources */,
 				B36FB95122DF871800E996FF /* UITabBarControllerExtension.swift in Sources */,
