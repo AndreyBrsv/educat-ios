@@ -1,7 +1,7 @@
 
 import UIKit
 
-class pProfileViewController: SWViewController {
+class pProfileViewController: UIViewController {
     
     public final let profilePhotoScaleFactor = 0.6 // Scale factor from width of the device
     public final let decorativeStripeHeightScaleFactor = 0.002

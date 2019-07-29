@@ -1,7 +1,7 @@
 
 import UIKit
 
-protocol SWTabBarDelegate {
+public protocol ECTabBarDelegate {
     
     func getIconForItem(withIndex index: Int) -> UIImage?
     

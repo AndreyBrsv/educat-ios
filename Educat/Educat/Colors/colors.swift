@@ -51,6 +51,20 @@ extension UIColor {
         }
     }
     
+    // Фирменный серый
+    open class var educatGray: UIColor {
+        get {
+            return UIColor(hex: "#E3E3E3")!
+        }
+    }
+    
+    // Фирменный темно-серый
+    open class var educatDarkGray: UIColor {
+        get {
+            return UIColor(hex: "#ADADAD")!
+        }
+    }
+
     // Фирменный светло-серо-голубой
     open class var educatLightGrayBlue: UIColor {
         get {

@@ -1,8 +1,8 @@
 
 import UIKit
 
-public class BookmarksViewController: UIViewController {
-
+public class DetailCourseViewController: UIViewController {
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
     }

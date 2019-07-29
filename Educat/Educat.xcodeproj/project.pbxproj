@@ -18,23 +18,12 @@
 		B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */; };
 		B3455CA922D8BDA000478FFF /* EducatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CA822D8BDA000478FFF /* EducatTests.swift */; };
 		B3455CB422D8BDA000478FFF /* EducatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CB322D8BDA000478FFF /* EducatUITests.swift */; };
-		B3455CC422D8C0B500478FFF /* SWTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CC322D8C0B500478FFF /* SWTabBar.swift */; };
 		B36FB94822DE603700E996FF /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94722DE603700E996FF /* colors.swift */; };
-		B36FB94E22DF790F00E996FF /* SWTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94D22DF790F00E996FF /* SWTabBarItem.swift */; };
-		B36FB95122DF871800E996FF /* UITabBarControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95022DF871800E996FF /* UITabBarControllerExtension.swift */; };
-		B36FB95322DF876600E996FF /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95222DF876600E996FF /* UIViewControllerExtension.swift */; };
-		B36FB95622DF889900E996FF /* Description.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B36FB95522DF889900E996FF /* Description.rtf */; };
-		B36FB95A22DFAE8400E996FF /* SWTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */; };
-		B36FB95C22DFC73A00E996FF /* SWTabBarItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */; };
-		B36FB95E22E08DB000E996FF /* SWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB95D22E08DB000E996FF /* SWViewController.swift */; };
-		B36FB96122E0A12900E996FF /* CirclePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB96022E0A12900E996FF /* CirclePhotoView.swift */; };
+		B36FB96122E0A12900E996FF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB96022E0A12900E996FF /* CircleImageView.swift */; };
 		B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */; };
 		B36FB98522E3C86100E996FF /* ProfileViewControllerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */; };
-		B36FB98822E3DD8800E996FF /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */; };
-		B36FB98E22E60A7E00E996FF /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98D22E60A7E00E996FF /* CardViewController.swift */; };
 		B37D0C3822DD26350065558C /* gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* gradients.swift */; };
-		B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3D22DE005B0065558C /* SubscribeView.swift */; };
-		B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */; };
+		B37D0C3E22DE005B0065558C /* PubSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3D22DE005B0065558C /* PubSubView.swift */; };
 		B37DAD0022E8866F001DBCD0 /* appActions.plist in Resources */ = {isa = PBXBuildFile; fileRef = B37DACFF22E8866F001DBCD0 /* appActions.plist */; };
 		B37DAD0922E88C20001DBCD0 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD0822E88C20001DBCD0 /* ArticleViewController.swift */; };
 		B37DAD0B22E88C76001DBCD0 /* ArticleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD0A22E88C76001DBCD0 /* ArticleRouter.swift */; };
@@ -72,12 +61,32 @@
 		B37DAD6322E9D9FF001DBCD0 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6222E9D9FF001DBCD0 /* CircleButton.swift */; };
 		B37DAD6A22E9E4F0001DBCD0 /* FeedRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6922E9E4F0001DBCD0 /* FeedRouterImpl.swift */; };
 		B37DAD6C22E9E53B001DBCD0 /* FeedInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6B22E9E53B001DBCD0 /* FeedInteractorImpl.swift */; };
+		B37DAD6E22E9E7C6001DBCD0 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6D22E9E7C6001DBCD0 /* ArticleService.swift */; };
+		B37DAD7022E9E88D001DBCD0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD6F22E9E88D001DBCD0 /* UserService.swift */; };
+		B37DAD7222E9FB19001DBCD0 /* DetailedCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD7122E9FB19001DBCD0 /* DetailedCourseViewController.swift */; };
+		B37DAD7622EA44F6001DBCD0 /* PubSubStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD7522EA44F6001DBCD0 /* PubSubStackView.swift */; };
+		B37DAD7822EA48BC001DBCD0 /* PubSubViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD7722EA48BC001DBCD0 /* PubSubViewDelegate.swift */; };
+		B37DAD7A22EA490D001DBCD0 /* PubSubViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAD7922EA490D001DBCD0 /* PubSubViewDataSource.swift */; };
 		B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505122DC81A8008D560A /* BookmarksViewController.swift */; };
 		B392505622DC81DB008D560A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505522DC81DB008D560A /* FeedViewController.swift */; };
 		B392505922DC822C008D560A /* sProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B392505822DC822C008D560A /* sProfileViewController.swift */; };
 		B392506222DC8851008D560A /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B392506122DC8851008D560A /* LoginStoryboard.storyboard */; };
-		B3DF99F722E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF99F622E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift */; };
-		B3DF99F922E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF99F822E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift */; };
+		D0BC30B52B0E1571B1949133 /* ProfileInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC34D87BC465B6896DE2EE /* ProfileInformationTableViewCell.swift */; };
+		D0BC30CBE29ACCBFE841F1BE /* ECTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC36D42E719EDE28265EFE /* ECTabBarDelegate.swift */; };
+		D0BC3262F618DE61BDD9296A /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC345C16C6708F48B094DA /* CardViewController.swift */; };
+		D0BC32B44CB0C68F0C4503BB /* UserProfileInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3BE8AB7EE2BEC1E669AC /* UserProfileInfoCollectionViewCell.swift */; };
+		D0BC32F975EED00F97376978 /* Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3E1C0D6A045A15EF671B /* Nav.swift */; };
+		D0BC33795F9CE53F678B5A57 /* ECViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3D944CE127A8FAE3DA25 /* ECViewController.swift */; };
+		D0BC344EB48AEF5D2EBB00CE /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3634A85D7629B3AA2FC3 /* ProfileTableViewCell.swift */; };
+		D0BC3608258AF94D0CF765EF /* CardViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC38436DF94CBD402CF506 /* CardViewControllerAnimatedTransitioning.swift */; };
+		D0BC361BAE165FE07257BD2B /* CardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3C2FCA36625963259EC0 /* CardInteractor.swift */; };
+		D0BC36F613F46EC481B45109 /* ECTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC310C8B03032CBC1D8997 /* ECTabBarController.swift */; };
+		D0BC377459A46C92F477C047 /* CardPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3BC09B79D0A1FBEA96EE /* CardPresenterImpl.swift */; };
+		D0BC3A02A0B6B76F29F848D5 /* CardInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3F06B2F1F9EBD51EFF67 /* CardInteractorImpl.swift */; };
+		D0BC3CF1053AF538D4D089D4 /* ECTabBarItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC38A55E4D6EB8A3824E00 /* ECTabBarItemDelegate.swift */; };
+		D0BC3E21741D64EB090A4F0E /* ECTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC36506301A0BF2CE91947 /* ECTabBar.swift */; };
+		D0BC3E973713CA989FD23D41 /* ECTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC36E0B4D644B629A0D173 /* ECTabBarItem.swift */; };
+		D0BC3F9FF673814B63760D62 /* CardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC35949DD1F628B3C0E1E0 /* CardPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,30 +129,18 @@
 		B3455CAF22D8BDA000478FFF /* EducatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EducatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455CB322D8BDA000478FFF /* EducatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducatUITests.swift; sourceTree = "<group>"; };
 		B3455CB522D8BDA000478FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3455CC322D8C0B500478FFF /* SWTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBar.swift; sourceTree = "<group>"; };
 		B36FB94722DE603700E996FF /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
-		B36FB94D22DF790F00E996FF /* SWTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarItem.swift; sourceTree = "<group>"; };
-		B36FB95022DF871800E996FF /* UITabBarControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtension.swift; sourceTree = "<group>"; };
-		B36FB95222DF876600E996FF /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		B36FB95522DF889900E996FF /* Description.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Description.rtf; sourceTree = "<group>"; };
-		B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarDelegate.swift; sourceTree = "<group>"; };
-		B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWTabBarItemDelegate.swift; sourceTree = "<group>"; };
-		B36FB95D22E08DB000E996FF /* SWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWViewController.swift; sourceTree = "<group>"; };
-		B36FB96022E0A12900E996FF /* CirclePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePhotoView.swift; sourceTree = "<group>"; };
+		B36FB96022E0A12900E996FF /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerImpl.swift; sourceTree = "<group>"; };
-		B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
-		B36FB98D22E60A7E00E996FF /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		B37D0C3722DD26350065558C /* gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradients.swift; sourceTree = "<group>"; };
-		B37D0C3D22DE005B0065558C /* SubscribeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeView.swift; sourceTree = "<group>"; };
-		B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberViewDelegate.swift; sourceTree = "<group>"; };
+		B37D0C3D22DE005B0065558C /* PubSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubSubView.swift; sourceTree = "<group>"; };
 		B37DACFF22E8866F001DBCD0 /* appActions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = appActions.plist; sourceTree = "<group>"; };
 		B37DAD0822E88C20001DBCD0 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		B37DAD0A22E88C76001DBCD0 /* ArticleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRouter.swift; sourceTree = "<group>"; };
 		B37DAD0C22E88CA5001DBCD0 /* ArticlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePresenter.swift; sourceTree = "<group>"; };
 		B37DAD0E22E88D17001DBCD0 /* ArticleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleConfigurator.swift; sourceTree = "<group>"; };
 		B37DAD1022E88D92001DBCD0 /* ArticleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInteractor.swift; sourceTree = "<group>"; };
-		B37DAD1422E88E35001DBCD0 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		B37DAD1722E88EAE001DBCD0 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
 		B37DAD1922E88ECC001DBCD0 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		B37DAD1B22E88EE8001DBCD0 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
@@ -175,13 +172,34 @@
 		B37DAD6222E9D9FF001DBCD0 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		B37DAD6922E9E4F0001DBCD0 /* FeedRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouterImpl.swift; sourceTree = "<group>"; };
 		B37DAD6B22E9E53B001DBCD0 /* FeedInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractorImpl.swift; sourceTree = "<group>"; };
+		B37DAD6D22E9E7C6001DBCD0 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		B37DAD6F22E9E88D001DBCD0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		B37DAD7122E9FB19001DBCD0 /* DetailedCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCourseViewController.swift; sourceTree = "<group>"; };
+		B37DAD7522EA44F6001DBCD0 /* PubSubStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubSubStackView.swift; sourceTree = "<group>"; };
+		B37DAD7722EA48BC001DBCD0 /* PubSubViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubSubViewDelegate.swift; sourceTree = "<group>"; };
+		B37DAD7922EA490D001DBCD0 /* PubSubViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubSubViewDataSource.swift; sourceTree = "<group>"; };
 		B392505122DC81A8008D560A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		B392505522DC81DB008D560A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B392505822DC822C008D560A /* sProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sProfileViewController.swift; sourceTree = "<group>"; };
 		B392506122DC8851008D560A /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
-		B3DF99F622E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
-		B3DF99F822E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		CE7710BE3515F9BB690871A0 /* Pods-EducatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducatTests/Pods-EducatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0BC310C8B03032CBC1D8997 /* ECTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBarController.swift; sourceTree = "<group>"; };
+		D0BC345C16C6708F48B094DA /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		D0BC34D87BC465B6896DE2EE /* ProfileInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInformationTableViewCell.swift; sourceTree = "<group>"; };
+		D0BC35949DD1F628B3C0E1E0 /* CardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresenter.swift; sourceTree = "<group>"; };
+		D0BC3634A85D7629B3AA2FC3 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		D0BC36506301A0BF2CE91947 /* ECTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBar.swift; sourceTree = "<group>"; };
+		D0BC36D42E719EDE28265EFE /* ECTabBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBarDelegate.swift; sourceTree = "<group>"; };
+		D0BC36E0B4D644B629A0D173 /* ECTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBarItem.swift; sourceTree = "<group>"; };
+		D0BC38436DF94CBD402CF506 /* CardViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		D0BC38A55E4D6EB8A3824E00 /* ECTabBarItemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBarItemDelegate.swift; sourceTree = "<group>"; };
+		D0BC3B278201AF296207FDDC /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		D0BC3BC09B79D0A1FBEA96EE /* CardPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresenterImpl.swift; sourceTree = "<group>"; };
+		D0BC3BE8AB7EE2BEC1E669AC /* UserProfileInfoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0BC3C2FCA36625963259EC0 /* CardInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInteractor.swift; sourceTree = "<group>"; };
+		D0BC3D944CE127A8FAE3DA25 /* ECViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECViewController.swift; sourceTree = "<group>"; };
+		D0BC3E1C0D6A045A15EF671B /* Nav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nav.swift; sourceTree = "<group>"; };
+		D0BC3F06B2F1F9EBD51EFF67 /* CardInteractorImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInteractorImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +262,7 @@
 				B3455C8E22D8BD9D00478FFF /* Products */,
 				A7D61CE881953029FA98B516 /* Pods */,
 				A42F014956F47A527E182DD2 /* Frameworks */,
+				D0BC3E1C0D6A045A15EF671B /* Nav.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,8 +283,6 @@
 				B37DAD0522E88BC8001DBCD0 /* Services */,
 				B37DAD0122E88B93001DBCD0 /* Modules */,
 				B37DACFB22E870F8001DBCD0 /* ViewComponents */,
-				B36FB98C22E60A5600E996FF /* CardViewController */,
-				B36FB94F22DF86F500E996FF /* SwallowUI */,
 				B36FB94622DE600600E996FF /* Colors */,
 				B3455C9022D8BD9D00478FFF /* AppDelegate.swift */,
 				B3455C9222D8BD9D00478FFF /* ViewController.swift */,
@@ -305,44 +322,14 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
-		B36FB94F22DF86F500E996FF /* SwallowUI */ = {
-			isa = PBXGroup;
-			children = (
-				B36FB95522DF889900E996FF /* Description.rtf */,
-				B36FB95422DF87AE00E996FF /* TabBar */,
-			);
-			path = SwallowUI;
-			sourceTree = "<group>";
-		};
-		B36FB95422DF87AE00E996FF /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				B36FB94D22DF790F00E996FF /* SWTabBarItem.swift */,
-				B36FB95222DF876600E996FF /* UIViewControllerExtension.swift */,
-				B3455CC322D8C0B500478FFF /* SWTabBar.swift */,
-				B36FB95022DF871800E996FF /* UITabBarControllerExtension.swift */,
-				B36FB95922DFAE8400E996FF /* SWTabBarDelegate.swift */,
-				B36FB95B22DFC73A00E996FF /* SWTabBarItemDelegate.swift */,
-				B36FB95D22E08DB000E996FF /* SWViewController.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		B36FB98C22E60A5600E996FF /* CardViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B36FB98D22E60A7E00E996FF /* CardViewController.swift */,
-				B3DF99F622E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift */,
-				B3DF99F822E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift */,
-			);
-			path = CardViewController;
-			sourceTree = "<group>";
-		};
 		B37D0C3F22DE01EA0065558C /* SubscriberView */ = {
 			isa = PBXGroup;
 			children = (
-				B37D0C3D22DE005B0065558C /* SubscribeView.swift */,
-				B37D0C4022DE02130065558C /* SubscriberViewDelegate.swift */,
+				B37D0C3D22DE005B0065558C /* PubSubView.swift */,
+				B37DAD7522EA44F6001DBCD0 /* PubSubStackView.swift */,
+				B37DAD7722EA48BC001DBCD0 /* PubSubViewDelegate.swift */,
+				B37DAD7922EA490D001DBCD0 /* PubSubViewDataSource.swift */,
+				D0BC3BE8AB7EE2BEC1E669AC /* UserProfileInfoCollectionViewCell.swift */,
 			);
 			path = SubscriberView;
 			sourceTree = "<group>";
@@ -350,7 +337,7 @@
 		B37DACFB22E870F8001DBCD0 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				B36FB96022E0A12900E996FF /* CirclePhotoView.swift */,
+				B36FB96022E0A12900E996FF /* CircleImageView.swift */,
 				B37DAD6222E9D9FF001DBCD0 /* CircleButton.swift */,
 			);
 			path = ViewComponents;
@@ -367,6 +354,8 @@
 				B37DAD0422E88BB5001DBCD0 /* Bookmarks */,
 				B37DAD0322E88BAB001DBCD0 /* Profile */,
 				B37DAD0222E88B9E001DBCD0 /* Feed */,
+				D0BC33F5C5E37171BE513164 /* Card */,
+				D0BC358B2BC62605B8BA4C6B /* Container */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -394,8 +383,6 @@
 				B36FB98422E3C86100E996FF /* ProfileViewControllerImpl.swift */,
 				B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */,
 				B392505822DC822C008D560A /* sProfileViewController.swift */,
-				B36FB98622E3DD8800E996FF /* ProfileTableViewCell.swift */,
-				B37DAD1422E88E35001DBCD0 /* ProfileTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -411,6 +398,8 @@
 		B37DAD0522E88BC8001DBCD0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B37DAD6D22E9E7C6001DBCD0 /* ArticleService.swift */,
+				B37DAD6F22E9E88D001DBCD0 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -459,6 +448,9 @@
 			children = (
 				B37DAD2422E890E9001DBCD0 /* ProfileViewController.swift */,
 				B37DAD2E22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift */,
+				D0BC34D87BC465B6896DE2EE /* ProfileInformationTableViewCell.swift */,
+				D0BC3634A85D7629B3AA2FC3 /* ProfileTableViewCell.swift */,
+				D0BC3B278201AF296207FDDC /* ProfileTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -520,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				B37DAD4222E8B421001DBCD0 /* CourseMarketViewController.swift */,
+				B37DAD7122E9FB19001DBCD0 /* DetailedCourseViewController.swift */,
 			);
 			path = CourseMarket;
 			sourceTree = "<group>";
@@ -654,6 +647,88 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		D0BC31948F56BBD1E10714F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0BC345C16C6708F48B094DA /* CardViewController.swift */,
+				D0BC38436DF94CBD402CF506 /* CardViewControllerAnimatedTransitioning.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0BC324926D30EF8D97B5FF5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D0BC35949DD1F628B3C0E1E0 /* CardPresenter.swift */,
+				D0BC3BC09B79D0A1FBEA96EE /* CardPresenterImpl.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D0BC32D1D691C839C9E8B399 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D0BC33F5C5E37171BE513164 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				D0BC31948F56BBD1E10714F3 /* View */,
+				D0BC32D1D691C839C9E8B399 /* Router */,
+				D0BC324926D30EF8D97B5FF5 /* Presenter */,
+				D0BC3BC0EDD2A38881892887 /* Interactor */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		D0BC358B2BC62605B8BA4C6B /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				D0BC367A67344A0710CADA72 /* ECTabBarController */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		D0BC367A67344A0710CADA72 /* ECTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D0BC310C8B03032CBC1D8997 /* ECTabBarController.swift */,
+				D0BC3D944CE127A8FAE3DA25 /* ECViewController.swift */,
+				D0BC39300797FCA613C11ABF /* Item */,
+				D0BC39071249085D51683402 /* TabBar */,
+			);
+			path = ECTabBarController;
+			sourceTree = "<group>";
+		};
+		D0BC39071249085D51683402 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D0BC36506301A0BF2CE91947 /* ECTabBar.swift */,
+				D0BC36D42E719EDE28265EFE /* ECTabBarDelegate.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D0BC39300797FCA613C11ABF /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				D0BC38A55E4D6EB8A3824E00 /* ECTabBarItemDelegate.swift */,
+				D0BC36E0B4D644B629A0D173 /* ECTabBarItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		D0BC3BC0EDD2A38881892887 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D0BC3C2FCA36625963259EC0 /* CardInteractor.swift */,
+				D0BC3F06B2F1F9EBD51EFF67 /* CardInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -769,7 +844,6 @@
 			files = (
 				B37DAD0022E8866F001DBCD0 /* appActions.plist in Resources */,
 				B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */,
-				B36FB95622DF889900E996FF /* Description.rtf in Resources */,
 				B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */,
 				B3455C9622D8BD9D00478FFF /* Main.storyboard in Resources */,
 				B392506222DC8851008D560A /* LoginStoryboard.storyboard in Resources */,
@@ -880,13 +954,11 @@
 				B392505922DC822C008D560A /* sProfileViewController.swift in Sources */,
 				B37DAD5022E8B737001DBCD0 /* Article.swift in Sources */,
 				B37DAD6A22E9E4F0001DBCD0 /* FeedRouterImpl.swift in Sources */,
-				B37D0C3E22DE005B0065558C /* SubscribeView.swift in Sources */,
-				B36FB95322DF876600E996FF /* UIViewControllerExtension.swift in Sources */,
+				B37D0C3E22DE005B0065558C /* PubSubView.swift in Sources */,
 				B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */,
 				B37DAD6122E9017C001DBCD0 /* ShortDetailedUser.swift in Sources */,
 				B37DAD6C22E9E53B001DBCD0 /* FeedInteractorImpl.swift in Sources */,
 				B37DAD1A22E88ECC001DBCD0 /* FeedPresenter.swift in Sources */,
-				B36FB94E22DF790F00E996FF /* SWTabBarItem.swift in Sources */,
 				B37DAD2722E89153001DBCD0 /* ProfileConfiguratorImpl.swift in Sources */,
 				B37DAD3522E893CD001DBCD0 /* ProfileRouter.swift in Sources */,
 				B37DAD1822E88EAE001DBCD0 /* FeedRouter.swift in Sources */,
@@ -896,30 +968,27 @@
 				B37DAD6322E9D9FF001DBCD0 /* CircleButton.swift in Sources */,
 				B37DAD0922E88C20001DBCD0 /* ArticleViewController.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
-				B36FB96122E0A12900E996FF /* CirclePhotoView.swift in Sources */,
-				B36FB95E22E08DB000E996FF /* SWViewController.swift in Sources */,
+				B36FB96122E0A12900E996FF /* CircleImageView.swift in Sources */,
 				B37DAD2B22E891F3001DBCD0 /* ProfilePresenter.swift in Sources */,
-				B3DF99F922E783AD003DB4AE /* CardViewControllerAnimatedTransitioning.swift in Sources */,
 				B37DAD0D22E88CA5001DBCD0 /* ArticlePresenter.swift in Sources */,
 				B37DAD3322E89385001DBCD0 /* ProfileInteractorImpl.swift in Sources */,
 				B37DAD0B22E88C76001DBCD0 /* ArticleRouter.swift in Sources */,
+				B37DAD6E22E9E7C6001DBCD0 /* ArticleService.swift in Sources */,
 				B37DAD4822E8B4EF001DBCD0 /* UserViewController.swift in Sources */,
-				B3DF99F722E781CE003DB4AE /* CardViewControllerTransitioningDelegate.swift in Sources */,
 				B37DAD4522E8B494001DBCD0 /* CourseViewController.swift in Sources */,
 				B37DAD2F22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift in Sources */,
-				B36FB98E22E60A7E00E996FF /* CardViewController.swift in Sources */,
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,
-				B37D0C4122DE02130065558C /* SubscriberViewDelegate.swift in Sources */,
+				B37DAD7222E9FB19001DBCD0 /* DetailedCourseViewController.swift in Sources */,
 				B37DAD1E22E88F0C001DBCD0 /* FeedConfigurator.swift in Sources */,
 				B37DAD3722E893F1001DBCD0 /* ProfileRouterImpl.swift in Sources */,
 				B37DAD2922E89174001DBCD0 /* ProfileConfigurator.swift in Sources */,
+				B37DAD7A22EA490D001DBCD0 /* PubSubViewDataSource.swift in Sources */,
 				B37DAD4B22E8B566001DBCD0 /* ShortDetailedUserView.swift in Sources */,
 				B37DAD1122E88D92001DBCD0 /* ArticleInteractor.swift in Sources */,
-				B36FB95C22DFC73A00E996FF /* SWTabBarItemDelegate.swift in Sources */,
 				B37DAD0F22E88D17001DBCD0 /* ArticleConfigurator.swift in Sources */,
 				B37DAD5822E8E077001DBCD0 /* ArticleComponentRole.swift in Sources */,
 				B37DAD4322E8B421001DBCD0 /* CourseMarketViewController.swift in Sources */,
-				B36FB95A22DFAE8400E996FF /* SWTabBarDelegate.swift in Sources */,
+				B37DAD7022E9E88D001DBCD0 /* UserService.swift in Sources */,
 				B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */,
 				B37DAD1C22E88EE8001DBCD0 /* FeedInteractor.swift in Sources */,
 				B37DAD5D22E8E256001DBCD0 /* ArticleComponentView.swift in Sources */,
@@ -927,15 +996,30 @@
 				B37DAD2522E890E9001DBCD0 /* ProfileViewController.swift in Sources */,
 				B36FB94822DE603700E996FF /* colors.swift in Sources */,
 				B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */,
-				B3455CC422D8C0B500478FFF /* SWTabBar.swift in Sources */,
 				B37DAD3F22E8B1D3001DBCD0 /* SignUpViewController.swift in Sources */,
 				B36FB98522E3C86100E996FF /* ProfileViewControllerImpl.swift in Sources */,
 				B37DAD5422E8DE03001DBCD0 /* ArticleMetadata.swift in Sources */,
 				B392505622DC81DB008D560A /* FeedViewController.swift in Sources */,
-				B36FB98822E3DD8800E996FF /* ProfileTableViewCell.swift in Sources */,
-				B36FB95122DF871800E996FF /* UITabBarControllerExtension.swift in Sources */,
+				B37DAD7822EA48BC001DBCD0 /* PubSubViewDelegate.swift in Sources */,
+				B37DAD7622EA44F6001DBCD0 /* PubSubStackView.swift in Sources */,
 				B37DAD4E22E8B702001DBCD0 /* ShortDetailedArticle.swift in Sources */,
 				B37DAD5622E8E011001DBCD0 /* ArticleComponent.swift in Sources */,
+				D0BC3262F618DE61BDD9296A /* CardViewController.swift in Sources */,
+				D0BC3608258AF94D0CF765EF /* CardViewControllerAnimatedTransitioning.swift in Sources */,
+				D0BC3F9FF673814B63760D62 /* CardPresenter.swift in Sources */,
+				D0BC377459A46C92F477C047 /* CardPresenterImpl.swift in Sources */,
+				D0BC361BAE165FE07257BD2B /* CardInteractor.swift in Sources */,
+				D0BC3A02A0B6B76F29F848D5 /* CardInteractorImpl.swift in Sources */,
+				D0BC32B44CB0C68F0C4503BB /* UserProfileInfoCollectionViewCell.swift in Sources */,
+				D0BC30B52B0E1571B1949133 /* ProfileInformationTableViewCell.swift in Sources */,
+				D0BC344EB48AEF5D2EBB00CE /* ProfileTableViewCell.swift in Sources */,
+				D0BC36F613F46EC481B45109 /* ECTabBarController.swift in Sources */,
+				D0BC33795F9CE53F678B5A57 /* ECViewController.swift in Sources */,
+				D0BC3E21741D64EB090A4F0E /* ECTabBar.swift in Sources */,
+				D0BC30CBE29ACCBFE841F1BE /* ECTabBarDelegate.swift in Sources */,
+				D0BC3CF1053AF538D4D089D4 /* ECTabBarItemDelegate.swift in Sources */,
+				D0BC3E973713CA989FD23D41 /* ECTabBarItem.swift in Sources */,
+				D0BC32F975EED00F97376978 /* Nav.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

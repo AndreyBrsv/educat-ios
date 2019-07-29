@@ -1,7 +1,7 @@
 
 import UIKit
 
-public class CirclePhotoView: UIView {
+public class CircleImageView: UIView {
     
     var imageView: UIImageView = UIImageView()
     
@@ -73,16 +73,19 @@ public class CirclePhotoView: UIView {
     private var defaultRadius: Double = 20.0
     
     private var imageScaleRadius: Double = 0.9
-    
+
     private var whiteRoundedViewScaleRadius = 0.95
     
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        print("Required init just create simple CircleImageView() instance " +
+                "without required constraints. Use convenience init.")
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        print("Overrided init just create simple UIView() instance. For the greatest result use conviniece init.")
     }
     
     public convenience init(image: UIImage, radius: Double?) {

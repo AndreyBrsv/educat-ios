@@ -1,6 +1,6 @@
 import UIKit
 
-class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
+public class ECTabBar: UIView, UITabBarDelegate, ECTabBarItemDelegate {
     
     open var tabBarCornerRadius: Double = 20.0 // Радиус скругления углов бара
     
@@ -18,9 +18,9 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
     
     open var tabBarHeightScaleFactor: Double = 0.1 // Доля высоты бара от высоты safeArea
 
-    var items: [SWTabBarItem] { // Кнопки бара
+    var items: [ECTabBarItem] { // Кнопки бара
         get {
-            return itemsStackView.arrangedSubviews as! [SWTabBarItem]
+            return itemsStackView.arrangedSubviews as! [ECTabBarItem]
         }
     }
     
@@ -39,33 +39,35 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         }
     }
     
-    open var delegate: SWTabBarDelegate? // Делегат бара
+    open var delegate: ECTabBarDelegate? // Делегат бара
     
     private var itemsStackView = UIStackView() // Горизонтальный StackView, хранящий кнопки бара
     
     private var selector = UIView() // Селектор (верхняя ползающая полоска)
     
     open weak var tabBarController: UITabBarController!
-    
-    
-    
+
+    var v: String
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
+    }
+
+    convenience init() {
+        self.init(frame: .zero)
+
         self.backgroundColor = .white
         self.layer.cornerRadius = CGFloat(tabBarCornerRadius)
-        
+
         configureItemsStackView()
         configureSelector()
-        
+
         self.isHidden = true // Делаем скрытым по умолчанию
         self.clipsToBounds = true
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func configureItemsStackView() -> Void { // Настройка itemsStackView
@@ -77,21 +79,16 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         itemsStackView.axis = .horizontal
         itemsStackView.alignment = .center
         itemsStackView.distribution = .equalCentering
-        
-        configureTabBarStackViewConstraints()
-    }
-    
-    private func configureTabBarStackViewConstraints() -> Void { // Настройка ограничений itemsStackView
-        
+
         itemsStackView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         let constraints = [
             self.itemsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: CGFloat(itemsStackViewMargin)),
             self.itemsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: CGFloat(-itemsStackViewMargin)),
             self.itemsStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             self.itemsStackView.heightAnchor.constraint(equalTo: self.heightAnchor),
         ]
-        
+
         NSLayoutConstraint.activate(constraints)
     }
     
@@ -138,10 +135,10 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         NSLayoutConstraint.activate(constraints)
     }
     
-    func wasTapped(item: UIButton) -> Void { // Метод, вызываем
+    public func wasTapped(item: UIButton) -> Void { // Метод, вызываем
         self.items.forEach {
             if $0.isEqual(item) {
-                self.tabBarController.selectedIndex = self.items.firstIndex(of: item as! SWTabBarItem)!
+                self.tabBarController.selectedIndex = self.items.firstIndex(of: item as! ECTabBarItem)!
             }
         }
         
@@ -160,7 +157,7 @@ class SWTabBar: UIView, UITabBarDelegate, SWTabBarItemDelegate {
         )
     }
     
-    open func setItems(_ items: [SWTabBarItem]?) -> Void { // Добавляет кнопки в массив arrangedViews itemStackView
+    open func setItems(_ items: [ECTabBarItem]?) -> Void { // Добавляет кнопки в массив arrangedViews itemStackView
         if let i = items {
             var index = 0
             i.forEach {

@@ -16,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window?.rootViewController = ViewController()
+        //window?.rootViewController = ViewController()
+        let ectbc = ECTabBarController()
+        ectbc.switchTabBar = true
+        window?.rootViewController = ectbc
         return true
     }
 }

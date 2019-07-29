@@ -1,5 +1,5 @@
 
-import UIKit
+import Foundation
 
 public class ProfilePresenterImpl: ProfilePresenter {
 
