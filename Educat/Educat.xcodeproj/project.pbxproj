@@ -18,6 +18,10 @@
 		B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */; };
 		B3455CA922D8BDA000478FFF /* EducatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CA822D8BDA000478FFF /* EducatTests.swift */; };
 		B3455CB422D8BDA000478FFF /* EducatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CB322D8BDA000478FFF /* EducatUITests.swift */; };
+		B352943022F8487000FAC155 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352942F22F8487000FAC155 /* CardContentView.swift */; };
+		B352943222F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943122F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift */; };
+		B353EAB822F463B20087DE9D /* CentralWebRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */; };
+		B353EABA22F4642E0087DE9D /* SecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353EAB922F4642E0087DE9D /* SecurityService.swift */; };
 		B36FB94822DE603700E996FF /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94722DE603700E996FF /* colors.swift */; };
 		B36FB96122E0A12900E996FF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB96022E0A12900E996FF /* CircleImageView.swift */; };
 		B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */; };
@@ -129,6 +133,10 @@
 		B3455CAF22D8BDA000478FFF /* EducatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EducatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455CB322D8BDA000478FFF /* EducatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducatUITests.swift; sourceTree = "<group>"; };
 		B3455CB522D8BDA000478FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B352942F22F8487000FAC155 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
+		B352943122F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
+		B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralWebRequestDispatcher.swift; sourceTree = "<group>"; };
+		B353EAB922F4642E0087DE9D /* SecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityService.swift; sourceTree = "<group>"; };
 		B36FB94722DE603700E996FF /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		B36FB96022E0A12900E996FF /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		B36FB98022E3AA0E00E996FF /* ProfileViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -400,6 +408,8 @@
 			children = (
 				B37DAD6D22E9E7C6001DBCD0 /* ArticleService.swift */,
 				B37DAD6F22E9E88D001DBCD0 /* UserService.swift */,
+				B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */,
+				B353EAB922F4642E0087DE9D /* SecurityService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -652,6 +662,8 @@
 			children = (
 				D0BC345C16C6708F48B094DA /* CardViewController.swift */,
 				D0BC38436DF94CBD402CF506 /* CardViewControllerAnimatedTransitioning.swift */,
+				B352942F22F8487000FAC155 /* CardContentView.swift */,
+				B352943122F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -956,12 +968,14 @@
 				B37DAD6A22E9E4F0001DBCD0 /* FeedRouterImpl.swift in Sources */,
 				B37D0C3E22DE005B0065558C /* PubSubView.swift in Sources */,
 				B36FB98122E3AA0E00E996FF /* ProfileViewControllerDelegate.swift in Sources */,
+				B352943022F8487000FAC155 /* CardContentView.swift in Sources */,
 				B37DAD6122E9017C001DBCD0 /* ShortDetailedUser.swift in Sources */,
 				B37DAD6C22E9E53B001DBCD0 /* FeedInteractorImpl.swift in Sources */,
 				B37DAD1A22E88ECC001DBCD0 /* FeedPresenter.swift in Sources */,
 				B37DAD2722E89153001DBCD0 /* ProfileConfiguratorImpl.swift in Sources */,
 				B37DAD3522E893CD001DBCD0 /* ProfileRouter.swift in Sources */,
 				B37DAD1822E88EAE001DBCD0 /* FeedRouter.swift in Sources */,
+				B352943222F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift in Sources */,
 				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
 				B37DAD3122E89369001DBCD0 /* ProfileInteractor.swift in Sources */,
 				B37DAD2D22E89257001DBCD0 /* ProfilePresenterImpl.swift in Sources */,
@@ -975,6 +989,7 @@
 				B37DAD0B22E88C76001DBCD0 /* ArticleRouter.swift in Sources */,
 				B37DAD6E22E9E7C6001DBCD0 /* ArticleService.swift in Sources */,
 				B37DAD4822E8B4EF001DBCD0 /* UserViewController.swift in Sources */,
+				B353EAB822F463B20087DE9D /* CentralWebRequestDispatcher.swift in Sources */,
 				B37DAD4522E8B494001DBCD0 /* CourseViewController.swift in Sources */,
 				B37DAD2F22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift in Sources */,
 				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,
@@ -982,6 +997,7 @@
 				B37DAD1E22E88F0C001DBCD0 /* FeedConfigurator.swift in Sources */,
 				B37DAD3722E893F1001DBCD0 /* ProfileRouterImpl.swift in Sources */,
 				B37DAD2922E89174001DBCD0 /* ProfileConfigurator.swift in Sources */,
+				B353EABA22F4642E0087DE9D /* SecurityService.swift in Sources */,
 				B37DAD7A22EA490D001DBCD0 /* PubSubViewDataSource.swift in Sources */,
 				B37DAD4B22E8B566001DBCD0 /* ShortDetailedUserView.swift in Sources */,
 				B37DAD1122E88D92001DBCD0 /* ArticleInteractor.swift in Sources */,

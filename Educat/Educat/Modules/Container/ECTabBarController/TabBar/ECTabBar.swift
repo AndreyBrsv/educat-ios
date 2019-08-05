@@ -47,8 +47,6 @@ public class ECTabBar: UIView, UITabBarDelegate, ECTabBarItemDelegate {
     
     open weak var tabBarController: UITabBarController!
 
-    var v: String
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
