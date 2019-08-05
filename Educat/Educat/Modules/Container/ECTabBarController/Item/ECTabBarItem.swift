@@ -23,6 +23,8 @@ public class ECTabBarItem: UIButton {
     
     private func setupSWTabBarItem() {
         
+        self.backgroundColor = .educatLightGray
+        
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [

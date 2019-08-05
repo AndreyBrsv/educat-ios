@@ -7,20 +7,24 @@
 //
 
 import UIKit
-import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let appContext: AppContext = AppContextImpl()
+    var context: AppContext!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        window?.rootViewController = appContext.getRootViewController()
+        context = AppContextImpl(application: application)
+        
+        window?.rootViewController = context.getRootViewController()
+        window?.makeKeyAndVisible()
         
         return true
     }
+    
+    
 }
 

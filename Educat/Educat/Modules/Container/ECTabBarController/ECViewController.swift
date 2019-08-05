@@ -3,6 +3,6 @@ import UIKit
 
 public protocol ECViewController {
     
-    var ecTabBarItem: ECTabBarItem { get set }
+    var ecTabBarItem: ECTabBarItem! { get set }
     
 }

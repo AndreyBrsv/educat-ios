@@ -11,7 +11,6 @@
 		6EA57AC0FE237AC2DE6A911B /* Pods_EducatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9147A99904EEE9A0470BA231 /* Pods_EducatTests.framework */; };
 		83491366D6C5B3532004687A /* Pods_EducatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F857350D1AEFBED14FAD7D6 /* Pods_EducatUITests.framework */; };
 		B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455C9022D8BD9D00478FFF /* AppDelegate.swift */; };
-		B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3455C9722D8BD9D00478FFF /* Educat.xcdatamodeld */; };
 		B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9A22D8BDA000478FFF /* Assets.xcassets */; };
 		B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */; };
 		B3455CA922D8BDA000478FFF /* EducatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CA822D8BDA000478FFF /* EducatTests.swift */; };
@@ -21,6 +20,7 @@
 		B352943422F878A900FAC155 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943322F878A900FAC155 /* AppContext.swift */; };
 		B352943622F8793C00FAC155 /* AppContextImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943522F8793C00FAC155 /* AppContextImpl.swift */; };
 		B352943822F87AE000FAC155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B352943722F87AE000FAC155 /* Main.storyboard */; };
+		B352943A22F8982000FAC155 /* ECNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943922F8982000FAC155 /* ECNavigationController.swift */; };
 		B353EAB822F463B20087DE9D /* CentralWebRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */; };
 		B353EABA22F4642E0087DE9D /* SecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353EAB922F4642E0087DE9D /* SecurityService.swift */; };
 		B36FB94822DE603700E996FF /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94722DE603700E996FF /* colors.swift */; };
@@ -80,7 +80,6 @@
 		D0BC30CBE29ACCBFE841F1BE /* ECTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC36D42E719EDE28265EFE /* ECTabBarDelegate.swift */; };
 		D0BC3262F618DE61BDD9296A /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC345C16C6708F48B094DA /* CardViewController.swift */; };
 		D0BC32B44CB0C68F0C4503BB /* UserProfileInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3BE8AB7EE2BEC1E669AC /* UserProfileInfoCollectionViewCell.swift */; };
-		D0BC32F975EED00F97376978 /* Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3E1C0D6A045A15EF671B /* Nav.swift */; };
 		D0BC33795F9CE53F678B5A57 /* ECViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3D944CE127A8FAE3DA25 /* ECViewController.swift */; };
 		D0BC344EB48AEF5D2EBB00CE /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3634A85D7629B3AA2FC3 /* ProfileTableViewCell.swift */; };
 		D0BC3608258AF94D0CF765EF /* CardViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC38436DF94CBD402CF506 /* CardViewControllerAnimatedTransitioning.swift */; };
@@ -122,7 +121,6 @@
 		A751B9C65274B1762123028E /* Pods_Educat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Educat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455C8D22D8BD9D00478FFF /* Educat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Educat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455C9022D8BD9D00478FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3455C9822D8BD9D00478FFF /* Educat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Educat.xcdatamodel; sourceTree = "<group>"; };
 		B3455C9A22D8BDA000478FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3455C9D22D8BDA000478FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3455C9F22D8BDA000478FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +135,7 @@
 		B352943322F878A900FAC155 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		B352943522F8793C00FAC155 /* AppContextImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextImpl.swift; sourceTree = "<group>"; };
 		B352943722F87AE000FAC155 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B352943922F8982000FAC155 /* ECNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECNavigationController.swift; sourceTree = "<group>"; };
 		B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralWebRequestDispatcher.swift; sourceTree = "<group>"; };
 		B353EAB922F4642E0087DE9D /* SecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityService.swift; sourceTree = "<group>"; };
 		B36FB94722DE603700E996FF /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
@@ -208,7 +207,6 @@
 		D0BC3BE8AB7EE2BEC1E669AC /* UserProfileInfoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0BC3C2FCA36625963259EC0 /* CardInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInteractor.swift; sourceTree = "<group>"; };
 		D0BC3D944CE127A8FAE3DA25 /* ECViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECViewController.swift; sourceTree = "<group>"; };
-		D0BC3E1C0D6A045A15EF671B /* Nav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nav.swift; sourceTree = "<group>"; };
 		D0BC3F06B2F1F9EBD51EFF67 /* CardInteractorImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardInteractorImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,7 +270,6 @@
 				B3455C8E22D8BD9D00478FFF /* Products */,
 				A7D61CE881953029FA98B516 /* Pods */,
 				A42F014956F47A527E182DD2 /* Frameworks */,
-				D0BC3E1C0D6A045A15EF671B /* Nav.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,7 +295,6 @@
 				B3455C9A22D8BDA000478FFF /* Assets.xcassets */,
 				B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */,
 				B3455C9F22D8BDA000478FFF /* Info.plist */,
-				B3455C9722D8BD9D00478FFF /* Educat.xcdatamodeld */,
 				B352943322F878A900FAC155 /* AppContext.swift */,
 				B352943522F8793C00FAC155 /* AppContextImpl.swift */,
 				B352943722F87AE000FAC155 /* Main.storyboard */,
@@ -702,6 +698,7 @@
 			isa = PBXGroup;
 			children = (
 				D0BC367A67344A0710CADA72 /* ECTabBarController */,
+				B352943922F8982000FAC155 /* ECNavigationController.swift */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -1002,6 +999,7 @@
 				B352943622F8793C00FAC155 /* AppContextImpl.swift in Sources */,
 				B37DAD2922E89174001DBCD0 /* ProfileConfigurator.swift in Sources */,
 				B353EABA22F4642E0087DE9D /* SecurityService.swift in Sources */,
+				B352943A22F8982000FAC155 /* ECNavigationController.swift in Sources */,
 				B37DAD7A22EA490D001DBCD0 /* PubSubViewDataSource.swift in Sources */,
 				B37DAD4B22E8B566001DBCD0 /* ShortDetailedUserView.swift in Sources */,
 				B37DAD1122E88D92001DBCD0 /* ArticleInteractor.swift in Sources */,
@@ -1009,7 +1007,6 @@
 				B37DAD5822E8E077001DBCD0 /* ArticleComponentRole.swift in Sources */,
 				B37DAD4322E8B421001DBCD0 /* CourseMarketViewController.swift in Sources */,
 				B37DAD7022E9E88D001DBCD0 /* UserService.swift in Sources */,
-				B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */,
 				B37DAD1C22E88EE8001DBCD0 /* FeedInteractor.swift in Sources */,
 				B37DAD5D22E8E256001DBCD0 /* ArticleComponentView.swift in Sources */,
 				B37DAD5B22E8E21C001DBCD0 /* ComponentBuilder.swift in Sources */,
@@ -1039,7 +1036,6 @@
 				D0BC30CBE29ACCBFE841F1BE /* ECTabBarDelegate.swift in Sources */,
 				D0BC3CF1053AF538D4D089D4 /* ECTabBarItemDelegate.swift in Sources */,
 				D0BC3E973713CA989FD23D41 /* ECTabBarItem.swift in Sources */,
-				D0BC32F975EED00F97376978 /* Nav.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,19 +1358,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B3455C9722D8BD9D00478FFF /* Educat.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B3455C9822D8BD9D00478FFF /* Educat.xcdatamodel */,
-			);
-			currentVersion = B3455C9822D8BD9D00478FFF /* Educat.xcdatamodel */;
-			path = Educat.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B3455C8522D8BD9D00478FFF /* Project object */;
 }
