@@ -11,8 +11,6 @@
 		6EA57AC0FE237AC2DE6A911B /* Pods_EducatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9147A99904EEE9A0470BA231 /* Pods_EducatTests.framework */; };
 		83491366D6C5B3532004687A /* Pods_EducatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F857350D1AEFBED14FAD7D6 /* Pods_EducatUITests.framework */; };
 		B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455C9022D8BD9D00478FFF /* AppDelegate.swift */; };
-		B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455C9222D8BD9D00478FFF /* ViewController.swift */; };
-		B3455C9622D8BD9D00478FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9422D8BD9D00478FFF /* Main.storyboard */; };
 		B3455C9922D8BD9D00478FFF /* Educat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3455C9722D8BD9D00478FFF /* Educat.xcdatamodeld */; };
 		B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9A22D8BDA000478FFF /* Assets.xcassets */; };
 		B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */; };
@@ -20,6 +18,9 @@
 		B3455CB422D8BDA000478FFF /* EducatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CB322D8BDA000478FFF /* EducatUITests.swift */; };
 		B352943022F8487000FAC155 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352942F22F8487000FAC155 /* CardContentView.swift */; };
 		B352943222F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943122F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift */; };
+		B352943422F878A900FAC155 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943322F878A900FAC155 /* AppContext.swift */; };
+		B352943622F8793C00FAC155 /* AppContextImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943522F8793C00FAC155 /* AppContextImpl.swift */; };
+		B352943822F87AE000FAC155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B352943722F87AE000FAC155 /* Main.storyboard */; };
 		B353EAB822F463B20087DE9D /* CentralWebRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */; };
 		B353EABA22F4642E0087DE9D /* SecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353EAB922F4642E0087DE9D /* SecurityService.swift */; };
 		B36FB94822DE603700E996FF /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94722DE603700E996FF /* colors.swift */; };
@@ -121,8 +122,6 @@
 		A751B9C65274B1762123028E /* Pods_Educat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Educat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455C8D22D8BD9D00478FFF /* Educat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Educat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455C9022D8BD9D00478FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3455C9222D8BD9D00478FFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3455C9522D8BD9D00478FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3455C9822D8BD9D00478FFF /* Educat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Educat.xcdatamodel; sourceTree = "<group>"; };
 		B3455C9A22D8BDA000478FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3455C9D22D8BDA000478FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,6 +134,9 @@
 		B3455CB522D8BDA000478FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B352942F22F8487000FAC155 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
 		B352943122F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
+		B352943322F878A900FAC155 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
+		B352943522F8793C00FAC155 /* AppContextImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextImpl.swift; sourceTree = "<group>"; };
+		B352943722F87AE000FAC155 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralWebRequestDispatcher.swift; sourceTree = "<group>"; };
 		B353EAB922F4642E0087DE9D /* SecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityService.swift; sourceTree = "<group>"; };
 		B36FB94722DE603700E996FF /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
@@ -293,12 +295,13 @@
 				B37DACFB22E870F8001DBCD0 /* ViewComponents */,
 				B36FB94622DE600600E996FF /* Colors */,
 				B3455C9022D8BD9D00478FFF /* AppDelegate.swift */,
-				B3455C9222D8BD9D00478FFF /* ViewController.swift */,
-				B3455C9422D8BD9D00478FFF /* Main.storyboard */,
 				B3455C9A22D8BDA000478FFF /* Assets.xcassets */,
 				B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */,
 				B3455C9F22D8BDA000478FFF /* Info.plist */,
 				B3455C9722D8BD9D00478FFF /* Educat.xcdatamodeld */,
+				B352943322F878A900FAC155 /* AppContext.swift */,
+				B352943522F8793C00FAC155 /* AppContextImpl.swift */,
+				B352943722F87AE000FAC155 /* Main.storyboard */,
 			);
 			path = Educat;
 			sourceTree = "<group>";
@@ -855,9 +858,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37DAD0022E8866F001DBCD0 /* appActions.plist in Resources */,
+				B352943822F87AE000FAC155 /* Main.storyboard in Resources */,
 				B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */,
 				B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */,
-				B3455C9622D8BD9D00478FFF /* Main.storyboard in Resources */,
 				B392506222DC8851008D560A /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -963,6 +966,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37DAD4122E8B229001DBCD0 /* SignInViewController.swift in Sources */,
+				B352943422F878A900FAC155 /* AppContext.swift in Sources */,
 				B392505922DC822C008D560A /* sProfileViewController.swift in Sources */,
 				B37DAD5022E8B737001DBCD0 /* Article.swift in Sources */,
 				B37DAD6A22E9E4F0001DBCD0 /* FeedRouterImpl.swift in Sources */,
@@ -992,10 +996,10 @@
 				B353EAB822F463B20087DE9D /* CentralWebRequestDispatcher.swift in Sources */,
 				B37DAD4522E8B494001DBCD0 /* CourseViewController.swift in Sources */,
 				B37DAD2F22E8933A001DBCD0 /* ProfileViewControllerProtocol.swift in Sources */,
-				B3455C9322D8BD9D00478FFF /* ViewController.swift in Sources */,
 				B37DAD7222E9FB19001DBCD0 /* DetailedCourseViewController.swift in Sources */,
 				B37DAD1E22E88F0C001DBCD0 /* FeedConfigurator.swift in Sources */,
 				B37DAD3722E893F1001DBCD0 /* ProfileRouterImpl.swift in Sources */,
+				B352943622F8793C00FAC155 /* AppContextImpl.swift in Sources */,
 				B37DAD2922E89174001DBCD0 /* ProfileConfigurator.swift in Sources */,
 				B353EABA22F4642E0087DE9D /* SecurityService.swift in Sources */,
 				B37DAD7A22EA490D001DBCD0 /* PubSubViewDataSource.swift in Sources */,
@@ -1071,14 +1075,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B3455C9422D8BD9D00478FFF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3455C9522D8BD9D00478FFF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

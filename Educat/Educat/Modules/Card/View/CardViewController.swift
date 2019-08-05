@@ -5,12 +5,13 @@ import UIKit
 // Карточный контроллер представления, определяющий карточку, которая появляется из нижней части экрана
 class CardViewController: UIViewController {
     
+    // MARK: Управление состоянием карточки(Card State Controll)
     enum CardState { // Состояние карточки
         case expanded
         case collapsed
     }
     
-    enum CardExpandedState { // Состояния открытой карточки
+    enum CardExpandedStateConstraints {
         case full
         case half
         case quater
@@ -49,17 +50,27 @@ class CardViewController: UIViewController {
     // MARK: Содержимое
     private let content = CardContentView()
     
-    // MARK: Распознаватели жестов
+    // MARK: Распознаватели жестов(Gesture Recognizers)
+    /// По идее мы должны подписывать любой контент, который будет
+    /// передаваться в карточку на этот распознававтель жестов
     private let panGestureRecognizer = UIPanGestureRecognizer()
 
+    // MARK: Методы жизненного цикла(Lifecycle Methods)
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        guard let frame = self.parent?.view.frame else {
+            fatalError("CardViewController parenr doesn't exist!")
+        }
+        
+        self.view.frame = frame
+        
         contentSetup()
         holderSetup()
         configurePanGestureRecognizer()
     }
     
+    // MARK: Конфигурационные методы(Configuration Methods)
     private func holderSetup() -> Void { // Установка параметров холдера
         self.view.addSubview(holder)
         holder.layer.cornerRadius = CGFloat(holderHeight / 2.0)
@@ -95,7 +106,7 @@ class CardViewController: UIViewController {
 
     }
     
-    // MARK: Animation controll methods
+    // MARK: Методы управления анимацией(Animation controll methods)
     
     
 
