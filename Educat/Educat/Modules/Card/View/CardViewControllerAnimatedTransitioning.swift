@@ -3,13 +3,15 @@ import UIKit
 
 class CardViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
     
+    static let animationTransitionDuration = 2.0
+    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 2.0
+        
+        return CardViewControllerAnimatedTransitioning.animationTransitionDuration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
     }
-    
     
 }
