@@ -1,9 +1,13 @@
 
 import UIKit
 
-// Card view controller define a card which appears from bottom of screen
-// Карточный контроллер представления, определяющий карточку, которая появляется из нижней части экрана
+/// Карточный контроллер представления, определяющий карточку, которая появляется из нижней части экрана
 class CardViewController: UIViewController {
+    
+    // MARK: Viper
+    
+    
+    weak var container: UIViewController? //
     
     // MARK: Управление состоянием карточки(Card State Controll)
     enum CardState { // Состояние карточки
@@ -30,7 +34,6 @@ class CardViewController: UIViewController {
     }
     
     // MARK: Держатель(Holder)
-    // A little stripe located over the top of self.view
     // Маленькая полоса, расположенная над верхней границей self.view
     private let holder = UIView()
     
@@ -54,18 +57,28 @@ class CardViewController: UIViewController {
     /// По идее мы должны подписывать любой контент, который будет
     /// передаваться в карточку на этот распознававтель жестов
     private let panGestureRecognizer = UIPanGestureRecognizer()
+    
+    // MARK: Делегат перехода
+    private let cardViewControllerTransitioningDelegate = CardViewControllerTransitioningDelegate()
 
     // MARK: Методы жизненного цикла(Lifecycle Methods)
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let frame = self.parent?.view.frame else {
-            fatalError("CardViewController parenr doesn't exist!")
+        // Viper
+        
+        
+        // Реализация кастомного перехода
+        self.modalPresentationStyle = .custom
+        self.transitioningDelegate = transitioningDelegate
+        
+        guard let frame = self.container?.view.frame else {
+            fatalError("CardViewController's container doesn't exist!")
         }
         
+        self.view.backgroundColor = .red
         self.view.frame = frame
         
-        contentSetup()
         holderSetup()
         configurePanGestureRecognizer()
     }
@@ -82,16 +95,16 @@ class CardViewController: UIViewController {
         )
     }
     
-    private func contentSetup() -> Void { // Установка view, отражающего содержимое карточки
-        self.view.addSubview(content)
-        content.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(
-            [ content.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-              content.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-              content.topAnchor.constraint(equalTo: self.view.topAnchor),
-              content.bottomAnchor.constraint(equalTo: self.view.bottomAnchor), ]
-        )
-    }
+//    private func contentSetup() -> Void { // Установка view, отражающего содержимое карточки
+//        self.view.addSubview(content)
+//        content.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate(
+//            [ content.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+//              content.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+//              content.topAnchor.constraint(equalTo: self.view.topAnchor),
+//              content.bottomAnchor.constraint(equalTo: self.view.bottomAnchor), ]
+//        )
+//    }
     
     private func configurePanGestureRecognizer() -> Void { // Конфигурирует распознаватель жеста "Перетаскивание"
         panGestureRecognizer.addTarget(self, action: #selector(panGestureRecognized(_:)))
@@ -103,7 +116,6 @@ class CardViewController: UIViewController {
     // MARK: Action methods
     @objc
     func panGestureRecognized(_ gesture: UIPanGestureRecognizer) -> Void {
-
     }
     
     // MARK: Методы управления анимацией(Animation controll methods)

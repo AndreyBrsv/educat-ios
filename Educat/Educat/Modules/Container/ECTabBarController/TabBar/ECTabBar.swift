@@ -144,15 +144,9 @@ public class ECTabBar: UIView, UITabBarDelegate, ECTabBarItemDelegate {
     }
     
     func animateSelectorFor(sender: UIButton) -> Void { // Анимация селектора при нажатии на кнопку
-        UIView.animate(
-            withDuration: 0.3,
-            delay: 0,
-            usingSpringWithDamping: 0.4,
-            initialSpringVelocity: 0,
-            options: .curveEaseIn,
-            animations: {self.selector.center.x = CGFloat(self.itemsStackViewMargin) + sender.center.x} ,
-            completion: nil
-        )
+        UIViewPropertyAnimator(duration: 0.1, curve: .easeInOut) {
+            self.selector.center.x = CGFloat(self.itemsStackViewMargin) + sender.center.x
+        }.startAnimation()
     }
     
     open func setItems(_ items: [ECTabBarItem]?) -> Void { // Добавляет кнопки в массив arrangedViews itemStackView

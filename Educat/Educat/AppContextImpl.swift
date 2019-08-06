@@ -8,14 +8,14 @@ class AppContextImpl: AppContext {
     
     // MARK: Объявление необходимых сервисов
     var articleService: ArticleService! // Сервис статей
-    var userService: UserService! // Сервис пользователей
-    var securityService: SecurityService! // Сервис безопасности
-    var requestDispatcher: CentralWebRequestDispatcher! // Центральный диспечер запросов
+//    var userService: UserService! // Сервис пользователей
+//    var securityService: SecurityService! // Сервис безопасности
+//    var requestDispatcher: CentralWebRequestDispatcher! // Центральный диспечер запросов
     
     // MARK: Объявление и иницализация необходимых контроллеров представления
-    let signInViewController: SignInViewController? // Вход
-    let signUpViewController: SignUpViewController? // Регистрация
-    let tabBarViewController = ECTabBarController()
+//    let signInViewController: SignInViewController? // Вход
+//    let signUpViewController: SignUpViewController? // Регистрация
+    let tabBarViewController = TabBarController()
     let cardViewController = CardViewController() // Карточка
     let feedViewController = FeedViewController() // Лента
     let courseViewController = CourseViewController() // Курсы
@@ -36,6 +36,7 @@ class AppContextImpl: AppContext {
         // Тут нужно принять решение относительно сокрытия бара
         // на основании данных об устройстве, если безрамочный,
         // тогда бар со скругленными углами, иначе обычный
+        
         tabBarViewController.switchTabBar = true // пока переключаем
         initializeProperties()
         setupDependencies()
@@ -45,6 +46,7 @@ class AppContextImpl: AppContext {
         
         // Принять решение относительно возврата корневого контроллера представления
         // в зависимости от наличия/отсутствия данных пользователя в keychain
+        
         return tabBarViewController
         
     }
@@ -65,6 +67,9 @@ class AppContextImpl: AppContext {
             courseNavigationController,
             bookmarksNavigationController,
             profileNavigationController], animated: false)
+        
+        tabBarViewController.card = cardViewController
+        cardViewController.container = tabBarViewController
         
     }
     

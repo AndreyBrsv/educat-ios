@@ -3,4 +3,5 @@ import UIKit
 
 protocol ArticleConfigurator {
     
+    
 }

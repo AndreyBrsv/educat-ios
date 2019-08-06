@@ -12,6 +12,13 @@ class CardViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimate
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
+        print(transitionContext.containerView)
+        
+        let card = transitionContext.view(forKey: .to)
+        
+        
+    
+        
     }
     
 }

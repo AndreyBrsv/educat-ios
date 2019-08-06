@@ -13,13 +13,29 @@ public class ProfileViewController: UIViewController, ProfileViewControllerProto
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
         configurator.configure(vc: self) // Конфигуратор проставит все зависимости
         presenter.configureView()
-        setupProfileView()
+        
+        self.view.backgroundColor = .white
+        setupNavigationItem()
+      //  setupProfileView()
     }
 
     public func setUsername(_ username : String) -> Void {
 
+    }
+    
+    private func setupNavigationItem() -> Void {
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.strokeColor : UIColor.educatDarkBlue]
+        
+        self.navigationItem.title = "Профиль"
+        self.navigationItem.largeTitleDisplayMode = .automatic
     }
 
     private func setupProfileView() -> Void {

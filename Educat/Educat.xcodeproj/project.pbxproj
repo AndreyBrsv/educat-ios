@@ -10,6 +10,8 @@
 		65870AB874C0413C405FA681 /* Pods_Educat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A751B9C65274B1762123028E /* Pods_Educat.framework */; };
 		6EA57AC0FE237AC2DE6A911B /* Pods_EducatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9147A99904EEE9A0470BA231 /* Pods_EducatTests.framework */; };
 		83491366D6C5B3532004687A /* Pods_EducatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F857350D1AEFBED14FAD7D6 /* Pods_EducatUITests.framework */; };
+		B30C505322F9D1130021824A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C505222F9D1130021824A /* TabBarController.swift */; };
+		B30C505522F9DE3D0021824A /* CardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C505422F9DE3D0021824A /* CardConfigurator.swift */; };
 		B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455C9022D8BD9D00478FFF /* AppDelegate.swift */; };
 		B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9A22D8BDA000478FFF /* Assets.xcassets */; };
 		B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */; };
@@ -119,6 +121,8 @@
 		9147A99904EEE9A0470BA231 /* Pods_EducatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F857350D1AEFBED14FAD7D6 /* Pods_EducatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A751B9C65274B1762123028E /* Pods_Educat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Educat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30C505222F9D1130021824A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B30C505422F9DE3D0021824A /* CardConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardConfigurator.swift; sourceTree = "<group>"; };
 		B3455C8D22D8BD9D00478FFF /* Educat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Educat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455C9022D8BD9D00478FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3455C9A22D8BDA000478FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -261,6 +265,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B30C505122F9D0FF0021824A /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				B30C505222F9D1130021824A /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		B3455C8422D8BD9D00478FFF = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +365,7 @@
 		B37DAD0122E88B93001DBCD0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B30C505122F9D0FF0021824A /* TabBarController */,
 				B37DAD3822E8987E001DBCD0 /* Cources */,
 				B37DAD1622E88E94001DBCD0 /* SignUp */,
 				B37DAD1522E88E75001DBCD0 /* SignIn */,
@@ -690,6 +703,7 @@
 				D0BC32D1D691C839C9E8B399 /* Router */,
 				D0BC324926D30EF8D97B5FF5 /* Presenter */,
 				D0BC3BC0EDD2A38881892887 /* Interactor */,
+				B30C505422F9DE3D0021824A /* CardConfigurator.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -980,6 +994,7 @@
 				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
 				B37DAD3122E89369001DBCD0 /* ProfileInteractor.swift in Sources */,
 				B37DAD2D22E89257001DBCD0 /* ProfilePresenterImpl.swift in Sources */,
+				B30C505322F9D1130021824A /* TabBarController.swift in Sources */,
 				B37DAD6322E9D9FF001DBCD0 /* CircleButton.swift in Sources */,
 				B37DAD0922E88C20001DBCD0 /* ArticleViewController.swift in Sources */,
 				B392505222DC81A8008D560A /* BookmarksViewController.swift in Sources */,
@@ -1005,6 +1020,7 @@
 				B37DAD1122E88D92001DBCD0 /* ArticleInteractor.swift in Sources */,
 				B37DAD0F22E88D17001DBCD0 /* ArticleConfigurator.swift in Sources */,
 				B37DAD5822E8E077001DBCD0 /* ArticleComponentRole.swift in Sources */,
+				B30C505522F9DE3D0021824A /* CardConfigurator.swift in Sources */,
 				B37DAD4322E8B421001DBCD0 /* CourseMarketViewController.swift in Sources */,
 				B37DAD7022E9E88D001DBCD0 /* UserService.swift in Sources */,
 				B37DAD1C22E88EE8001DBCD0 /* FeedInteractor.swift in Sources */,

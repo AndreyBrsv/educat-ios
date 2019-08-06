@@ -39,5 +39,5 @@ extension ECTabBarController {
         }
         self.edTabBar.setItems(items)
     }
-
+    
 }

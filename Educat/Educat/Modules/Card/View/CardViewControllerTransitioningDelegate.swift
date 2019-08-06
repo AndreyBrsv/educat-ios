@@ -7,6 +7,10 @@ import UIKit
 /// представления необходимо наличие делегата перехода
 class CardViewControllerTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return CardViewControllerAnimatedTransitioning()
+    }
     
     
 }
