@@ -1,20 +1,21 @@
 import UIKit
 
 public class ECTabBarController: UITabBarController {
-
-    open var edTabBar = ECTabBar()
+    
+    open var edTabBar: ECTabBar?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        setupECTabBarController()
     }
-
-    private func setupECTabBarController() -> Void {
-        self.view.addSubview(edTabBar)
-        self.edTabBar.tabBarController = self
-        self.edTabBar.configureTabBarConstraints()
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if switchTabBar {
+            self.view.addSubview(edTabBar!)
+            self.edTabBar?.tabBarController = self
+            self.edTabBar?.configureTabBarConstraints()
+        }
     }
-
 }
 
 /// Расширение для управления кастомным tabBar
@@ -24,20 +25,30 @@ extension ECTabBarController {
         get {
             return self.tabBar.isHidden
         }
-        set {
-            self.tabBar.isHidden = newValue
-            self.edTabBar.isHidden = !newValue
+        set { // Идея не выделять память, если флаг не true
+            if newValue {
+                if edTabBar == nil {
+                    edTabBar = ECTabBar()
+                }
+            } else {
+                if edTabBar != nil {
+                    switchTB(newValue)
+                }
+            }
         }
-    }
-
-    /// Позволяет добавлять к TabBarController другие контроллеры, добавляя при этом кнопки в SWTabBar
-    open func addViewControllers<T>(_ viewControllers: [T]?, animated: Bool) where T:ECViewController {
-        self.setViewControllers((viewControllers as! [UIViewController]), animated: animated)
-        var items: [ECTabBarItem] = []
-        viewControllers?.forEach {
-            items.append($0.ecTabBarItem)
-        }
-        self.edTabBar.setItems(items)
     }
     
+    private func switchTB(_ newValue: Bool) -> Void {
+        self.tabBar.isHidden = newValue
+        self.edTabBar!.isHidden = !newValue
+    }
+    
+    override public func setViewControllers(_ viewControllers: [UIViewController]?, animated: Bool) {
+        print("Attention! ECTabBarController overrides setViewControllers method. \n" +
+            "For correct execution, yours view controllers must implement ECViewController protocol.")
+        super.setViewControllers(viewControllers, animated: animated)
+        viewControllers?.forEach {
+            self.edTabBar?.setItems([($0 as? ECViewController)!.ecTabBarItem])
+        }
+    }
 }

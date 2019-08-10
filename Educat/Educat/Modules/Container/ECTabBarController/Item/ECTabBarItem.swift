@@ -3,13 +3,13 @@ import UIKit
 
 public class ECTabBarItem: UIButton {
     
-    open var delegate: ECTabBarItemDelegate?
+    open weak var delegate: ECTabBarItemDelegate?
     
     private var defaultSize = 35.0
     
     private var notificationIndicator: UIView?
     
-    private var notificationIndicatorWhiteBordedr: UIView?
+    private var notificationIndicatorWhiteBorder: UIView?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -21,24 +21,22 @@ public class ECTabBarItem: UIButton {
         setupSWTabBarItem()
     }
     
+    convenience init() {
+        self.init(frame: .zero)
+    }
+    
     private func setupSWTabBarItem() {
         
         self.backgroundColor = .educatLightGray
         
         self.translatesAutoresizingMaskIntoConstraints = false
         
-        let constraints = [
-            self.heightAnchor.constraint(equalToConstant: 35),
-            self.widthAnchor.constraint(equalToConstant: 35),
-        ]
+        NSLayoutConstraint.activate([
+            self.heightAnchor.constraint(equalToConstant: CGFloat(defaultSize)),
+            self.widthAnchor.constraint(equalToConstant: CGFloat(defaultSize)),
+        ])
         
-        NSLayoutConstraint.activate(constraints)
+        self.addTarget(self, action: #selector(delegate?.wasTapped(item:)), for: .touchUpInside)
         
-        self.addTarget(self, action: #selector(wasTapped), for: .touchUpInside)
-        
-    }
-    
-    @objc func wasTapped() -> Void {
-        delegate?.wasTapped(item: self)
     }
 }

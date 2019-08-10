@@ -1,8 +1,8 @@
 
 import UIKit
 
-public protocol ECViewController {
+public protocol ECViewController: class {
     
-    var ecTabBarItem: ECTabBarItem! { get set }
+    var ecTabBarItem: ECTabBarItem! { get }
     
 }

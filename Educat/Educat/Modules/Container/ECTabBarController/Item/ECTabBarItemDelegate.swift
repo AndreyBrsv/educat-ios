@@ -1,8 +1,8 @@
 
 import UIKit
 
-public protocol ECTabBarItemDelegate {
+@objc public protocol ECTabBarItemDelegate: class {
     
-    func wasTapped(item: UIButton) -> Void
+    @objc func wasTapped(item: UIButton) -> Void
     
 }

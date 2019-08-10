@@ -8,4 +8,7 @@ public protocol ProfilePresenter {
     /// Метод, конфигурирующий слой view (ProfileViewController)
     func configureView()
     
+    /// Метод, возвращаюший текущего пользователя приложения
+    func getCurrentUser() -> User
+    
 }

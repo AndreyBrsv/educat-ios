@@ -12,8 +12,21 @@ public class SignInViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     
+    // MARK: Методы жизненного цикла
     override public func viewDidLoad() {
         super.viewDidLoad()
+        // Инициализация всех view
     }
+    
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Приведение всех view в исходное положение
+    }
+    
+    override public func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Анимирование всех view
+    }
+    
     
 }

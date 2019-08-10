@@ -4,66 +4,109 @@ import UIKit
 /// Контроллер представления, отражающий профиль пользователя
 public class ProfileViewController: UIViewController, ProfileViewControllerProtocol {
     
-    // Viper
+    // MARK: Viper
     var presenter: ProfilePresenter!
     let configurator: ProfileConfigurator = ProfileConfiguratorImpl()
     
-    // UI
-    var profileTableView: UITableView!
+    // MARK: UI
+    var profileTableView = UITableView()
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
+        // Viper
         configurator.configure(vc: self) // Конфигуратор проставит все зависимости
         presenter.configureView()
         
-        self.view.backgroundColor = .white
-        setupNavigationItem()
-      //  setupProfileView()
-    }
-
-    public func setUsername(_ username : String) -> Void {
-
+        self.view.addSubview(profileTableView)
+        profileTableView.delegate = self
+        profileTableView.dataSource = self
+        profileTableView.register(ProfileInformationTableViewCell.self, forCellReuseIdentifier: "info")
+        profileTableView.separatorColor = .educatLightGray
     }
     
-    private func setupNavigationItem() -> Void {
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        self.view.backgroundColor = .white
+        setupNavigationItem()
+    }
+    
+    public override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    /// Метод, производящий настройку навигационного бара
+    private func setupNavigationItem() -> Void {
+
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        let headerColor = UIColor.educatPlainTextColor
+        self.navigationController?.navigationBar.largeTitleTextAttributes =
+            [NSAttributedString.Key.foregroundColor : headerColor]
         self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.strokeColor : UIColor.educatDarkBlue]
-        
-        self.navigationItem.title = "Профиль"
+            [NSAttributedString.Key.foregroundColor : headerColor]
+
+        self.title = "Профиль"
         self.navigationItem.largeTitleDisplayMode = .automatic
+        self.navigationItem.rightBarButtonItem =
+            UIBarButtonItem(image: UIImage(imageLiteralResourceName: "settingsProfile") ,
+                            style: .done,
+                            target: nil,
+                            action: nil)
     }
-
-    private func setupProfileView() -> Void {
-
+    
+    public override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
         self.profileTableView.translatesAutoresizingMaskIntoConstraints = false
 
-        let constraint = [
-            // Ограничения для profileTableView
-            self.profileTableView.centerXAnchor.constraint(equalTo: self.view!.centerXAnchor),
-            self.profileTableView.centerYAnchor.constraint(equalTo: self.view!.centerYAnchor),
-            self.profileTableView.heightAnchor.constraint(equalTo: self.view!.heightAnchor),
-            self.profileTableView.widthAnchor.constraint(equalTo: self.view!.widthAnchor),
-        ]
-
-        NSLayoutConstraint.activate(constraint)
-
+        NSLayoutConstraint.activate([
+            self.profileTableView.topAnchor.constraint(equalTo: self.navigationController!.navigationBar.bottomAnchor),
+            self.profileTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            self.profileTableView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+        ])
     }
 }
 
-/// Расширение для обеспечения profileTableView необходимыми данными
-extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
-
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+// MARK: UITableViewDelegate & UITableViewDataSource
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return self.view.frame.height * 0.4
+        }
+        return CGFloat(0.0)
     }
-
+    
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return 2 // Две секции: Информация о пользователе и все остальное
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1 // Секция с информацией о профиле
+        }
+        return 4 // Все остальное
+    }
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let profileInfoCell = tableView.dequeueReusableCell(withIdentifier: "info") as! ProfileInformationTableViewCell
+            profileInfoCell.user = presenter.getCurrentUser()
+            profileInfoCell.delegate = self
+            return profileInfoCell
+        }
         return UITableViewCell()
     }
+}
 
+// MARK: ProfileInformationTableViewCellDelegate
+extension ProfileViewController: ProfileInformationTableViewCellDelegate {
+    
+    public func editInfo(_ sender: UIButton) {
+        print("hello")
+    }
 }
