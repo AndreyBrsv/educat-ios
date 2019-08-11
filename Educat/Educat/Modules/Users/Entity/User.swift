@@ -7,4 +7,8 @@ public struct User {
     var lastName: String!
     var userInfo: String?
     
+    var posts: Int?
+    var subscribers: Int?
+    var subscriptions: Int?
+    
 }

@@ -83,7 +83,6 @@ public class CircleImageView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
     
     public convenience init(image: UIImage, radius: CGFloat?) {

@@ -43,7 +43,7 @@ public class ProfileViewController: UIViewController, ProfileViewControllerProto
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        let headerColor = UIColor.educatPlainTextColor
+        let headerColor = UIColor.educatDarkBlue
         self.navigationController?.navigationBar.largeTitleTextAttributes =
             [NSAttributedString.Key.foregroundColor : headerColor]
         self.navigationController?.navigationBar.titleTextAttributes =
@@ -66,7 +66,8 @@ public class ProfileViewController: UIViewController, ProfileViewControllerProto
         NSLayoutConstraint.activate([
             self.profileTableView.topAnchor.constraint(equalTo: self.navigationController!.navigationBar.bottomAnchor),
             self.profileTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            self.profileTableView.widthAnchor.constraint(equalTo: self.view.widthAnchor),
+            self.profileTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.profileTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
         ])
     }
 }
@@ -107,6 +108,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 extension ProfileViewController: ProfileInformationTableViewCellDelegate {
     
     public func editInfo(_ sender: UIButton) {
-        print("hello")
+        print("edit info button tapped")
     }
 }

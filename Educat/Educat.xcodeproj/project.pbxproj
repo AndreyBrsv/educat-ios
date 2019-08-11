@@ -78,6 +78,7 @@
 		B3FE5C6522FCD263007888E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE5C6422FCD263007888E8 /* User.swift */; };
 		B3FE5C6722FE4281007888E8 /* ProfileInformationTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE5C6622FE4281007888E8 /* ProfileInformationTableViewCellDelegate.swift */; };
 		B3FE5C6922FE461C007888E8 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE5C6822FE461C007888E8 /* UIView.swift */; };
+		B3FE5C6C22FF3DD6007888E8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE5C6B22FF3DD6007888E8 /* Font.swift */; };
 		D0BC30B52B0E1571B1949133 /* ProfileInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC34D87BC465B6896DE2EE /* ProfileInformationTableViewCell.swift */; };
 		D0BC30CBE29ACCBFE841F1BE /* ECTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC36D42E719EDE28265EFE /* ECTabBarDelegate.swift */; };
 		D0BC3262F618DE61BDD9296A /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC345C16C6708F48B094DA /* CardViewController.swift */; };
@@ -195,6 +196,7 @@
 		B3FE5C6422FCD263007888E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B3FE5C6622FE4281007888E8 /* ProfileInformationTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformationTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		B3FE5C6822FE461C007888E8 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B3FE5C6B22FF3DD6007888E8 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		CE7710BE3515F9BB690871A0 /* Pods-EducatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EducatTests/Pods-EducatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0BC310C8B03032CBC1D8997 /* ECTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBarController.swift; sourceTree = "<group>"; };
 		D0BC345C16C6708F48B094DA /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 		B3455C8F22D8BD9D00478FFF /* Educat */ = {
 			isa = PBXGroup;
 			children = (
+				B3FE5C6A22FF3DC1007888E8 /* Font */,
 				B37DACFF22E8866F001DBCD0 /* appActions.plist */,
 				B37DAD0522E88BC8001DBCD0 /* Services */,
 				B37DAD0122E88B93001DBCD0 /* Modules */,
@@ -667,6 +670,14 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		B3FE5C6A22FF3DC1007888E8 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B3FE5C6B22FF3DD6007888E8 /* Font.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		D0BC31948F56BBD1E10714F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1026,6 +1037,7 @@
 				B37DAD2522E890E9001DBCD0 /* ProfileViewController.swift in Sources */,
 				B36FB94822DE603700E996FF /* colors.swift in Sources */,
 				B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */,
+				B3FE5C6C22FF3DD6007888E8 /* Font.swift in Sources */,
 				B37DAD3F22E8B1D3001DBCD0 /* SignUpViewController.swift in Sources */,
 				B3FE5C6722FE4281007888E8 /* ProfileInformationTableViewCellDelegate.swift in Sources */,
 				B37DAD5422E8DE03001DBCD0 /* ArticleMetadata.swift in Sources */,

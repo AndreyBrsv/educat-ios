@@ -25,7 +25,6 @@ class ProfileInformationTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubviews()
-        setProperties()
     }
     
     required init?(coder: NSCoder) {
@@ -50,12 +49,17 @@ class ProfileInformationTableViewCell: UITableViewCell {
         background.backgroundColor = .educatLightGray
         background.layer.cornerRadius = CGFloat(20.0)
         
-        profileImage.backgroundColor = .educatPlainTextColor
+        profileImage.backgroundColor = .educatDarkBlue
         profileImage.whiteRoundedView.backgroundColor = .educatLightGray
         
         changeInfoButton.backgroundColor = .white
         changeInfoButton.addTarget(delegate, action: #selector(delegate?.editInfo(_:)), for: .touchUpInside)
-        changeInfoButton.dropShadow()
+        changeInfoButton.setImage(UIImage(imageLiteralResourceName: "changeInfoButton"), for: .normal)
+        changeInfoButton.layer.cornerRadius = 0.4 * profileImage.width / 2.0
+        changeInfoButton.layer.shadowColor = UIColor.black.cgColor
+        changeInfoButton.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        changeInfoButton.layer.shadowOpacity = 0.1
+        changeInfoButton.layer.shadowRadius = 4.0
         
         usernameLabel.textAlignment = .center
         usernameLabel.textColor = .educatPlainTextColor
@@ -73,21 +77,14 @@ class ProfileInformationTableViewCell: UITableViewCell {
         usernameLabel.translatesAutoresizingMaskIntoConstraints = false
         userInfoLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let changeInfoButtonWidthMultiplier: CGFloat = 0.4
-        
         NSLayoutConstraint.activate([
-                
-            background.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            background.heightAnchor.constraint(greaterThanOrEqualTo: self.heightAnchor, multiplier: 0.7),
-            background.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.75),
-            background.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -0.1 * self.frame.height),
-                
+            
+            profileImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10.0),
             profileImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            profileImage.centerYAnchor.constraint(equalTo: background.topAnchor),
                 
             changeInfoButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             changeInfoButton.centerYAnchor.constraint(equalTo: profileImage.bottomAnchor),
-            changeInfoButton.widthAnchor.constraint(equalTo: profileImage.widthAnchor, multiplier: changeInfoButtonWidthMultiplier),
+            changeInfoButton.widthAnchor.constraint(equalTo: profileImage.widthAnchor, multiplier: 0.4),
             changeInfoButton.heightAnchor.constraint(equalTo: changeInfoButton.widthAnchor),
                 
             usernameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -97,12 +94,19 @@ class ProfileInformationTableViewCell: UITableViewCell {
             userInfoLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             userInfoLabel.widthAnchor.constraint(equalTo: background.widthAnchor, multiplier: 0.8),
             userInfoLabel.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: 20.0),
+            
+            background.topAnchor.constraint(equalTo: profileImage.centerYAnchor),
+            background.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            background.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
+            background.bottomAnchor.constraint(greaterThanOrEqualTo: userInfoLabel.bottomAnchor, constant: 10),
+            background.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor, constant: -10)
                 
             ])
         
         profileImage.layoutIfNeeded()
         
-        changeInfoButton.layer.cornerRadius = changeInfoButtonWidthMultiplier * profileImage.width / 2.0
+        setProperties()
+
     }
 
     
