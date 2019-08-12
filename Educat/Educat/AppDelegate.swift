@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Educat
-//
-//  Created by Ilya Mikheev on 12/07/2019.
-//  Copyright © 2019 Ilya Mikheev. All rights reserved.
-//
 
 import UIKit
 
@@ -30,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+//    func applicationDidBecomeActive(_ application: UIApplication) {
+//        let root = (window?.rootViewController as! ECTabBarController)
+//        root.edTabBar.animateSelectorToItem(withIndex: root.selectedIndex)
+//    }
     
     
 }

@@ -45,6 +45,7 @@ class ProfileInformationTableViewCell: UITableViewCell {
     private func setProperties() -> Void {
         
         self.selectionStyle = .none
+        self.backgroundColor = .white
         
         background.backgroundColor = .educatLightGray
         background.layer.cornerRadius = CGFloat(20.0)
@@ -63,9 +64,11 @@ class ProfileInformationTableViewCell: UITableViewCell {
         
         usernameLabel.textAlignment = .center
         usernameLabel.textColor = .educatPlainTextColor
+        usernameLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         
         userInfoLabel.textAlignment = .center
         userInfoLabel.textColor = .educatPlainTextColor
+        userInfoLabel.numberOfLines = 3
     }
     
     override func layoutIfNeeded() {

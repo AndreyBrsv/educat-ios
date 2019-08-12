@@ -15,18 +15,18 @@ class AppContextImpl: AppContext {
     // MARK: Объявление и иницализация необходимых контроллеров представления
 //    let signInViewController: SignInViewController? // Вход
 //    let signUpViewController: SignUpViewController? // Регистрация
-//    let tabBarViewController = TabBarController()
-//    let cardViewController = CardViewController() // Карточка
-//    let feedViewController = FeedViewController() // Лента
-//    let courseViewController = CourseViewController() // Курсы
-//    let bookmarksViewController = BookmarksViewController() // Закладки
+    let tabBarViewController = TabBarController()
+    let cardViewController = CardViewController() // Карточка
+    let feedViewController = FeedViewController() // Лента
+    let courseViewController = CourseViewController() // Курсы
+    let bookmarksViewController = BookmarksViewController() // Закладки
     let profileViewController = ProfileViewController() // Профиль пользователя
 //    let userViewController = UserViewController() // Информация о профиле другого пользователя (нужен ренейминг)
 //
 //    // MARK: Объявление навигационных контроллеров
-//    private var feedNavigationController: ECNavigationController!
-//    private var courseNavigationController: ECNavigationController!
-//    private var bookmarksNavigationController: ECNavigationController!
+    private var feedNavigationController: ECNavigationController!
+    private var courseNavigationController: ECNavigationController!
+    private var bookmarksNavigationController: ECNavigationController!
     private var profileNavigationController: ECNavigationController!
     
     init(application: UIApplication!) {
@@ -46,8 +46,19 @@ class AppContextImpl: AppContext {
         
         // Принять решение относительно возврата корневого контроллера представления
         // в зависимости от наличия/отсутствия данных пользователя в keychain
+        feedNavigationController = ECNavigationController()
+        courseNavigationController = ECNavigationController()
+        bookmarksNavigationController = ECNavigationController()
         profileNavigationController = ECNavigationController(rootViewController: profileViewController)
-        return profileNavigationController
+
+        tabBarViewController.switchTabBar = true
+        tabBarViewController.setViewControllers([
+            feedNavigationController,
+            courseNavigationController,
+            bookmarksNavigationController,
+            profileNavigationController], animated: true)
+        
+        return tabBarViewController
         
         
     }

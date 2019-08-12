@@ -22,18 +22,20 @@ public class ProfileViewController: UIViewController, ProfileViewControllerProto
         profileTableView.delegate = self
         profileTableView.dataSource = self
         profileTableView.register(ProfileInformationTableViewCell.self, forCellReuseIdentifier: "info")
-        profileTableView.separatorColor = .educatLightGray
     }
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.view.backgroundColor = .white
+        profileTableView.separatorColor = .educatLightGray
+        profileTableView.backgroundColor = .white
         setupNavigationItem()
     }
     
     public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // 
     }
 
     /// Метод, производящий настройку навигационного бара
@@ -54,8 +56,8 @@ public class ProfileViewController: UIViewController, ProfileViewControllerProto
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(image: UIImage(imageLiteralResourceName: "settingsProfile") ,
                             style: .done,
-                            target: nil,
-                            action: nil)
+                            target: self,
+                            action: #selector(settingsNavigationBarButtonAction(sender:)))
     }
     
     public override func viewWillLayoutSubviews() {
@@ -69,6 +71,14 @@ public class ProfileViewController: UIViewController, ProfileViewControllerProto
             self.profileTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.profileTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
         ])
+    }
+}
+
+// MARK: Actions
+extension ProfileViewController {
+    
+    @objc private func settingsNavigationBarButtonAction(sender: UIBarButtonItem) {
+        self.navigationController?.pushViewController(SettingsViewController(), animated: true)
     }
 }
 
