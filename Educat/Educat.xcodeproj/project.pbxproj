@@ -24,7 +24,7 @@
 		B352943A22F8982000FAC155 /* ECNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943922F8982000FAC155 /* ECNavigationController.swift */; };
 		B353EAB822F463B20087DE9D /* CentralWebRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */; };
 		B353EABA22F4642E0087DE9D /* SecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B353EAB922F4642E0087DE9D /* SecurityService.swift */; };
-		B36FB94822DE603700E996FF /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94722DE603700E996FF /* colors.swift */; };
+		B36FB94822DE603700E996FF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB94722DE603700E996FF /* UIColor.swift */; };
 		B36FB96122E0A12900E996FF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FB96022E0A12900E996FF /* CircleImageView.swift */; };
 		B37D0C3822DD26350065558C /* gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3722DD26350065558C /* gradients.swift */; };
 		B37D0C3E22DE005B0065558C /* PubSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37D0C3D22DE005B0065558C /* PubSubView.swift */; };
@@ -140,7 +140,7 @@
 		B352943922F8982000FAC155 /* ECNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECNavigationController.swift; sourceTree = "<group>"; };
 		B353EAB722F463B20087DE9D /* CentralWebRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralWebRequestDispatcher.swift; sourceTree = "<group>"; };
 		B353EAB922F4642E0087DE9D /* SecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityService.swift; sourceTree = "<group>"; };
-		B36FB94722DE603700E996FF /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		B36FB94722DE603700E996FF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B36FB96022E0A12900E996FF /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		B37D0C3722DD26350065558C /* gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradients.swift; sourceTree = "<group>"; };
 		B37D0C3D22DE005B0065558C /* PubSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubSubView.swift; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				B37D0C3722DD26350065558C /* gradients.swift */,
-				B36FB94722DE603700E996FF /* colors.swift */,
+				B36FB94722DE603700E996FF /* UIColor.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -1027,7 +1027,7 @@
 				B37DAD5D22E8E256001DBCD0 /* ArticleComponentView.swift in Sources */,
 				B37DAD5B22E8E21C001DBCD0 /* ComponentBuilder.swift in Sources */,
 				B37DAD2522E890E9001DBCD0 /* ProfileViewController.swift in Sources */,
-				B36FB94822DE603700E996FF /* colors.swift in Sources */,
+				B36FB94822DE603700E996FF /* UIColor.swift in Sources */,
 				B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */,
 				B3FE5C6C22FF3DD6007888E8 /* Font.swift in Sources */,
 				B37DAD3F22E8B1D3001DBCD0 /* SignUpViewController.swift in Sources */,

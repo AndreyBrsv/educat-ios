@@ -15,7 +15,7 @@ public class ProfilePresenterImpl: ProfilePresenter {
     }
     
     public func getCurrentUser() -> User {
-        return User(firstName: "Кот", lastName: "Обормот", userInfo: "Преподаватель кафедры машинного обучения МГУ 8)")
+        return User(id: 12, firstName: "Кот", lastName: "Обормот", userInfo: "Преподаватель кафедры машинного обучения МГУ 8)")
     }
     
 }

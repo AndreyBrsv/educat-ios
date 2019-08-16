@@ -36,53 +36,35 @@ class AppContextImpl: AppContext {
         // Тут нужно принять решение относительно сокрытия бара
         // на основании данных об устройстве, если безрамочный,
         // тогда бар со скругленными углами, иначе обычный
-        
-//        tabBarViewController.switchTabBar = true // пока переключаем
-//        initializeProperties()
-//        setupDependencies()
+        tabBarViewController.switchTabBar = true // пока переключаем
+        setupDependencies()
     }
     
     func getRootViewController() -> UIViewController {
         
         // Принять решение относительно возврата корневого контроллера представления
         // в зависимости от наличия/отсутствия данных пользователя в keychain
-        feedNavigationController = ECNavigationController()
-        courseNavigationController = ECNavigationController()
-        bookmarksNavigationController = ECNavigationController()
-        profileNavigationController = ECNavigationController(rootViewController: profileViewController)
-
-        tabBarViewController.switchTabBar = true
-        tabBarViewController.setViewControllers([
-            feedNavigationController,
-            courseNavigationController,
-            bookmarksNavigationController,
-            profileNavigationController], animated: true)
         
         return tabBarViewController
-        
-        
     }
     
-//    private func initializeProperties() -> Void {
-//        articleService = ArticleServiceImpl()
-//    }
-//
-//    private func setupDependencies() -> Void {
-//
-//        feedNavigationController = ECNavigationController(rootViewController: feedViewController)
-//        courseNavigationController = ECNavigationController(rootViewController: courseViewController)
-//        bookmarksNavigationController = ECNavigationController(rootViewController: bookmarksViewController)
-//        profileNavigationController = ECNavigationController(rootViewController: profileViewController)
-//
-//        tabBarViewController.setViewControllers([
-//                    feedNavigationController,
-//                    courseNavigationController,
-//                    bookmarksNavigationController,
-//                    profileNavigationController], animated: false)
-//
+
+    private func setupDependencies() -> Void {
+
+        feedNavigationController = ECNavigationController(rootViewController: feedViewController)
+        courseNavigationController = ECNavigationController(rootViewController: courseViewController)
+        bookmarksNavigationController = ECNavigationController(rootViewController: bookmarksViewController)
+        profileNavigationController = ECNavigationController(rootViewController: profileViewController)
+
+        tabBarViewController.setViewControllers([
+                    feedNavigationController,
+                    courseNavigationController,
+                    bookmarksNavigationController,
+                    profileNavigationController], animated: false)
+
 //        tabBarViewController.card = cardViewController
 //        cardViewController.container = tabBarViewController
-//
-//    }
+
+    }
     
 }
