@@ -157,6 +157,7 @@ struct NotificationViewConstants {
     static let defaultNotificationViewAnimationDuration = 1.0
     static let defaultNotificationViewAnimationDelay = 5.0
     static let defaultNotificationViewAnimationDampingRatio = 0.6
+    static let defaultNotificationViewwLayerOpacity: Float = 0.6
 }
 
 extension ECTabBar {
@@ -166,13 +167,15 @@ extension ECTabBar {
             withMessage: message,
             textColor: textColor,
             backgroundColor: backgroundColor,
+            opacity: NotificationViewConstants.defaultNotificationViewwLayerOpacity,
             duration: NotificationViewConstants.defaultNotificationViewAnimationDuration,
             delay: NotificationViewConstants.defaultNotificationViewAnimationDelay,
             dampingRatio: NotificationViewConstants.defaultNotificationViewAnimationDampingRatio)
     }
     
-    public func showNotification(withMessage message: String?, textColor: UIColor?, backgroundColor: UIColor?, duration: TimeInterval, delay: TimeInterval, dampingRatio: Double) -> Void {
+    public func showNotification(withMessage message: String?, textColor: UIColor?, backgroundColor: UIColor?, opacity: Float, duration: TimeInterval, delay: TimeInterval, dampingRatio: Double) -> Void {
         
+        notificationView.layer.opacity = opacity
         notificationView.backgroundColor = backgroundColor
         notificationViewLabel.text = message
         notificationViewLabel.textColor = textColor ?? .black

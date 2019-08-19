@@ -12,13 +12,13 @@
 		83491366D6C5B3532004687A /* Pods_EducatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F857350D1AEFBED14FAD7D6 /* Pods_EducatUITests.framework */; };
 		B30C505322F9D1130021824A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C505222F9D1130021824A /* TabBarController.swift */; };
 		B30C505522F9DE3D0021824A /* CardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30C505422F9DE3D0021824A /* CardConfigurator.swift */; };
+		B3386F5C230A169600AF92E8 /* CardViewControllerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3386F5B230A169600AF92E8 /* CardViewControllerAnimator.swift */; };
 		B3455C9122D8BD9D00478FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455C9022D8BD9D00478FFF /* AppDelegate.swift */; };
 		B3455C9B22D8BDA000478FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9A22D8BDA000478FFF /* Assets.xcassets */; };
 		B3455C9E22D8BDA000478FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3455C9C22D8BDA000478FFF /* LaunchScreen.storyboard */; };
 		B3455CA922D8BDA000478FFF /* EducatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CA822D8BDA000478FFF /* EducatTests.swift */; };
 		B3455CB422D8BDA000478FFF /* EducatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3455CB322D8BDA000478FFF /* EducatUITests.swift */; };
 		B352943022F8487000FAC155 /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352942F22F8487000FAC155 /* CardContentView.swift */; };
-		B352943222F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943122F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift */; };
 		B352943422F878A900FAC155 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943322F878A900FAC155 /* AppContext.swift */; };
 		B352943622F8793C00FAC155 /* AppContextImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943522F8793C00FAC155 /* AppContextImpl.swift */; };
 		B352943A22F8982000FAC155 /* ECNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B352943922F8982000FAC155 /* ECNavigationController.swift */; };
@@ -83,7 +83,6 @@
 		D0BC3262F618DE61BDD9296A /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC345C16C6708F48B094DA /* CardViewController.swift */; };
 		D0BC32B44CB0C68F0C4503BB /* UserProfileInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3BE8AB7EE2BEC1E669AC /* UserProfileInfoCollectionViewCell.swift */; };
 		D0BC33795F9CE53F678B5A57 /* ECViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3D944CE127A8FAE3DA25 /* ECViewController.swift */; };
-		D0BC3608258AF94D0CF765EF /* CardViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC38436DF94CBD402CF506 /* CardViewControllerAnimatedTransitioning.swift */; };
 		D0BC361BAE165FE07257BD2B /* CardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3C2FCA36625963259EC0 /* CardInteractor.swift */; };
 		D0BC36F613F46EC481B45109 /* ECTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC310C8B03032CBC1D8997 /* ECTabBarController.swift */; };
 		D0BC377459A46C92F477C047 /* CardPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BC3BC09B79D0A1FBEA96EE /* CardPresenterImpl.swift */; };
@@ -122,6 +121,7 @@
 		A751B9C65274B1762123028E /* Pods_Educat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Educat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30C505222F9D1130021824A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B30C505422F9DE3D0021824A /* CardConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardConfigurator.swift; sourceTree = "<group>"; };
+		B3386F5B230A169600AF92E8 /* CardViewControllerAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerAnimator.swift; sourceTree = "<group>"; };
 		B3455C8D22D8BD9D00478FFF /* Educat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Educat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3455C9022D8BD9D00478FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3455C9A22D8BDA000478FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,7 +134,6 @@
 		B3455CB322D8BDA000478FFF /* EducatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducatUITests.swift; sourceTree = "<group>"; };
 		B3455CB522D8BDA000478FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B352942F22F8487000FAC155 /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
-		B352943122F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
 		B352943322F878A900FAC155 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		B352943522F8793C00FAC155 /* AppContextImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextImpl.swift; sourceTree = "<group>"; };
 		B352943922F8982000FAC155 /* ECNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECNavigationController.swift; sourceTree = "<group>"; };
@@ -202,7 +201,6 @@
 		D0BC36506301A0BF2CE91947 /* ECTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBar.swift; sourceTree = "<group>"; };
 		D0BC36D42E719EDE28265EFE /* ECTabBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBarDelegate.swift; sourceTree = "<group>"; };
 		D0BC36E0B4D644B629A0D173 /* ECTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBarItem.swift; sourceTree = "<group>"; };
-		D0BC38436DF94CBD402CF506 /* CardViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		D0BC38A55E4D6EB8A3824E00 /* ECTabBarItemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECTabBarItemDelegate.swift; sourceTree = "<group>"; };
 		D0BC3BC09B79D0A1FBEA96EE /* CardPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresenterImpl.swift; sourceTree = "<group>"; };
 		D0BC3BE8AB7EE2BEC1E669AC /* UserProfileInfoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileInfoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -676,9 +674,8 @@
 			isa = PBXGroup;
 			children = (
 				D0BC345C16C6708F48B094DA /* CardViewController.swift */,
-				D0BC38436DF94CBD402CF506 /* CardViewControllerAnimatedTransitioning.swift */,
 				B352942F22F8487000FAC155 /* CardContentView.swift */,
-				B352943122F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift */,
+				B3386F5B230A169600AF92E8 /* CardViewControllerAnimator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -990,7 +987,6 @@
 				B37DAD2722E89153001DBCD0 /* ProfileConfiguratorImpl.swift in Sources */,
 				B37DAD3522E893CD001DBCD0 /* ProfileRouter.swift in Sources */,
 				B37DAD1822E88EAE001DBCD0 /* FeedRouter.swift in Sources */,
-				B352943222F8492B00FAC155 /* CardViewControllerTransitioningDelegate.swift in Sources */,
 				B37D0C3822DD26350065558C /* gradients.swift in Sources */,
 				B37DAD3122E89369001DBCD0 /* ProfileInteractor.swift in Sources */,
 				B37DAD2D22E89257001DBCD0 /* ProfilePresenterImpl.swift in Sources */,
@@ -1024,6 +1020,7 @@
 				B37DAD4322E8B421001DBCD0 /* CourseMarketViewController.swift in Sources */,
 				B37DAD7022E9E88D001DBCD0 /* UserService.swift in Sources */,
 				B37DAD1C22E88EE8001DBCD0 /* FeedInteractor.swift in Sources */,
+				B3386F5C230A169600AF92E8 /* CardViewControllerAnimator.swift in Sources */,
 				B37DAD5D22E8E256001DBCD0 /* ArticleComponentView.swift in Sources */,
 				B37DAD5B22E8E21C001DBCD0 /* ComponentBuilder.swift in Sources */,
 				B37DAD2522E890E9001DBCD0 /* ProfileViewController.swift in Sources */,
@@ -1039,7 +1036,6 @@
 				B37DAD4E22E8B702001DBCD0 /* ShortDetailedArticle.swift in Sources */,
 				B37DAD5622E8E011001DBCD0 /* ArticleComponent.swift in Sources */,
 				D0BC3262F618DE61BDD9296A /* CardViewController.swift in Sources */,
-				D0BC3608258AF94D0CF765EF /* CardViewControllerAnimatedTransitioning.swift in Sources */,
 				D0BC3F9FF673814B63760D62 /* CardPresenter.swift in Sources */,
 				D0BC377459A46C92F477C047 /* CardPresenterImpl.swift in Sources */,
 				B3FE5C6E23019251007888E8 /* SettingsViewController.swift in Sources */,

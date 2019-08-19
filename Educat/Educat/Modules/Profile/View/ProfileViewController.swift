@@ -119,5 +119,7 @@ extension ProfileViewController: ProfileInformationTableViewCellDelegate {
     
     public func editInfo(_ sender: UIButton) {
         print("edit info button tapped")
+        let tb = self.tabBarController as! ECTabBarController
+        tb.edTabBar.showNotification(withMessage: "Соединение потеряно", textColor: .white, backgroundColor: .educatRed)
     }
 }
