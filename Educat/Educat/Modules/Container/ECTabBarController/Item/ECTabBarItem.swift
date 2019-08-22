@@ -20,7 +20,6 @@ public class ECTabBarItem: UIButton {
     }
     
     private func setupSWTabBarItem() {
-        self.backgroundColor = .educatLightGray
         self.addTarget(self, action: #selector(wasTapped), for: .touchUpInside)
     }
     

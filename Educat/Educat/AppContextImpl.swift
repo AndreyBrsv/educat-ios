@@ -16,9 +16,14 @@ class AppContextImpl: AppContext {
 //    let signInViewController: SignInViewController? // Вход
 //    let signUpViewController: SignUpViewController? // Регистрация
     let tabBarViewController = TabBarController()
-    let cardViewController = CardViewController() // Карточка
-    let feedViewController = FeedViewController() // Лента
+    
+    // MARK:- Лента
+    let feedViewController = FeedViewController()
+    
+    // MARK:- Курсы
     let courseViewController = CourseViewController() // Курсы
+    let courceMarketViewController = CourseMarketViewController() // Магазин курсов
+    
     let bookmarksViewController = BookmarksViewController() // Закладки
     let profileViewController = ProfileViewController() // Профиль пользователя
 //    let userViewController = UserViewController() // Информация о профиле другого пользователя (нужен ренейминг)
@@ -52,7 +57,7 @@ class AppContextImpl: AppContext {
     private func setupDependencies() -> Void {
 
         feedNavigationController = ECNavigationController(rootViewController: feedViewController)
-        courseNavigationController = ECNavigationController(rootViewController: courseViewController)
+        courseNavigationController = ECNavigationController(rootViewController: courceMarketViewController)
         bookmarksNavigationController = ECNavigationController(rootViewController: bookmarksViewController)
         profileNavigationController = ECNavigationController(rootViewController: profileViewController)
 

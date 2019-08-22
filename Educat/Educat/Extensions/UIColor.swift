@@ -72,10 +72,24 @@ extension UIColor {
         }
     }
     
-    // Фирменный синий
+    // Фирменный тёмно-синий
     open class var educatDarkBlue: UIColor {
         get {
             return UIColor(hex: "#484D9D")!
+        }
+    }
+    
+    // Фирменный светло-синий
+    open class var educatLightBlue: UIColor {
+        get {
+            return UIColor(hex: "#567BC8")!
+        }
+    }
+    
+    // Фирменный сине-фиолетовый
+    open class var educatBlueViolet: UIColor {
+        get {
+            return UIColor(hex: "#443D8E")!
         }
     }
     

@@ -2,7 +2,7 @@
 import UIKit
 
 /// Карточный контроллер представления, определяющий карточку, которая появляется из нижней части экрана
-class CardViewController: UIViewController {
+public class CardViewController: UIViewController {
     
     // MARK:- Viper
     
@@ -26,7 +26,6 @@ class CardViewController: UIViewController {
             return self.view.layer.cornerRadius
         }
         set {
-            self.view.clipsToBounds = true
             self.view.layer.cornerRadius = newValue
         }
     }
@@ -40,36 +39,37 @@ class CardViewController: UIViewController {
     private let panGestureRecognizer = UIPanGestureRecognizer()
 
     // MARK:- Методы жизненного цикла
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         // MARK:- Viper -> viewDidLoad()
         
         // MARK:- panGestureRecognizer -> viewDidLoad()
         panGestureRecognizer.addTarget(self, action: #selector(dismissCardViewController(_:)))
+        panGestureRecognizer.isEnabled = true
         
         // MARK:- self -> viewDidLoad()
         self.transitioningDelegate = self
         self.view.addGestureRecognizer(panGestureRecognizer)
         
         // MARK:- holder -> viewDidLoad()
+        view.addSubview(holder)
         holder.frame = CGRect(
             x: view.center.x - CGFloat(holderWidth / 2.0),
             y: CGFloat(holderHeight - 10.0),
             width: CGFloat(holderWidth),
             height: CGFloat(holderHeight))
-        view.addSubview(holder)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // MARK:- self -> viewWillAppear()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .gray
         self.cornerRadius = 20.0
         
         // MARK:- holder -> viewWillAppear()
-        holder.backgroundColor = self.view.backgroundColor
+        holder.backgroundColor = .gray
         holder.layer.cornerRadius = CGFloat(holderHeight / 2.0)
     }
 }
@@ -77,7 +77,7 @@ class CardViewController: UIViewController {
 // MARK:- Реализация протокола UIViewControllerTransitioningDelegate
 extension CardViewController: UIViewControllerTransitioningDelegate {
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         return CardViewControllerAnimatedTransitioning()
     }
@@ -106,7 +106,7 @@ extension CardViewController {
     //    dismiss-инг продолжается согласно с логикой метода dismissCardViewController
     
     
-    @objc func dismissCardViewController(_ gesture: UIPanGestureRecognizer) -> Void {
+    @objc public func dismissCardViewController(_ gesture: UIPanGestureRecognizer) -> Void {
         
         switch gesture.state {
         case .began:

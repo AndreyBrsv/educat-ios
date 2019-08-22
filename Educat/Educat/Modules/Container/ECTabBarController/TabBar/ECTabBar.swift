@@ -10,105 +10,124 @@ public struct ECTabBarLayoutConstants {
 
 public class ECTabBar: UIView, UITabBarDelegate, ECTabBarItemDelegate {
     
+    override public class var requiresConstraintBasedLayout: Bool {
+        get {
+            return true
+        }
+    }
+    
     open var itemsStackViewMargin: Double { // Полный оступ для стека кнопок
         get {
             return ECTabBarLayoutConstants.tabBarCornerRadius + ECTabBarLayoutConstants.itemsStackViewAdditionalMargin
         }
     }
 
-    open var items: [ECTabBarItem] { // Кнопки бара
+    // MARK: - items (Кнопки бара)
+    open var items: [ECTabBarItem] {
         get {
             return itemsStackView.arrangedSubviews as! [ECTabBarItem]
         }
     }
     
-    open var delegate: ECTabBarDelegate? // Делегат бара
+    // MARK: - delegate (Делегат бара)
+    open var delegate: ECTabBarDelegate?
     
-    // MARK: Notification View
-    open var notificationView = UIView() // Представление, появляющееся из-за бара с некоторым сообщением
+    // MARK: - notificationView (Представление, появляющееся из-за бара с некоторым сообщением)
+    open lazy var notificationView: UIView = {
+        let notificationView = UIView()
+        notificationView.layer.cornerRadius = CGFloat(ECTabBarLayoutConstants.tabBarCornerRadius)
+        notificationView.addSubview(notificationViewLabel)
+        notificationView.translatesAutoresizingMaskIntoConstraints = false
+        return notificationView
+    }()
     
-    open var notificationViewLabel = UILabel() // То самое сообщение
+    open lazy var notificationViewLabel: UILabel = {
+        let notificationViewLabel = UILabel()
+        notificationViewLabel.textAlignment = .center
+        notificationViewLabel.translatesAutoresizingMaskIntoConstraints = false
+        return notificationViewLabel
+    }()
     
-    // MARK: Container View
-    private var container = UIView()
+    // MARK: - container (Контейнер, содержащий в себе фронтальные элементы бара)
+    private lazy var container: UIView = {
+        let container = UIView()
+        container.backgroundColor = .white
+        container.layer.cornerRadius = CGFloat(ECTabBarLayoutConstants.tabBarCornerRadius)
+        container.clipsToBounds = true
+        container.addSubview(selector)
+        container.addSubview(itemsStackView)
+        container.translatesAutoresizingMaskIntoConstraints = false
+        return container
+    }()
     
-    private var itemsStackView = UIStackView() // Горизонтальный StackView, хранящий кнопки бара
+    // MARK: - itemsStackView (Горизонтальный StackView, хранящий кнопки бара)
+    private lazy var itemsStackView: UIStackView = {
+        let itemsStackView = UIStackView()
+        itemsStackView.axis = .horizontal
+        itemsStackView.alignment = .center
+        itemsStackView.distribution = .equalCentering
+        itemsStackView.translatesAutoresizingMaskIntoConstraints = false
+        return itemsStackView
+    }()
     
-    open var selector = UIView() // Селектор (верхняя ползающая полоска)
+    // MARK: - selector (Селектор (верхняя ползающая полоска))
+    open lazy var selector: UIView = {
+        let selector = UIView()
+        selector.layer.cornerRadius = CGFloat(ECTabBarLayoutConstants.selectorCornerRadius)
+        selector.backgroundColor = .educatLightYellow
+        selector.clipsToBounds = true
+        selector.translatesAutoresizingMaskIntoConstraints = false
+        return selector
+    }()
     
     open weak var tabBarController: UITabBarController?
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupView()
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
+        setupLayout()
     }
 
     convenience init() {
         self.init(frame: .zero)
-
+    }
+    
+    func setupView() {
         self.backgroundColor = .white
         self.layer.cornerRadius = CGFloat(ECTabBarLayoutConstants.tabBarCornerRadius)
         self.dropShadow()
-        
-        // Добвляем представление для уведомлений
         self.addSubview(notificationView)
-        notificationView.layer.cornerRadius = CGFloat(ECTabBarLayoutConstants.tabBarCornerRadius)
-        
-        notificationView.addSubview(notificationViewLabel)
-        notificationViewLabel.textAlignment = .center
-
-        // Добвляем контейнер
         self.addSubview(container)
-        container.addSubview(selector)
-        container.addSubview(itemsStackView)
-        container.backgroundColor = .white
-        container.layer.cornerRadius = CGFloat(ECTabBarLayoutConstants.tabBarCornerRadius)
-        
-        itemsStackView.axis = .horizontal
-        itemsStackView.alignment = .center
-        itemsStackView.distribution = .equalCentering
-        
-        self.selector.layer.cornerRadius = CGFloat(ECTabBarLayoutConstants.selectorCornerRadius)
-        self.selector.backgroundColor = .educatLightYellow
-
         self.isHidden = true // Делаем скрытым по умолчанию
-        container.clipsToBounds = true
     }
     
-    
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        itemsStackView.translatesAutoresizingMaskIntoConstraints = false
-        selector.translatesAutoresizingMaskIntoConstraints = false
-        container.translatesAutoresizingMaskIntoConstraints = false
-        notificationView.translatesAutoresizingMaskIntoConstraints = false
-        notificationViewLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+    func setupLayout() {
         NSLayoutConstraint.activate([
-            
+            // notificationView
             notificationView.leadingAnchor.constraint(equalTo: leadingAnchor),
             notificationView.trailingAnchor.constraint(equalTo: trailingAnchor),
             notificationView.topAnchor.constraint(equalTo: topAnchor),
             notificationView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
+            // notificationViewLabel
             notificationViewLabel.widthAnchor.constraint(equalTo: notificationView.widthAnchor),
             notificationViewLabel.centerXAnchor.constraint(equalTo: notificationView.centerXAnchor),
             notificationViewLabel.topAnchor.constraint(equalTo: notificationView.topAnchor),
-            
+            // container
             container.leadingAnchor.constraint(equalTo: leadingAnchor),
             container.trailingAnchor.constraint(equalTo: trailingAnchor),
             container.topAnchor.constraint(equalTo: topAnchor),
             container.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
+            // itemsStackView
             itemsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CGFloat(itemsStackViewMargin)),
             itemsStackView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: CGFloat(-itemsStackViewMargin)),
             itemsStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             itemsStackView.heightAnchor.constraint(equalTo: heightAnchor),
-            
+            // selector
             selector.centerYAnchor.constraint(equalTo: topAnchor),
             selector.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.15),
             selector.widthAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5),
@@ -127,7 +146,7 @@ public class ECTabBar: UIView, UITabBarDelegate, ECTabBarItemDelegate {
 }
 
 // MARK: ECTabBarDelegate
-extension ECTabBar: ECTabBarDelegate {
+extension ECTabBar {
     
     public func wasTapped(item: ECTabBarItem) -> Void {
         self.items.forEach {

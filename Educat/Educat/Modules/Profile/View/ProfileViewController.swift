@@ -14,10 +14,11 @@ public class ProfileViewController: UIViewController, ProfileViewControllerProto
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        // Viper
+        // MARK: - Viper -> viewDidLoad()
         configurator.configure(vc: self) // Конфигуратор проставит все зависимости
         presenter.configureView()
         
+        // MARK: - profileTableView -> viewDidLoad()
         self.view.addSubview(profileTableView)
         profileTableView.delegate = self
         profileTableView.dataSource = self
@@ -27,37 +28,26 @@ public class ProfileViewController: UIViewController, ProfileViewControllerProto
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // MARK: - self -> viewWillAppear()
         self.view.backgroundColor = .white
+        
+        // MARK: - profileTableView -> viewWillAppear()
         profileTableView.separatorColor = .educatLightGray
         profileTableView.backgroundColor = .white
-        setupNavigationItem()
-    }
-    
-    public override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // 
-    }
-
-    /// Метод, производящий настройку навигационного бара
-    private func setupNavigationItem() -> Void {
-
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.barTintColor = .white
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        let headerColor = UIColor.educatDarkBlue
-        self.navigationController?.navigationBar.largeTitleTextAttributes =
-            [NSAttributedString.Key.foregroundColor : headerColor]
-        self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.foregroundColor : headerColor]
-
+        
+        // MARK: - navigationBar -> viewWillAppear()
+        self.makeNavigationBarClear(withHeaderColor: .educatDarkBlue)
         self.title = "Профиль"
-        self.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationItem.rightBarButtonItem =
             UIBarButtonItem(image: UIImage(imageLiteralResourceName: "settingsProfile") ,
                             style: .done,
                             target: self,
                             action: #selector(settingsNavigationBarButtonAction(sender:)))
+    }
+    
+    public override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // 
     }
     
     public override func viewWillLayoutSubviews() {
@@ -108,6 +98,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             let profileInfoCell = tableView.dequeueReusableCell(withIdentifier: "info") as! ProfileInformationTableViewCell
             profileInfoCell.user = presenter.getCurrentUser()
             profileInfoCell.delegate = self
+            profileInfoCell.profileImage = UIImage(imageLiteralResourceName: "ph")
             return profileInfoCell
         }
         return UITableViewCell()
@@ -121,5 +112,10 @@ extension ProfileViewController: ProfileInformationTableViewCellDelegate {
         print("edit info button tapped")
         let tb = self.tabBarController as! ECTabBarController
         tb.edTabBar.showNotification(withMessage: "Соединение потеряно", textColor: .white, backgroundColor: .educatRed)
+//        let card = CardViewController()
+//        card.transitioningDelegate = card
+//        card.modalPresentationStyle = .custom
+//        tabBarController?.modalPresentationStyle = .custom
+//        self.tabBarController?.present(card, animated: true, completion: nil)
     }
 }

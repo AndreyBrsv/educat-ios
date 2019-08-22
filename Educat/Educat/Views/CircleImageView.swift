@@ -3,123 +3,74 @@ import UIKit
 
 public class CircleImageView: UIView {
     
-    var imageView: UIImageView = UIImageView()
+    override public class var requiresConstraintBasedLayout: Bool {
+        get {
+            return true
+        }
+    }
+    
+    open lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     
     // Белый ободок вокруг фотографии
-    open var whiteRoundedView = UIView()
+    open lazy var whiteRoundedView: UIView = {
+        let whiteRoundedView = UIView()
+        whiteRoundedView.translatesAutoresizingMaskIntoConstraints = false
+        return whiteRoundedView
+    }()
     
-    // Для установки можно передать CAGradientLayer c необходимыми цветами
-    // без установки frame. Frame проставляется непосредственно тут.
-    var borderGradient: CAGradientLayer {
+    open var cornerRadius: CGFloat {
         get {
-            return bgGradient ?? CAGradientLayer()
+            return self.layer.cornerRadius
         }
         set {
-            bgGradient = newValue
-            newValue.frame = CGRect(x: 0, y: 0, width: width, height: width)
-            self.layer.insertSublayer(newValue, at: 0)
+            self.layer.cornerRadius = newValue
+            self.whiteRoundedView.layer.cornerRadius = whiteRoundedViewScaleRadius * newValue
+            self.imageView.layer.cornerRadius = imageScaleRadius * whiteRoundedViewScaleRadius * newValue
         }
     }
     
-    private var bgGradient: CAGradientLayer?
-    
-    // Радиус view, расположенного за изображением
-    open var radius: CGFloat {
-        get {
-            return defaultRadius
-        }
-        set {
-            defaultRadius = newValue
-            self.layer.cornerRadius = CGFloat(newValue)
-            self.imageView.layer.cornerRadius = CGFloat(imageRadius)
-        }
-    }
-    
-    // Ширина view, расположенного за изображением
-    open var width: CGFloat {
-        get {
-            return radius * 2.0
-        }
-    }
-    
-    // Радиус изображения
-    open var imageRadius: CGFloat {
-        get {
-            return imageScaleRadius * radius
-        }
-    }
-    
-    // Ширина изображения
-    open var imageWidth: CGFloat {
-        get {
-            return imageRadius * 2.0
-        }
-    }
-    
-    // Радиус белого ободка вокруг изображения
-    private var whiteRoundedViewRadius: CGFloat {
-        get {
-            return whiteRoundedViewScaleRadius * radius
-        }
-    }
-    
-    // Ширина белого ободка вокруг изображения
-    private var whiteRoundedViewWidth: CGFloat {
-        get {
-            return whiteRoundedViewRadius * 2.0
-        }
-    }
-    
-    private var defaultRadius: CGFloat = 20.0
-    
-    private var imageScaleRadius: CGFloat = 0.9
+    private var imageScaleRadius: CGFloat = 0.95
 
     private var whiteRoundedViewScaleRadius: CGFloat = 0.95
     
-    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupView()
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
     }
     
-    public convenience init(image: UIImage, radius: CGFloat?) {
+    convenience init() {
         self.init(frame: .zero)
-        self.imageView.image = image
-        if let r = radius {
-            self.defaultRadius = r
-        }
+        setupLayout()
     }
     
-    public override func layoutIfNeeded() {
-        super.layoutIfNeeded()
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        whiteRoundedView.translatesAutoresizingMaskIntoConstraints = false
-        
+    func setupView() {
+        self.clipsToBounds = true
         self.addSubview(whiteRoundedView)
         self.addSubview(imageView)
-
+    }
+    
+    private func setupLayout() -> Void {
         NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(equalToConstant: width),
-            self.widthAnchor.constraint(equalToConstant: width),
+            // whiteRoundedView
             self.whiteRoundedView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.whiteRoundedView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.whiteRoundedView.heightAnchor.constraint(equalToConstant: whiteRoundedViewWidth),
-            self.whiteRoundedView.widthAnchor.constraint(equalToConstant: whiteRoundedViewWidth),
+            self.whiteRoundedView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: whiteRoundedViewScaleRadius),
+            self.whiteRoundedView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: whiteRoundedViewScaleRadius),
+            // imageView
             self.imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.imageView.heightAnchor.constraint(equalToConstant: imageWidth),
-            self.imageView.widthAnchor.constraint(equalToConstant: imageWidth),
+            self.imageView.heightAnchor.constraint(equalTo: whiteRoundedView.heightAnchor, multiplier: imageScaleRadius),
+            self.imageView.widthAnchor.constraint(equalTo: whiteRoundedView.widthAnchor, multiplier: imageScaleRadius),
         ])
-        
-        imageView.clipsToBounds = true
-        self.clipsToBounds = true
-        self.layer.cornerRadius = CGFloat(radius)
-        self.imageView.layer.cornerRadius = CGFloat(imageRadius)
-        self.whiteRoundedView.layer.cornerRadius = CGFloat(whiteRoundedViewRadius)
     }
 }

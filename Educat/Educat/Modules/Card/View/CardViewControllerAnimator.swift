@@ -3,7 +3,7 @@ import UIKit
 
 class CardViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
     
-    let transitionDuration = 0.6
+    let transitionDuration = 0.8
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         
@@ -12,11 +12,12 @@ class CardViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimate
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        let fromVC = transitionContext.viewController(forKey: .from) as? ECTabBarController
+        let fromVC = transitionContext.viewController(forKey: .from) as! ECTabBarController
         let toVC = transitionContext.viewController(forKey: .to) as! CardViewController
         
         let toView = transitionContext.view(forKey: .to)!
         
+        //fromVC.hide(true)
         transitionContext.containerView.addSubview(toView)
         
         // MARK:- Настройка разметки для карточки
@@ -24,7 +25,9 @@ class CardViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimate
         let height = toView.frame.height
         // Будем анимировать постоянную верхнего constraint
         // MARK:-TODO: Сделать для горизонтального режима тоже
-        let topConstraint = toView.topAnchor.constraint(equalTo: transitionContext.containerView.topAnchor, constant: height)
+        let topConstraint = toView.topAnchor.constraint(equalTo: transitionContext.containerView.safeAreaLayoutGuide.topAnchor)
+        topConstraint.constant = height
+        
         NSLayoutConstraint.activate([
             topConstraint,
             toView.leadingAnchor.constraint(equalTo: transitionContext.containerView.leadingAnchor),

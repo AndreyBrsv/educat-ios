@@ -18,6 +18,8 @@ public class PubSubView: UIView {
         }
     }
     
+    var height = 10.0
+    
     var publications: PubSubStackView?
     
     var subscribers: PubSubStackView?
@@ -25,19 +27,6 @@ public class PubSubView: UIView {
     var subscribeButton: UIButton = UIButton()
 
     var delegate: PubSubViewDelegate?
-    
-    private var defaultWidth: Double = 275.0
-    
-    open var height: Double {
-        get {
-            return defaultHeight
-        }
-        set {
-            defaultHeight = newValue
-        }
-    }
-    
-    private var defaultHeight: Double = 77.0
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -77,16 +66,12 @@ public class PubSubView: UIView {
 
     func setupConstraints() -> Void {
         
-        self.translatesAutoresizingMaskIntoConstraints = false
         delimeter.translatesAutoresizingMaskIntoConstraints = false
         publications?.translatesAutoresizingMaskIntoConstraints = false
         subscribers?.translatesAutoresizingMaskIntoConstraints = false
         subscribeButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let constraints = [
-            // Base constraints
-            self.widthAnchor.constraint(equalTo: self.superview!.widthAnchor, multiplier: 0.6),
-            self.heightAnchor.constraint(equalToConstant: CGFloat(height)),
+        NSLayoutConstraint.activate([
             // Subscribe button
             subscribeButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             subscribeButton.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -105,10 +90,7 @@ public class PubSubView: UIView {
             subscribers!.centerYAnchor.constraint(equalTo: delimeter.centerYAnchor),
             subscribers!.heightAnchor.constraint(equalTo: delimeter.heightAnchor),
             subscribers!.leadingAnchor.constraint(equalTo: delimeter.trailingAnchor, constant: (self.superview!.frame.width * 0.025))
-        ]
-        
-        NSLayoutConstraint.activate(constraints)
-        
+        ])
     }
 
     @objc func subscribeButtonTapped() -> Void {
